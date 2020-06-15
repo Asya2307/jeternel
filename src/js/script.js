@@ -21,3 +21,6 @@
 
 // Фильтры
 //= partials/filters.js
+
+// Фильтры
+//= partials/content.js

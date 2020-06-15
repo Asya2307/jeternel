@@ -4009,6 +4009,12 @@ body.js-burger-menu-is-open .burger__crossed:hover {
   margin-right: auto;
   padding-top: 90px;
 }
+@media (max-width: 1300px) {
+  .main__wrap {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
 .main__content {
   font-family: "Cormorant";
   color: #382f2d;
@@ -4017,6 +4023,8 @@ body.js-burger-menu-is-open .burger__crossed:hover {
   font-size: 90px;
   font-weight: 400;
   line-height: 94px;
+  margin-top: 30px;
+  margin-bottom: 50px;
 }
 .main p {
   font-size: 24px;
@@ -4025,11 +4033,13 @@ body.js-burger-menu-is-open .burger__crossed:hover {
 .main h2 {
   font-size: 60px;
   font-weight: 400;
+  margin-top: 83px;
 }
 .main h3 {
   font-size: 42px;
   line-height: 46px;
   font-weight: 400;
+  margin-top: 90px;
 }
 .main ul {
   list-style-type: none;
@@ -4066,6 +4076,8 @@ body.js-burger-menu-is-open .burger__crossed:hover {
   font-weight: 400;
   border-collapse: collapse;
   text-align: left;
+  margin-top: 9px;
+  margin-bottom: 4px;
 }
 .main table td,
 .main table th {
@@ -4076,4 +4088,7 @@ body.js-burger-menu-is-open .burger__crossed:hover {
 }
 .main table th {
   white-space: nowrap;
+}
+.main img {
+  margin-top: 7px;
 }
