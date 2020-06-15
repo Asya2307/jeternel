@@ -14,5 +14,8 @@
 // Choices
 //= plugins/choices.js
 
+// Choices
+//= plugins/perfectscrollbar.js
+
 
 

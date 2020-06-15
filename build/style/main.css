@@ -51,14 +51,21 @@
     margin-bottom: 70px;
   }
 }
+.ps {
+  overflow: hidden !important;
+  overflow-anchor: none;
+  -ms-overflow-style: none;
+  touch-action: auto;
+  -ms-touch-action: auto;
+}
 svg path,
 svg line,
 svg rect,
 svg polygon,
 svg circle {
-  fill: inherit !important;
-  stroke: inherit !important;
-  stroke-width: inherit !important;
+  fill: inherit;
+  stroke: inherit;
+  stroke-width: inherit;
 }
 .common__hidden-heading {
   display: none;
@@ -1412,8 +1419,16 @@ body.js-burger-menu-is-open .burger__crossed:hover {
     width: 100%;
   }
 }
+.main-slider__description--about {
+  font-size: 24px;
+  font-family: "Cormorant";
+  margin-bottom: 40px;
+}
 .main-slider__title + .main-slider__description {
   margin-top: 32px;
+}
+.main-slider__title + .main-slider__description--about {
+  margin-top: 70px;
 }
 @media (max-width: 960px) {
   .main-slider__arrows {
@@ -4002,6 +4017,19 @@ body.js-burger-menu-is-open .burger__crossed:hover {
 .breadcumbs__link:hover:before {
   opacity: 0;
 }
+.section__bird {
+  position: relative;
+  background-image: url("../images/about/bird.png");
+}
+.section__bird-item {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.section__bird-item svg path {
+  fill: #fafafa;
+  stroke: #53282d;
+}
 /* Section */
 .main__wrap {
   max-width: 992px;
@@ -4013,39 +4041,61 @@ body.js-burger-menu-is-open .burger__crossed:hover {
   .main__wrap {
     padding-left: 40px;
     padding-right: 40px;
+    padding-top: 20px;
+  }
+}
+@media (max-width: 600px) {
+  .main__wrap {
+    padding-left: 20px;
+    padding-right: 20px;
   }
 }
 .main__content {
   font-family: "Cormorant";
   color: #382f2d;
 }
-.main__title {
-  font-size: 90px;
-  font-weight: 400;
-  line-height: 94px;
-  margin-top: 30px;
-  margin-bottom: 50px;
-}
-.main p {
+.main__content p {
   font-size: 24px;
   line-height: 32px;
 }
-.main h2 {
+.main__content h2 {
   font-size: 60px;
   font-weight: 400;
   margin-top: 83px;
 }
-.main h3 {
+@media (max-width: 768px) {
+  .main__content h2 {
+    font-size: 45px;
+    margin-top: 49px;
+  }
+}
+@media (max-width: 768px) {
+  .main__content h2 {
+    font-size: 32px;
+  }
+}
+.main__content h3 {
   font-size: 42px;
   line-height: 46px;
   font-weight: 400;
   margin-top: 90px;
 }
-.main ul {
+@media (max-width: 768px) {
+  .main__content h3 {
+    font-size: 36px;
+    margin-top: 49px;
+  }
+}
+@media (max-width: 600px) {
+  .main__content h3 {
+    font-size: 30px;
+  }
+}
+.main__content ul {
   list-style-type: none;
   padding: 0;
 }
-.main ul li {
+.main__content ul li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -4055,10 +4105,10 @@ body.js-burger-menu-is-open .burger__crossed:hover {
   font-size: 24px;
   margin-bottom: 17px;
 }
-.main ul li:last-child {
+.main__content ul li:last-child {
   margin-bottom: 0;
 }
-.main ul li:before {
+.main__content ul li:before {
   content: '';
   display: block;
   width: 100%;
@@ -4069,7 +4119,7 @@ body.js-burger-menu-is-open .burger__crossed:hover {
   position: relative;
   top: 13px;
 }
-.main table {
+.main__content table {
   border: 1px solid #e7e7e7;
   background-color: #fafafa;
   font-size: 20px;
@@ -4079,16 +4129,47 @@ body.js-burger-menu-is-open .burger__crossed:hover {
   margin-top: 9px;
   margin-bottom: 4px;
 }
-.main table td,
-.main table th {
+.main__content table td,
+.main__content table th {
   border-bottom: 1px solid #e7e7e7;
   border-left: 1px solid #e7e7e7;
   padding: 23px;
   font-weight: 400;
 }
-.main table th {
+.main__content table th {
   white-space: nowrap;
 }
-.main img {
+.main__content img {
   margin-top: 7px;
+}
+@media (max-width: 600px) {
+  .main__content img {
+    width: 100%;
+    display: block;
+  }
+}
+.main__title {
+  font-size: 90px;
+  font-weight: 400;
+  line-height: 94px;
+  margin-top: 30px;
+  margin-bottom: 50px;
+}
+@media (max-width: 1024px) {
+  .main__title {
+    font-size: 70px;
+    line-height: 1.1;
+  }
+}
+@media (max-width: 768px) {
+  .main__title {
+    font-size: 56px;
+    line-height: 1.1;
+  }
+}
+@media (max-width: 600px) {
+  .main__title {
+    font-size: 42px;
+    line-height: 1.1;
+  }
 }
