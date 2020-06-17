@@ -57,6 +57,25 @@
     -ms-touch-action: auto;
 }
 
+.block__title 
+    font-size 50px
+    line-height 54px
+    color black
+
+.slider__nav 
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translateY(-112px)
+    &-item 
+        background-color transparent 
+        border none
+        padding 0
+        margin-right 60px
+        cursor pointer
+        &:last-child
+            margin-right 0
+
 @import "partials/common.styl"
 @import "partials/animations.styl"
 @import "partials/intro.styl"
@@ -74,7 +93,13 @@
 /* Components */
 @import "components/breadcumbs.styl"
 @import "components/bird.styl"
+@import "components/legend.styl"
+
+
 
 /* Section */
 @import "section/main-content.styl"
+@import "section/gallery.styl"
+@import "section/special.styl"
+
 

@@ -1,0 +1,1 @@
+"use strict";document.addEventListener("DOMContentLoaded",function(e){var t=document.querySelectorAll(".js-special-slider");t&&t.forEach(function(e){new Swiper(e,{speed:1200,spaceBetween:150,slidesPerView:3,autoHeight:!0,loop:!0,navigation:{nextEl:".slider__nav-item--next",prevEl:".slider__nav-item--prev"}})})});
