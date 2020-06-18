@@ -17,9 +17,17 @@
        text-align center
        display block
        padding: 40px 40px 20px 40px
+    @media phone
+        &__title 
+            padding: 20px 0
     &__img 
         height 400px
         display flex
         align-items flex-end
+    @media tablet-hor
+        &__img 
+            height auto
+            img 
+                width 100%
 
     
