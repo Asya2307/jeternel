@@ -42,6 +42,19 @@
 
 @import "helpers/vars.styl"
 
+*
+    box-sizing border-box
+    outline none
+
+button
+a
+    cursor pointer 
+
+body
+    min-width 320px
+    color black
+
+
 .content
     background-color #fafafa
 
@@ -49,6 +62,7 @@
     margin-bottom 100px
     @media laptop
         margin-bottom 70px
+
 .ps {
     overflow: hidden!important;
     overflow-anchor: none;
@@ -107,11 +121,18 @@
 @import "components/bird.styl"
 @import "components/legend.styl"
 @import "components/reviews.styl"
+@import "components/filters.styl"
+@import "components/form.styl"
+@import "components/profile.styl"
+@import "components/info.styl"
 
 
 /* Section */
 @import "section/main-content.styl"
 @import "section/gallery.styl"
 @import "section/special.styl"
+@import "section/employers.styl"
+@import "section/sections.styl"
+@import "section/history.styl"
 
 

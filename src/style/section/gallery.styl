@@ -11,7 +11,19 @@
         background-size cover
         background-repeat no-repeat
         border 1px solid #e7e7e7
-
+        &--ser
+            background-size: contain
+            height unset
+            display flex
+            align-items center
+            justify-content center
+            &:after
+                content ''
+                float left 
+                padding-bottom 100%
+            img 
+                margin-left auto
+                margin-right auto
         &--popup 
             height unset
             img 
