@@ -53,6 +53,16 @@
         if(document.documentElement.clientWidth > 1083 && document.querySelector(".js-problems-slider")){
             createProblemsSlider();
         };
+        var sliderBeforeAfter = new Swiper('.js-before-after-slider', {
+            speed: 400,
+            slidesPerView: 2,
+            loop: true,
+            spaceBetween: 150,
+            navigation: {
+                nextEl: '.slider__nav--before-after .slider__nav-item--next',
+                prevEl: '.slider__nav--before-after .slider__nav-item--prev',
+              },
+        });
     });
 
     window.addEventListener("resize", function(){
@@ -269,6 +279,15 @@ if(document.getElementById("map")){
 // До и после
 (function(){
 
+    var swiper = new Swiper('.js-before-after-slider', {
+        slidesPerView: 3,
+        spaceBetween: 30,
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+    });
+
 
     let beforeAfterElements = document.querySelectorAll(".js-before-after-container");
 
@@ -460,3 +479,10 @@ document.addEventListener('DOMContentLoaded', (e) => {
         })
     }
 })
+
+// Faq
+document.querySelectorAll('.js-open-faq').forEach((item) => {
+    item.addEventListener('click', (e) => {
+        e.currentTarget.classList.toggle('active')
+    })
+});

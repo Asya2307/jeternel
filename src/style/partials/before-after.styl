@@ -1,16 +1,28 @@
 .before-after
     width 100%
-
+    &__slide 
+        .before-after-preview
+            width 100%
+            text-align left
     &--index
         margin-bottom 200px
         @media laptop
             margin-bottom 160px
+    &--slider 
+        margin-top 150px
+    &__box
+        margin-top 60px
 
     &__container
         width calc(100% - 128px)
         margin 0 auto
         padding 80px 0 90px 0
         background-color white
+        &--slider
+            width 100%
+            padding: 0 
+            background-color transparent
+            position relative
         @media desktop-medium
             width 100%
         @media laptop
@@ -63,6 +75,8 @@
     flex-wrap nowrap
     align-items center
     width calc(50% - 24px)
+    &.swiper-slide 
+        width 100%
     @media laptop
         width calc(50% - 21px)
     @media tablet-landscape-large

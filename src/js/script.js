@@ -27,3 +27,6 @@
 
 // Фильтры
 //= partials/special.js
+
+// Faq
+//= partials/faq.js

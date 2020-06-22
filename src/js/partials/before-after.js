@@ -1,5 +1,14 @@
 (function(){
 
+    var swiper = new Swiper('.js-before-after-slider', {
+        slidesPerView: 3,
+        spaceBetween: 30,
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+    });
+
 
     let beforeAfterElements = document.querySelectorAll(".js-before-after-container");
 
