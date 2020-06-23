@@ -19,6 +19,12 @@
             background-position: center
             background-size contain
             background-repeat no-repeat
+    @media phone-portrait
+        &__wrap
+            padding-left 20px
+            padding-right 20px
+            &:after
+                content none
     &__inner
         width 100%
         max-width 438px
@@ -34,7 +40,9 @@
         text-align center
         width 100%
         display block
-        
+    @media phone-portrait
+        &__title
+            font-size 26px
     &__item
        position relative
        width 100% 

@@ -76,6 +76,7 @@ body {
   line-height: 54px;
   color: #382f2d;
   font-family: "Cormorant";
+  font-weight: 400;
 }
 .slider__nav {
   position: absolute;
@@ -2921,6 +2922,10 @@ body.js-burger-menu-is-open .burger__crossed:hover {
 }
 .before-after__box {
   margin-top: 60px;
+  margin-bottom: 50px;
+}
+.before-after__box .swiper-wrapper {
+  height: auto;
 }
 .before-after__container {
   width: calc(100% - 128px);
@@ -2933,6 +2938,7 @@ body.js-burger-menu-is-open .burger__crossed:hover {
   padding: 0;
   background-color: transparent;
   position: relative;
+  margin-top: 123px;
 }
 @media (max-width: 1680px) {
   .before-after__container {
@@ -4375,6 +4381,8 @@ body.js-burger-menu-is-open .burger__crossed:hover {
 }
 .filters {
   margin-top: 40px;
+  width: 100%;
+  overflow: auto;
 }
 .filters__list {
   display: -webkit-box;
@@ -4402,6 +4410,7 @@ body.js-burger-menu-is-open .burger__crossed:hover {
   border: none;
   -webkit-transition: 0.3s;
   transition: 0.3s;
+  white-space: nowrap;
 }
 .filters__button:after {
   content: '';
@@ -4444,6 +4453,15 @@ body.js-burger-menu-is-open .burger__crossed:hover {
   background-size: contain;
   background-repeat: no-repeat;
 }
+@media (max-width: 768px) {
+  .form__wrap {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .form__wrap:after {
+    content: none;
+  }
+}
 .form__inner {
   width: 100%;
   max-width: 438px;
@@ -4466,6 +4484,11 @@ body.js-burger-menu-is-open .burger__crossed:hover {
   text-align: center;
   width: 100%;
   display: block;
+}
+@media (max-width: 768px) {
+  .form__title {
+    font-size: 26px;
+  }
 }
 .form__item {
   position: relative;
@@ -4563,6 +4586,7 @@ body.js-burger-menu-is-open .burger__crossed:hover {
   -webkit-box-align: start;
   -ms-flex-align: start;
   align-items: flex-start;
+  margin-top: 85px;
 }
 .em__profile-photo {
   display: -webkit-box;
@@ -4659,6 +4683,7 @@ body.js-burger-menu-is-open .burger__crossed:hover {
 }
 .faq {
   font-family: "Cormorant";
+  margin-top: 100px;
 }
 .faq__inner {
   display: -webkit-box;
@@ -4772,6 +4797,72 @@ body.js-burger-menu-is-open .burger__crossed:hover {
   font-family: "Helvetica-Neue";
   margin-left: auto;
 }
+.faq__button {
+  margin-top: 60px;
+}
+.publication__inner {
+  margin-top: 90px;
+}
+.publication__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.publication__top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin-bottom: 36px;
+}
+.publication__item {
+  width: calc(100% / 3);
+  margin-right: 48px;
+  text-align: center;
+  font-family: "Helvetica-Neue";
+}
+.publication__item:last-child {
+  margin-right: 0;
+}
+.publication__image {
+  width: 100%;
+}
+.publication__image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+.publication__image:after {
+  content: '';
+  float: left;
+  padding-bottom: 100%;
+}
+.publication__title {
+  font-size: 13px;
+  line-height: 23px;
+  letter-spacing: 3.12px;
+  display: block;
+  margin-top: 30px;
+  text-transform: uppercase;
+}
+.publication__text {
+  font-size: 15px;
+  line-height: 25px;
+  display: block;
+  margin-top: 20px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+.publication__link {
+  text-decoration: none;
+  color: #382f2d;
+}
 /* Section */
 .main__wrap {
   max-width: 992px;
@@ -4786,6 +4877,12 @@ body.js-burger-menu-is-open .burger__crossed:hover {
 }
 .main__wrap--biggest {
   max-width: 1332px;
+}
+@media (max-width: 1300px) {
+  .main__wrap--biggest {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 }
 @media (max-width: 1300px) {
   .main__wrap {
@@ -4994,6 +5091,12 @@ body.js-burger-menu-is-open .burger__crossed:hover {
     height: 300px;
   }
 }
+@media (max-width: 1300px) {
+  .gallery {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
 .special {
   margin-top: 80px;
 }
@@ -5056,8 +5159,25 @@ body.js-burger-menu-is-open .burger__crossed:hover {
   flex-wrap: wrap;
   margin: 53px -82px 0 -82px;
 }
+@media (max-width: 1480px) {
+  .employers__inner {
+    margin-left: -40px;
+    margin-right: -40px;
+  }
+}
+@media (max-width: 1300px) {
+  .employers__inner {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
 .employers__wrap {
   padding: 0 44px;
+}
+@media (max-width: 960px) {
+  .employers__wrap {
+    padding: 0;
+  }
 }
 .employers__link {
   display: -webkit-box;
@@ -5081,6 +5201,12 @@ body.js-burger-menu-is-open .burger__crossed:hover {
   display: block;
   padding: 40px 40px 20px 40px;
 }
+@media (max-width: 768px) {
+  .employers__name {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
 .employers__img {
   height: 400px;
   display: -webkit-box;
@@ -5098,6 +5224,11 @@ body.js-burger-menu-is-open .burger__crossed:hover {
   -o-object-position: bottom;
   object-position: bottom;
 }
+@media (max-width: 1024px) {
+  .employers__img {
+    height: auto;
+  }
+}
 .employers__item {
   width: calc(100% / 3 - 164px);
   margin: 0 81px 72px 81px;
@@ -5107,6 +5238,23 @@ body.js-burger-menu-is-open .burger__crossed:hover {
   opacity: 1;
   -webkit-animation-play-state: running;
   animation-play-state: running;
+}
+@media (max-width: 1300px) {
+  .employers__item {
+    margin-left: 20px;
+    margin-right: 20px;
+    width: calc(100% / 3 - 40px);
+  }
+}
+@media (max-width: 1200px) {
+  .employers__item {
+    width: calc(100% / 2 - 40px);
+  }
+}
+@media (max-width: 1024px) {
+  .employers__item {
+    width: 100%;
+  }
 }
 .employers__position {
   font-size: 15px;
@@ -5167,6 +5315,11 @@ body.js-burger-menu-is-open .burger__crossed:hover {
   top: 10%;
   animation-direction: reverse;
 }
+@media (max-width: 1200px) {
+  .employers__pattern {
+    display: none;
+  }
+}
 .sections {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -5184,6 +5337,12 @@ body.js-burger-menu-is-open .burger__crossed:hover {
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   margin: -24px;
+}
+@media (max-width: 1300px) {
+  .sections__inner {
+    margin-left: 0;
+    margin-right: 0;
+  }
 }
 .sections__item {
   position: relative;
@@ -5214,6 +5373,19 @@ body.js-burger-menu-is-open .burger__crossed:hover {
 }
 .sections__item:hover {
   background-size: 110%;
+}
+@media (max-width: 1300px) {
+  .sections__item {
+    background-size: cover;
+  }
+}
+@media (max-width: 960px) {
+  .sections__item {
+    width: 100%;
+    height: 300px;
+    margin-left: 0;
+    margin-right: 0;
+  }
 }
 .sections__link {
   font-family: "Cormorant";
