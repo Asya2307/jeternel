@@ -181,62 +181,66 @@ html(lang="ru")
                             use(xlink:href="#glass-icon")
         main.main
             .container
-                .main__wrap.main__wrap--biggest
-                    include components/breadcumbs.pug
-                    .main__content
-                        h1.main__title Блог
-                        
-                            .blog__categories-item
-                                .blog__categories-link
-                                    a(href="#").blog__categories-heading Все публикации
-                                    span.blog__categories-count 317
-                                .blog__categories-box
-                                    span.blog__categories-title Безупречность во всем
-                                    span.blog__categories-subtitle   Лучшие мировые технологии омоложения, коррекции эстетических недостатков и лечения кожных заболеваний, комплексный сервис: от базового ухода до революционных косметологических новаций.                               
-                                    .blog__profile.blog__profile-categories
-                                        button.blog__profile-auth(style="background-image: url(images/faq.png)")
-                                        span.blog__profile-name Константинопольская Ольга
-                            .blog__categories-item
-                                .blog__categories-link
-                                    a(href="#").blog__categories-heading Наши специалисты
-                                    span.blog__categories-count 67
-                                .blog__categories-box
-                                    span.blog__categories-title Елизарова Ольга – главный врач, и широкой души человек
-                                    span.blog__categories-subtitle Лучшие мировые технологии омоложения, коррекции эстетических недостатков и лечения кожных заболеваний, комплексный сервис: от базового ухода до революционных косметологических новаций.                               
-                                    .blog__profile.blog__profile-categories
-                                        button.blog__profile-auth(style="background-image: url(images/faq2.png)")
-                                        span.blog__profile-name Константинопольская Ольга
-                            .blog__categories-item
-                                .blog__categories-link
-                                    a(href="#").blog__categories-heading Наша атмосфера
-                                    span.blog__categories-count 5
-                                .blog__categories-box
-                                    span.blog__categories-title Jeternel на Воровского, 13
-                                    span.blog__categories-subtitle Группа компаний Jeternel стоит на страже красоты и здоровья с 1998 года. В 2009 году самые передовые и прогрессивные технологии в косметологии были выделены в отдельное направление работы. Так появилась Лаборатория красоты Jeternel.
-                            .blog__categories-item
-                                .blog__categories-link
-                                    a(href="#").blog__categories-heading Процедуры
-                                    span.blog__categories-count 19
-                                .blog__categories-box
-                                    span.blog__categories-title Вакуумно-ролилковый массаж
-                                    span.blog__categories-subtitle Процедуру на аппарате вакуумно-роликового массажа в Центрах косметологии Jeternel проводят специалисты с многолетним опытом. Мы позаботимся о вас и вашей красоте!                               
-                                    .blog__profile.blog__profile-categories
-                                        button.blog__profile-auth(style="background-image: url(images/faq.png)")
-                                        span.blog__profile-name Константинопольская Ольга
-                            .blog__categories-item
-                                .blog__categories-link
-                                    a(href="#").blog__categories-heading Косметология
-                                    span.blog__categories-count 258
-                                .blog__categories-box
-                                    span.blog__categories-title Компания Jetrnel приняла участие в торжественной встрече, приуроченной к профессиональному празднику «День работника бытового обслуживания населения»
-                                    span.blog__categories-subtitle 20 марта в Челябинске состоялась торжественная встреча, приуроченная к профессиональному празднику.
-                                    .blog__profile.blog__profile-categories
-                                        button.blog__profile-auth(style="background-image: url(images/faq.png)")
-                                        span.blog__profile-name Константинопольская Ольга
-                            .blog__categories-item.blog__categories-item--resourses
-                                .blog__categories-box.blog__categories-box--resourses
-                                    a(href="#").blog__categories-title.blog__categories-title--prm Рекомендуемые ресурсы
-                                    span.blog__categories-subtitle.blog__categories-subtitle--prm Подборка сторонних ресурсов по теме.
+                include components/breadcumbs.pug
+                .main__content
+                    h1.main__title Блог
+                    .publication__container.publication__container--article
+                        .blog__categories-item
+                            .blog__categories-link
+                                a(href="#").blog__categories-heading 
+                                    span Все публикации
+                                span.blog__categories-count 317
+                            .blog__categories-box
+                                span.blog__categories-title Безупречность во всем
+                                span.blog__categories-subtitle   Лучшие мировые технологии омоложения, коррекции эстетических недостатков и лечения кожных заболеваний, комплексный сервис: от базового ухода до революционных косметологических новаций.                               
+                                .blog__profile.blog__profile-categories
+                                    button.blog__profile-auth(style="background-image: url(images/faq.png)")
+                                    span.blog__profile-name Константинопольская Ольга
+                        .blog__categories-item
+                            .blog__categories-link
+                                a(href="#").blog__categories-heading 
+                                    span Наши специалисты
+                                span.blog__categories-count 67
+                            .blog__categories-box
+                                span.blog__categories-title Елизарова Ольга – главный врач, и широкой души человек
+                                span.blog__categories-subtitle Лучшие мировые технологии омоложения, коррекции эстетических недостатков и лечения кожных заболеваний, комплексный сервис: от базового ухода до революционных косметологических новаций.                               
+                                .blog__profile.blog__profile-categories
+                                    button.blog__profile-auth(style="background-image: url(images/faq2.png)")
+                                    span.blog__profile-name Константинопольская Ольга
+                        .blog__categories-item
+                            .blog__categories-link
+                                a(href="#").blog__categories-heading Наша атмосфера
+                                span.blog__categories-count 5
+                            .blog__categories-box
+                                span.blog__categories-title Jeternel на Воровского, 13
+                                span.blog__categories-subtitle Группа компаний Jeternel стоит на страже красоты и здоровья с 1998 года. В 2009 году самые передовые и прогрессивные технологии в косметологии были выделены в отдельное направление работы. Так появилась Лаборатория красоты Jeternel.
+                        .blog__categories-item
+                            .blog__categories-link
+                                a(href="#").blog__categories-heading 
+                                    span Процедуры
+                                span.blog__categories-count 19
+                            .blog__categories-box
+                                span.blog__categories-title Вакуумно-ролилковый массаж
+                                span.blog__categories-subtitle Процедуру на аппарате вакуумно-роликового массажа в Центрах косметологии Jeternel проводят специалисты с многолетним опытом. Мы позаботимся о вас и вашей красоте!                               
+                                .blog__profile.blog__profile-categories
+                                    button.blog__profile-auth(style="background-image: url(images/faq.png)")
+                                    span.blog__profile-name Константинопольская Ольга
+                        .blog__categories-item
+                            .blog__categories-link
+                                a(href="#").blog__categories-heading 
+                                    span Косметология
+                                span.blog__categories-count 258
+                            .blog__categories-box
+                                span.blog__categories-title Компания Jetrnel приняла участие в торжественной встрече, приуроченной к профессиональному празднику «День работника бытового обслуживания населения»
+                                span.blog__categories-subtitle 20 марта в Челябинске состоялась торжественная встреча, приуроченная к профессиональному празднику.
+                                .blog__profile.blog__profile-categories
+                                    button.blog__profile-auth(style="background-image: url(images/faq.png)")
+                                    span.blog__profile-name Константинопольская Ольга
+                        .blog__categories-item.blog__categories-item--resourses
+                            .blog__categories-box.blog__categories-box--resourses
+                                a(href="#").blog__categories-title.blog__categories-title--prm 
+                                    span Рекомендуемые ресурсы
+                                span.blog__categories-subtitle.blog__categories-subtitle--prm Подборка сторонних ресурсов по теме.
 
         //= partials/footer.pug
         div.intro-curtain
