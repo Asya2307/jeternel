@@ -1,3 +1,4 @@
+
 doctype html
 html(lang="ru")
     head
@@ -11,7 +12,7 @@ html(lang="ru")
     body.content.js-intro-is-shown
         div(style="display: none")
             include ../../build/images/sprite.svg
-        header.head.head--white
+        header.head.head--inside
             div.burger-menu
                 div.burger-menu__decoration
                     svg(width="562" height="552")
@@ -178,18 +179,62 @@ html(lang="ru")
                     button.helpers__button.helpers__button--special
                         svg(width="26" height="22")
                             use(xlink:href="#glass-icon")
-        main.main.main--prm
-            section.error__block
-                .error__block-inner
-                    span.error__block-title 404
-                    span.error__block-subtitle Страница не найдена
-                    p.error__block-text Вы неправильно набрали адрес. Возможно такой страницы больше не существует. Воспользуйтесь главным меню, чтобы перейти на другую страницу.
-                    p.error__block-text Вы также можете вернуться <a href="/"><span>на главную страницу</span></a> сайта.
+        main.main
+            .container
+                .main__wrap--biggest
+                    include components/breadcumbs.pug
+                    h1.main__title Филиалы
+                div#map.location__map.location__map--full
+                .main__wrap--biggest
+                    section.branch__list-wrap
+                        ul.branch__list
+                            li.branch__list-item
+                                .branch__list-box
+                                    .branch__list-img
+                                        img(src="/images/branches/f1.png", alt="")
+                                    .branch__list-inner 
+                                        a.branch__info-title 
+                                            span Jeternel на Воровского, 13
+                                        .branch__info 
+                                            span.branch__info-phone +7 351 225-75-10
+                                            span.branch__info-time 09:00 – 21:00
+                                        span.branch__info-danger Обращаем внимание, 1 и 2 января 2021 года филиал не будет работать. 
+                                        p.branch__info-text Группа компаний Jeternel стоит на страже красоты и здоровья с 1998 года. В 2009 году самые передовые и прогрессивные технологии в косметологии были выделены в отдельное направление работы. Так появилась Лаборатория красоты Jeternel.
+                            li.branch__list-item
+                                .branch__list-box
+                                    .branch__list-img
+                                        img(src="/images/branches/f2.png", alt="")
+                                    .branch__list-inner 
+                                        a.branch__info-title 
+                                            span Jeternel на Комсомольском проспекте, 48
+                                        .branch__info 
+                                            span.branch__info-phone +7 351 225-75-50
+                                            span.branch__info-time 09:00 – 21:00
+                                        p.branch__info-text Группа компаний Jeternel стоит на страже красоты и здоровья с 1998 года. В 2009 году самые передовые и прогрессивные технологии в косметологии были выделены в отдельное направление работы.
+                            li.branch__list-item
+                                .branch__list-box
+                                    .branch__list-img
+                                        img(src="/images/branches/f3.png", alt="")
+                                    .branch__list-inner 
+                                        a.branch__info-title 
+                                            span Jeternel на проспекте Ленина, 66
+                                        .branch__info 
+                                            span.branch__info-phone +7 351 225-75-50
+                                        span.branch__info-danger Обращаем внимание, филиал временно не работает. 
+                                        p.branch__info-text В 2009 году самые передовые и прогрессивные технологии в косметологии были выделены в отдельное направление работы. Так появилась Лаборатория красоты Jeternel.
+                            li.branch__list-item
+                                .branch__list-box
+                                    .branch__list-img
+                                        img(src="/images/branches/f4.png", alt="")
+                                    .branch__list-inner 
+                                        a.branch__info-title 
+                                            span Jeternel на Братьев Кашириных, 131Б
+                                        .branch__info 
+                                            span.branch__info-phone +7 351 225-75-50
+                                            span.branch__info-time 09:00 – 21:00
+                                        p.branch__info-text В 2009 году самые передовые и прогрессивные технологии в косметологии были выделены в отдельное направление работы. Так появилась Лаборатория красоты Jeternel.
         //= partials/footer.pug
         div.intro-curtain
         script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript")
         script(src="script/vendor.js" type="text/javascript")
         script(src="script/script.js" type="text/javascript")
-
-
-
