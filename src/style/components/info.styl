@@ -11,6 +11,11 @@
             margin 0 -24px
         &--half
             justify-content space-between
+    @media tablet-hor
+        &__inner 
+            &--part 
+                margin-left 0
+                margin-right 0
     &__item
         width 100%
         padding: 45px 80px 45px 59px
@@ -32,6 +37,11 @@
             flex-wrap wrap
             font-size 26px
             width calc(100%/2 - 48px)
+    @media tablet-hor
+        &__item 
+            &--part 
+                width 100%
+
 
             
 

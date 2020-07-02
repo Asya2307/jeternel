@@ -2,7 +2,6 @@ const equipmentItem = document.querySelectorAll('.js-equipment__link');
 const windowWidth = window.outerWidth
 
 if (windowWidth > 768) {
-    console.log(1)
     if (equipmentItem) {
         const mouseOver = (e) => {
             const equipmentImg = e.currentTarget.querySelector('.js-equipment-tooltip');

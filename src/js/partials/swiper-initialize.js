@@ -54,13 +54,18 @@
         };
         var sliderBeforeAfter = new Swiper('.js-before-after-slider', {
             speed: 400,
-            slidesPerView: 2,
+            slidesPerView: 1,
             loop: true,
             spaceBetween: 150,
             navigation: {
                 nextEl: '.slider__nav--before-after .slider__nav-item--next',
                 prevEl: '.slider__nav--before-after .slider__nav-item--prev',
-              },
+            },
+            breakpoints: {
+                768: {
+                  slidesPerView: 2,
+                }
+              }
         });
     });
 
