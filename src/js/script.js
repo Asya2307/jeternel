@@ -36,3 +36,6 @@
 
 // Validation
 //= partials/equipment.js
+
+// Scroll menu
+//= partials/menu-catalog.js

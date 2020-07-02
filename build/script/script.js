@@ -542,3 +542,10 @@ if (windowWidth > 768) {
         });
     }
 }
+
+// Scroll menu
+document.addEventListener('DOMContentLoaded', () => {
+    const menuCatalogScroll = new PerfectScrollbar(".js-menu-catalog", {
+
+    });
+})
