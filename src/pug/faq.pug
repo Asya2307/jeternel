@@ -183,31 +183,65 @@ html(lang="ru")
             .container
                 .main__wrap--biggest
                     include components/breadcumbs.pug
-                    h1.main__title Jeternel на Воровского, 13
-                .main__wrap--biggest
-                    .branch__contacts
-                        .branch__contacts-item 
-                            span.branch__contacts-title Телефон: 
-                            span.branch__contacts-info +7 351 225-55-55
-                        .branch__contacts-item 
-                            span.branch__contacts-title Часы работы: 
-                            span.branch__contacts-info 09:00 – 19:00  
-                    div#map.location__map.location__map--full.location__map--low
-                    section.gallery
-                        .gallery__content.main__content
-                            p Описание филиала. Её образ было решено использовать в знаке группы компаний. Название стало идеологическим продолжением символа: от русской вечно-молодой Жар-птицы была взята первая буква Ж (J), которая соединилась с французским словом eternel (вечность).
-                        .gallery__inner
-                            .gallery__item(style="background-image: url(images/today/today1.png)")
-                            .gallery__item(style="background-image: url(images/today/today2.png)")
-                            .gallery__item(style="background-image: url(images/today/today3.png)")
-                            .gallery__item(style="background-image: url(images/today/today5.png)")
-                            .gallery__item(style="background-image: url(images/today/today6.png)")
-                            .gallery__item(style="background-image: url(images/today/today7.png)")
-                            .gallery__item(style="background-image: url(images/today/today4.png)")
-                    include components/reviews.pug
-                    include components/form-textarea.pug
-
-                        
+                    .faq__title-inner
+                        h1.main__title Вопросы и ответы
+                        button.common__button Задать вопрос
+                    section.faq.faq--index
+                        .faq__inner
+                            .faq__item 
+                                .faq__box.js-open-faq
+                                    button.faq__title 
+                                        span Как правильно пользоваться масками для лица? Как часто ими можно пользоваться?
+                                    .faq__container 
+                                        p.faq__text Обычно маски для лица делают 1-2 раза в неделю, а в целях профилактики — 1 раз в десять дней. Если нужно усиленное воздействие на истощенную и проблемную кожу, то частоту применения увеличивают до 3 раз в неделю или делают курс масок.
+                                        .faq__bottom
+                                            .faq__auth
+                                                .faq__auth-profile(style="background-image: url(images/faq.png)")
+                                                .faq__auth-inner
+                                                    span.faq__auth-name Константинопольская Ольга
+                                                    span.faq__auth-position врач-косметолог
+                                            .faq__date 
+                                                span 18.03.2020
+                            .faq__item 
+                                .faq__box.js-open-faq
+                                    button.faq__title 
+                                        span Как происходит естественное очищение кожи?
+                                    .faq__container 
+                                        p.faq__text Обычно маски для лица делают 1-2 раза в неделю, а в целях профилактики — 1 раз в десять дней. Если нужно усиленное воздействие на истощенную и проблемную кожу, то частоту применения увеличивают до 3 раз в неделю или делают курс масок.
+                                        .faq__bottom
+                                            .faq__auth
+                                                .faq__auth-profile(style="background-image: url(images/faq.png)")
+                                                .faq__auth-inner
+                                                    span.faq__auth-name Константинопольская Ольга
+                                                    span.faq__auth-position врач-косметолог
+                                            .faq__date 
+                                                span 18.03.2020
+                            .faq__item
+                                .faq__box.js-open-faq
+                                    button.faq__title 
+                                        span Косметологические процедуры улучшают внешний вид. Не создают ли они других, скрытых проблем?
+                                    .faq__container 
+                                        p.faq__text Обычно маски для лица делают 1-2 раза в неделю, а в целях профилактики — 1 раз в десять дней. Если нужно усиленное воздействие на истощенную и проблемную кожу, то частоту применения увеличивают до 3 раз в неделю или делают курс масок.
+                                        .faq__bottom
+                                            .faq__date 
+                                                span 18.03.2020
+                        .faq__button.faq__button--center
+                            button.common__button Показать еще
+                section.form__wrap
+                    form.form(action="").js-form
+                        .form__inner
+                            span.form__title Задать вопрос
+                            .form__box
+                                .form__group
+                                    .form__item 
+                                        input(type="text" placeholder="Имя").form__input
+                                    .form__item
+                                        input(type="text" placeholder="Телефон*").form__input.js-input-phone.js-phone-mask
+                                .form__checkbox
+                                    .custom__checkbox-wrap
+                                        input(type="checkbox").custom__checkbox
+                                        label.custom__checkbox-label Согласен на обработку персональных данных
+                                button.common__button.common__button--gray-cherry Записаться
         //= partials/footer.pug
         div.intro-curtain
         script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript")

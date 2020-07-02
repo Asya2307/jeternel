@@ -183,31 +183,54 @@ html(lang="ru")
             .container
                 .main__wrap--biggest
                     include components/breadcumbs.pug
-                    h1.main__title Jeternel на Воровского, 13
+                    h1.main__title Контактная информация
+                    ul.contacts
+                        li.contacts__item
+                            a.contacts__link(href="#")
+                                span Лаборатория красоты Jeternel на Воровского, 13
+                            .branch__info.branch__info--contacts
+                                span.branch__info-phone +7 351 225-75-50
+                                span.branch__info-time 09:00 – 21:00
+                            span.contacts__info Обращаем внимание, 1 и 2 января 2021 года филиал не будет работать.
+                        li.contacts__item
+                            a.contacts__link(href="#")
+                                span Центр косметологии Jeternel на Комсомольском проспекте, 48
+                            .branch__info.branch__info--contacts
+                                span.branch__info-phone +7 351 225-75-50
+                                span.branch__info-time 09:00 – 21:00
+                        li.contacts__item
+                            a.contacts__link(href="#")
+                                span Центр косметологии Jeternel на проспекте Ленина, 66
+                            .branch__info.branch__info--contacts
+                                span.branch__info-phone +7 351 225-75-50
+                            span.contacts__info Обращаем внимание, филиал временно не работает. 
+                        li.contacts__item
+                            a.contacts__link(href="#")
+                                span Центр косметологии Jeternel на Братьев Кашириных, 131Б
+                            .branch__info.branch__info--contacts
+                                span.branch__info-phone +7 351 225-75-50
+                div#map.location__map.location__map--full
                 .main__wrap--biggest
-                    .branch__contacts
-                        .branch__contacts-item 
-                            span.branch__contacts-title Телефон: 
-                            span.branch__contacts-info +7 351 225-55-55
-                        .branch__contacts-item 
-                            span.branch__contacts-title Часы работы: 
-                            span.branch__contacts-info 09:00 – 19:00  
-                    div#map.location__map.location__map--full.location__map--low
-                    section.gallery
-                        .gallery__content.main__content
-                            p Описание филиала. Её образ было решено использовать в знаке группы компаний. Название стало идеологическим продолжением символа: от русской вечно-молодой Жар-птицы была взята первая буква Ж (J), которая соединилась с французским словом eternel (вечность).
-                        .gallery__inner
-                            .gallery__item(style="background-image: url(images/today/today1.png)")
-                            .gallery__item(style="background-image: url(images/today/today2.png)")
-                            .gallery__item(style="background-image: url(images/today/today3.png)")
-                            .gallery__item(style="background-image: url(images/today/today5.png)")
-                            .gallery__item(style="background-image: url(images/today/today6.png)")
-                            .gallery__item(style="background-image: url(images/today/today7.png)")
-                            .gallery__item(style="background-image: url(images/today/today4.png)")
-                    include components/reviews.pug
-                    include components/form-textarea.pug
-
-                        
+                    section.requisites
+                        h2.requisites__title Реквизиты ООО «Вдохновение»
+                        ul.requisites__list 
+                            li.requisites__item
+                                span.requisites__item-title ИНН:
+                                span.requisites__item-info 7451268934
+                            li.requisites__item
+                                span.requisites__item-title КПП:
+                                span.requisites__item-info 745101001
+                            li.requisites__item
+                                span.requisites__item-title ОГРН:
+                                span.requisites__item-info 1087451008798
+                            li.requisites__item
+                                span.requisites__item-title БИК:
+                                span.requisites__item-info 047501602 к/с 3010 1810 7000 0000 0602 
+                            li.requisites__item
+                                span.requisites__item-title р/с:
+                                span.requisites__item-info 4070 2810 6720 0002 4621 в Челябинске ОСБ №8597, г. Челябинск 
+                include components/form.pug
+                    
         //= partials/footer.pug
         div.intro-curtain
         script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript")

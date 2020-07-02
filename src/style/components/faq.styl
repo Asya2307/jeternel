@@ -11,7 +11,6 @@
         overflow auto
     &__box
         padding 50px 60px 35px 60px
-        transition .5s
         &.active
             background-color #ffffff
             & .faq__container
@@ -19,6 +18,11 @@
                 position relative
                 visibility visible
                 z-index 1
+                transition: opacity .3s
+    @media phone 
+        &__box 
+            padding-left 20px
+            padding-right 20px
 
     &__title
         display inline
@@ -28,11 +32,26 @@
         border: none 
         padding 0
         text-align left
+        word-break break-word
         span  
             border-bottom 1px solid rgba(0,0,0,0)
             transition-duration .3s
             &:hover 
                 border-bottom 1px solid rgba(0,0,0,0.1)
+        &-inner
+            display flex
+            justify-content space-between
+            align-items center
+            .common__button
+                height 90px
+        @media phone 
+            &-inner 
+                flex-direction column
+                .common__button
+                    height unset
+    &--index 
+        margin-top 0
+        margin-bottom 100px
  
     &__container
         display flex
@@ -44,7 +63,6 @@
         position absolute
         bottom 0
         z-index -1
-        transition: .3s
     &__bottom
         display flex
         align-items center
@@ -75,3 +93,6 @@
         margin-left auto
     &__button 
         margin-top 60px
+        &--center 
+            display flex
+            justify-content center

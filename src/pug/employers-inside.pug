@@ -406,7 +406,9 @@ html(lang="ru")
                                 span Прессотерапия
                                 span от 590 руб                               
                     include components/reviews.pug
-                    include components/faq.pug
+                    section.faq
+                        h2.infobox__title Вопросы и ответы
+                        include components/faq.pug
                     include components/publcation.pug
         //= partials/footer.pug
         div.intro-curtain

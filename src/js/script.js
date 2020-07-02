@@ -30,3 +30,9 @@
 
 // Faq
 //= partials/faq.js
+
+// Validation
+//= partials/validation.js
+
+// Validation
+//= partials/equipment.js

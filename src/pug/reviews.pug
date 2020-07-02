@@ -183,31 +183,85 @@ html(lang="ru")
             .container
                 .main__wrap--biggest
                     include components/breadcumbs.pug
-                    h1.main__title Jeternel на Воровского, 13
-                .main__wrap--biggest
-                    .branch__contacts
-                        .branch__contacts-item 
-                            span.branch__contacts-title Телефон: 
-                            span.branch__contacts-info +7 351 225-55-55
-                        .branch__contacts-item 
-                            span.branch__contacts-title Часы работы: 
-                            span.branch__contacts-info 09:00 – 19:00  
-                    div#map.location__map.location__map--full.location__map--low
-                    section.gallery
-                        .gallery__content.main__content
-                            p Описание филиала. Её образ было решено использовать в знаке группы компаний. Название стало идеологическим продолжением символа: от русской вечно-молодой Жар-птицы была взята первая буква Ж (J), которая соединилась с французским словом eternel (вечность).
-                        .gallery__inner
-                            .gallery__item(style="background-image: url(images/today/today1.png)")
-                            .gallery__item(style="background-image: url(images/today/today2.png)")
-                            .gallery__item(style="background-image: url(images/today/today3.png)")
-                            .gallery__item(style="background-image: url(images/today/today5.png)")
-                            .gallery__item(style="background-image: url(images/today/today6.png)")
-                            .gallery__item(style="background-image: url(images/today/today7.png)")
-                            .gallery__item(style="background-image: url(images/today/today4.png)")
-                    include components/reviews.pug
-                    include components/form-textarea.pug
-
-                        
+                    h1.main__title Отзывы
+                    .filters
+                        ul.filters__list
+                            li.filters__item 
+                                a.filters__button 
+                                    span Все
+                            li.filters__item 
+                                a.filters__button 
+                                    span О филиалах
+                            li.filters__item 
+                                a.filters__button 
+                                    span О врачах
+                            li.filters__item 
+                                a.filters__button 
+                                    span Об услугах
+                    .filters__select 
+                        .location__select-wrapper
+                        select.location__select(data-choices-black)
+                            option(value="branch-01")
+                                |Jeternel на Воровского, 13
+                            option(value="branch-02")
+                                |Jeternel на Братьев Кашириных, 131б
+                            option(value="branch-03")
+                                |Jeternel на Комсомольском проспекте, 48
+                            option(value="branch-04")
+                                |Jeternel на проспекте Ленина, 66
+                    section.reviews.reviews--index
+                        .reviews__inner
+                            .reviews__item
+                                .reviews__text 
+                                    p Огромное спасибо Наталье Андреевне за деликатный подход и внимательность к своим пациентам.
+                                    p Приходя в салон, всегда чувствуешь себя как дома.
+                                .reviews__bottom
+                                    .reviews__tags
+                                        a(href="#").reviews__tags-item Jeternel на Воровского, 13
+                                        a(href="#").reviews__tags-item Вебер Наталья Андреевна
+                                    .reviews__info 
+                                        span Екатерина, 18.03.2020
+                            .reviews__item
+                                .reviews__text 
+                                    p Хочу выразить огромную благодарность Ивановой Валерии Олеговне, за ее профессионализм! Делала удаление сосудистых звездочек на лице неодимовым лазером. Была приятно удивлена увидеть результат сразу после процедуры. Доктор все доходчиво объяснил и рассказал какие рекомендации соблюдать после. Спасибо Валерии Олеговне, теперь я ваш постоянный клиент!
+                                .reviews__bottom
+                                    .reviews__tags
+                                    .reviews__info 
+                                        span Анастасия, 24.05.2019
+                            .reviews__item
+                                .reviews__text 
+                                    p Впервые я была на консультации у врача-косметолога в вашем Центре косметологии на Комсомольском проспекте 48 2 мая 2018. Меня принимала доктор Гува Дженет Мурадовна.
+                                    p Хочется отметить ее внимательность и грамотность. Она очень подробно расспросила меня, провела осмотр, задавала много уточняющих вопросов. Дала рекомендации по курсу коррекции выявленных проблем, посоветовала сдать некоторые анализы. Спасибо Вам огромное! Обязательно приду к вам за красотой!
+                                .reviews__bottom
+                                    .reviews__tags
+                                        a(href="#").reviews__tags-item Jeternel на Комсомольском проспекте, 48
+                                        a(href="#").reviews__tags-item Консультация врача-косметолога
+                                        a(href="#").reviews__tags-item Гува Дженет Мурадовна
+                                    .reviews__info 
+                                        span Юлия, 08.05.2019
+                        .see__more.see__more--center
+                            button.common__button Показать еще
+                section.form__wrap.form__wrap--index
+                    form.form(action="").js-form
+                        .form__inner.form__inner--big
+                            span.form__title Оставить отзыв
+                            .form__box
+                                .form__container
+                                    .form__group.form__group--half
+                                        .form__item 
+                                            input(type="text" name="name" placeholder="Имя").form__input.form__input--left.required.js-input-name
+                                        .form__item
+                                            input(type="text" name="phone" placeholder="Телефон*").form__input.form__input--left.js-input-phone.js-phone-mask.required
+                                        .form__item
+                                            input(type="text" name="email" placeholder="Электронная почта*").form__input.form__input--left.required.js-input-email
+                                    .form__group.form__group--half
+                                        .form__item.form__item-textarea
+                                            textarea(name="textarea", cols="30", rows="10").form__textarea.required.js-input-textarea Текст отзыва *
+                                .form__checkbox
+                                    .custom__checkbox-wrap
+                                        input(type="checkbox" name="checkbox").custom__checkbox.required.js-input-checkbox
+                                        label.custom__checkbox-label Согласен на обработку персональных данных
+                                button.common__button.common__button--half.common__button--gray-cherry Отправить отзыв              
         //= partials/footer.pug
         div.intro-curtain
         script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript")

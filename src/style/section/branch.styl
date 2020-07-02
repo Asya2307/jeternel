@@ -67,6 +67,8 @@
                 transition border-bottom-color .3s
                 &:hover
                     border-bottom-color transparent
+        &--contacts 
+            justify-content flex-start
         &-phone
             font-family serif
             font-size 26px
@@ -76,6 +78,7 @@
             &-phone
                 margin-right 0
                 margin-bottom 15px 
+            
         &-time 
             font-family serif
             font-size 26px
@@ -95,6 +98,8 @@
     @media tablet-hor
         &__info
             flex-direction column
+            &--contacts 
+                align-items flex-start
     &__contacts
         display flex
         align-items center  

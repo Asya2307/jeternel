@@ -1,15 +1,13 @@
 section.form__wrap
-    form.form(action="")
+    form.form(action="").js-form
         .form__inner
             span.form__title Записаться на прием
             .form__box
                 .form__group
                     .form__item 
-                        //- label.form__label Имя *
                         input(type="text" placeholder="Имя").form__input
                     .form__item
-                        //- label.form__label Телефон *
-                        input(type="text" placeholder="Телефон*").form__input
+                        input(type="text" placeholder="Телефон*").form__input.js-input-phone.js-phone-mask
                 .form__checkbox
                     .custom__checkbox-wrap
                         input(type="checkbox").custom__checkbox
