@@ -1,0 +1,28 @@
+section.form__wrap
+    form.form(action="").js-form
+        .form__inner
+            span.form__title Записаться на прием
+            .form__box
+                .form__group
+                    .form__item 
+                        .location__select-wrapper.location__select-wrapper--full
+                            select.location__select.location__select--light(data-choices-white)
+                                option(value="branch-01")
+                                    |Онлайн-консультация
+                                option(value="branch-02")
+                                    |Онлайн-консультация
+                                option(value="branch-03")
+                                    |Онлайн-консультация
+                                option(value="branch-04")
+                                    |Онлайн-консультация
+                    .form__item 
+                        input(type="text" placeholder="Имя").form__input
+                    .form__item
+                        input(type="text" placeholder="Телефон*").form__input.js-input-phone.js-phone-mask
+                .form__checkbox
+                    .custom__checkbox-wrap
+                        input(type="checkbox").custom__checkbox
+                        label.custom__checkbox-label Согласен на обработку персональных данных
+                button.common__button.common__button--gray-cherry Записаться
+
+                 

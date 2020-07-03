@@ -186,7 +186,7 @@ html(lang="ru")
                     h1.main__title Старение
                     section.expert__wrap
                         .expert
-                            .expert___inner
+                            .expert__inner
                                 .expert__box
                                     p.expert__text Высокая эффективность и абсолютно безболезненное, комфортное решение многих эстетических проблем: целлюлит, локальные жировые отложения, дряблость кожи, темные круги вокруг глаз, второй подбородок.
                                     button.common__button.common__button--gray-cherry Спросить эксперта
@@ -205,8 +205,325 @@ html(lang="ru")
                             .expert__pattern 
                             .expert__image 
                                 img(src="/images/expert.png", alt="")
+                    section.faq
+                        include components/faq-problem.pug    
+                    section.equipment__wrap.equipment__wrap--inside
+                        .equipment 
+                            .equipment__box
+                                .equipment__head 
+                                    h2.equipment__title Услуги
+                                    a.common__button-link(href="")
+                                        |Прайс-лист
+                                ul.equipment__list
+                                    li.equipment__item.equipment__item--half
+                                        a(href="#").equipment__link.equipment__link--row 
+                                            span.equipment__link-title Аппарат газожидкостного пилинга «АтисМед»
+                                            span.equipment__link-price от 1940 руб
+                                    li.equipment__item.equipment__item--half
+                                        a(href="#").equipment__link.equipment__link--row 
+                                            span.equipment__link-title Заполнение носогубных складок, складок на переносице, морщин вокруг губ
+                                            span.equipment__link-price от 1980 руб
+                                    li.equipment__item.equipment__item--half
+                                        a(href="#").equipment__link.equipment__link--row 
+                                            span.equipment__link-title Объемное Моделирование щёк, скул, подбородка, углов нижней челюсти, височных областей
+                                            span.equipment__link-price от 1279 руб
+                                    li.equipment__item.equipment__item--half
+                                        a(href="#").equipment__link.equipment__link--row 
+                                            span.equipment__link-title Увеличение и коррекция объёма губ
+                                            span.equipment__link-price от 1590 руб
+                                    li.equipment__item.equipment__item--half
+                                        a(href="#").equipment__link.equipment__link--row 
+                                            span.equipment__link-title Коррекция носослезной борозды
+                                            span.equipment__link-price от 590 руб
+                                    li.equipment__item.equipment__item--half
+                                        a(href="#").equipment__link.equipment__link--row 
+                                            span.equipment__link-title Коррекция атрофических рубцов
+                                            span.equipment__link-price от 3850 руб  
+                    section.before-after__container.before-after__container--slider
+                        h2.infobox__title
+                            |До и после
+                        .js-before-after-slider.before-after__box.swiper-container
+                            .swiper-wrapper
+                                .swiper-slide.before-after__slide 
+                                    li.before-after-preview.before-after__item
+                                        div.before-after-preview__images-container.js-before-after-container
+                                            div.before-after-preview__image-wrapper
+                                                img.before-after-preview__image(src="images/before-after/01-after.jpg", alt="")
+                                                span.before-after-preview__tag
+                                                    |После
+                                            div.before-after-preview__image-wrapper.js-before-after-overlay
+                                                img.before-after-preview__image(src="images/before-after/01-before.jpg", alt="")
+                                                span.before-after-preview__tag
+                                                    |До
+                                        div.before-after-preview__props
+                                            ul.before-after-preview__props-list
+                                                li.before-after-preview__props-item
+                                                    span.before-after-preview__hint
+                                                        |Проблема
+                                                    span.before-after-preview__data
+                                                        a.before-after-preview__link(href="")
+                                                            |Хроностарение
+                                                li.before-after-preview__props-item
+                                                    span.before-after-preview__hint
+                                                        |Пол
+                                                    span.before-after-preview__data
+                                                        |Женский
+                                                li.before-after-preview__props-item
+                                                    span.before-after-preview__hint
+                                                        |Услуга
+                                                    span.before-after-preview__data
+                                                        a.before-after-preview__link(href="")
+                                                            |Вакуумно-роликовый массаж
+                                                li.before-after-preview__props-item
+                                                    span.before-after-preview__hint
+                                                        |Аппарат
+                                                    span.before-after-preview__data
+                                                        a.before-after-preview__link(href="")
+                                                            |Лазер EP56
+                                .swiper-slide.before-after__slide 
+                                    li.before-after-preview.before-after__item
+                                        div.before-after-preview__images-container.js-before-after-container
+                                            div.before-after-preview__image-wrapper
+                                                img.before-after-preview__image(src="images/before-after/01-after.jpg", alt="")
+                                                span.before-after-preview__tag
+                                                    |После
+                                            div.before-after-preview__image-wrapper.js-before-after-overlay
+                                                img.before-after-preview__image(src="images/before-after/01-before.jpg", alt="")
+                                                span.before-after-preview__tag
+                                                    |До
+                                        div.before-after-preview__props
+                                            ul.before-after-preview__props-list
+                                                li.before-after-preview__props-item
+                                                    span.before-after-preview__hint
+                                                        |Проблема
+                                                    span.before-after-preview__data
+                                                        a.before-after-preview__link(href="")
+                                                            |Хроностарение
+                                                li.before-after-preview__props-item
+                                                    span.before-after-preview__hint
+                                                        |Пол
+                                                    span.before-after-preview__data
+                                                        |Женский
+                                                li.before-after-preview__props-item
+                                                    span.before-after-preview__hint
+                                                        |Услуга
+                                                    span.before-after-preview__data
+                                                        a.before-after-preview__link(href="")
+                                                            |Вакуумно-роликовый массаж
+                                                li.before-after-preview__props-item
+                                                    span.before-after-preview__hint
+                                                        |Аппарат
+                                                    span.before-after-preview__data
+                                                        a.before-after-preview__link(href="")
+                                                            |Лазер EP56
+                                .swiper-slide.before-after__slide 
+                                    li.before-after-preview.before-after__item
+                                        div.before-after-preview__images-container.js-before-after-container
+                                            div.before-after-preview__image-wrapper
+                                                img.before-after-preview__image(src="images/before-after/01-after.jpg", alt="")
+                                                span.before-after-preview__tag
+                                                    |После
+                                            div.before-after-preview__image-wrapper.js-before-after-overlay
+                                                img.before-after-preview__image(src="images/before-after/01-before.jpg", alt="")
+                                                span.before-after-preview__tag
+                                                    |До
+                                        div.before-after-preview__props
+                                            ul.before-after-preview__props-list
+                                                li.before-after-preview__props-item
+                                                    span.before-after-preview__hint
+                                                        |Проблема
+                                                    span.before-after-preview__data
+                                                        a.before-after-preview__link(href="")
+                                                            |Хроностарение
+                                                li.before-after-preview__props-item
+                                                    span.before-after-preview__hint
+                                                        |Пол
+                                                    span.before-after-preview__data
+                                                        |Женский
+                                                li.before-after-preview__props-item
+                                                    span.before-after-preview__hint
+                                                        |Услуга
+                                                    span.before-after-preview__data
+                                                        a.before-after-preview__link(href="")
+                                                            |Вакуумно-роликовый массаж
+                                                li.before-after-preview__props-item
+                                                    span.before-after-preview__hint
+                                                        |Аппарат
+                                                    span.before-after-preview__data
+                                                        a.before-after-preview__link(href="")
+                                                            |Лазер EP56
+                                .swiper-slide.before-after__slide 
+                                    li.before-after-preview.before-after__item
+                                        div.before-after-preview__images-container.js-before-after-container
+                                            div.before-after-preview__image-wrapper
+                                                img.before-after-preview__image(src="images/before-after/01-after.jpg", alt="")
+                                                span.before-after-preview__tag
+                                                    |После
+                                            div.before-after-preview__image-wrapper.js-before-after-overlay
+                                                img.before-after-preview__image(src="images/before-after/01-before.jpg", alt="")
+                                                span.before-after-preview__tag
+                                                    |До
+                                        div.before-after-preview__props
+                                            ul.before-after-preview__props-list
+                                                li.before-after-preview__props-item
+                                                    span.before-after-preview__hint
+                                                        |Проблема
+                                                    span.before-after-preview__data
+                                                        a.before-after-preview__link(href="")
+                                                            |Хроностарение
+                                                li.before-after-preview__props-item
+                                                    span.before-after-preview__hint
+                                                        |Пол
+                                                    span.before-after-preview__data
+                                                        |Женский
+                                                li.before-after-preview__props-item
+                                                    span.before-after-preview__hint
+                                                        |Услуга
+                                                    span.before-after-preview__data
+                                                        a.before-after-preview__link(href="")
+                                                            |Вакуумно-роликовый массаж
+                                                li.before-after-preview__props-item
+                                                    span.before-after-preview__hint
+                                                        |Аппарат
+                                                    span.before-after-preview__data
+                                                        a.before-after-preview__link(href="")
+                                                            |Лазер EP56
+                        .slider__nav.slider__nav--before-after
+                            button.slider__nav-item.slider__nav-item--prev
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="35"><path fill="#382f2d" d="M.696 16.8L17.323.01l.693.699L1.39 17.499l16.626 16.79-.693.7L.697 18.2l-.693-.7z"/></svg>   
+                            button.slider__nav-item.slider__nav-item--next
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="35"><path fill="#382f2d" d="M.698 34.99l-.692-.7L16.602 17.5.006.708l.692-.7L17.985 17.5z"/></svg>
+                        a.common__button-link(href="")
+                            |Все результаты  
+                    include components/special.pug
+                    section.action__slider-inner
+                        .action__slider-box
+                            .action__slider-content
+                                span.action__slider-title Акции
+                            .action__slider.swiper-container.js-action-slider
+                                .swiper-wrapper
+                                    .action__slider-slide.swiper-slide
+                                        .action__slider-img(style="background-image: url(/images/action/action.png)")
+                                            img(src="/images/action/action.png")
+                                        span.action__slider-head Безупречность во всем!
+                                        span.action__slider-text При прохождении Альтератерапии от 406 линий процедура «Обогащённая PRP» в подарок! Только на Воровского, 13.
+                                    .action__slider-slide.swiper-slide
+                                        .action__slider-img(style="background-image: url(/images/action/action2.png)")
+                                            img(src="/images/action/action2.png")
+                                        span.action__slider-head Безупречность во всем!
+                                        span.action__slider-text При прохождении Альтератерапии от 406 линий процедура «Обогащённая PRP» в подарок! Только на Воровского, 13.
+                                    button.action__slider-arrow.action__slider-arrow--left
+                                        <svg xmlns="http://www.w3.org/2000/svg">
+                                            <path fill="#fff" d="M.71 17.984l-.7-.692L17.5.002l17.49 17.29-.7.692L17.5 1.386z"/>
+                                        </svg>
+                                    button.action__slider-arrow.action__slider-arrow--right
+                                        <svg xmlns="http://www.w3.org/2000/svg">
+                                            <path fill="#fff" d="M.71 17.984l-.7-.692L17.5.002l17.49 17.29-.7.692L17.5 1.386z"/>
+                                    </svg>
+                            .action__slider-show
+                                button.common__button.common__button--gray-cherry Все акции 
+                        .action__slider-box
+                            .action__slider-content
+                                span.action__slider-title Ждем вас в лаборатории красоты Jeternel
+                                p.action__slider-desc Лучшие мировые технологии омоложения, коррекции эстетических недостатков и лечения кожных заболеваний. Оригинальное оборудование и косметологические препараты последнего поколения.
+                                p.action__slider-desc Ведущие профессионалы города, прошедшие стажировку в лучших клиниках России и мира. Высокий уровень сервиса в соответствии с мировыми стандартами.
+                            .action__slider.swiper-container.js-action-slider
+                                .swiper-wrapper
+                                    .action__slider-slide.swiper-slide
+                                        .action__slider-img(style="background-image: url(/images/action/action.png)")
+                                            img(src="/images/action/action.png")
+                                        span.action__slider-head Безупречность во всем!
+                                        span.action__slider-text При прохождении Альтератерапии от 406 линий процедура «Обогащённая PRP» в подарок! Только на Воровского, 13.
+                                    .action__slider-slide.swiper-slide
+                                        .action__slider-img(style="background-image: url(/images/action/action2.png)")
+                                            img(src="/images/action/action2.png")
+                                        span.action__slider-head Безупречность во всем!
+                                        span.action__slider-text При прохождении Альтератерапии от 406 линий процедура «Обогащённая PRP» в подарок! Только на Воровского, 13.
+                                    button.action__slider-arrow.action__slider-arrow--left
+                                        <svg xmlns="http://www.w3.org/2000/svg">
+                                            <path fill="#fff" d="M.71 17.984l-.7-.692L17.5.002l17.49 17.29-.7.692L17.5 1.386z"/>
+                                        </svg>
+                                    button.action__slider-arrow.action__slider-arrow--right
+                                        <svg xmlns="http://www.w3.org/2000/svg">
+                                            <path fill="#fff" d="M.71 17.984l-.7-.692L17.5.002l17.49 17.29-.7.692L17.5 1.386z"/>
+                                    </svg>    
+                include components/form-consult.pug
+                .main__wrap--biggest
+                    section.infobox
+                        h2.infobox__title Аппараты
+                        .infobox__inner.infobox__inner--part
+                            .infobox__item.infobox__item--part
+                                span Оборудование для ультразвуковой терапии B-790
+                            .infobox__item.infobox__item--part
+                                span Косметологический комбайн 13 функций UK230 8003 (I-8003) Gezatone
+                            .infobox__item.infobox__item--part
+                                span Bio Sonic 3003 Оборудование для ультразвуковой терапии Gezaton
+                            .infobox__item.infobox__item--part
+                                span Bio Sonic 3003 Оборудованиедля ультразвуковой терапии Gezatone  
+                    include components/reviews.pug 
+                    section.faq
+                        include components/faq.pug 
+                    section.gallery
+                        .gallery__content.main__content
+                            h2.gallery__title Jeternel сегодня 
+                            ul.gallery__list
+                                li 
+                                    |Лучшие мировые технологии омоложения, коррекции эстетических недостатков и лечения кожных заболеваний;
+                                li
+                                    |Комплексный сервис: от базового ухода до революционных косметологических новаций;
+                                li 
+                                    |Самое большое количество оригинального оборудования для эстетической медицины в Челябинске;
+                                li 
+                                    |Самый широкий выбор косметологических препаратов последнего поколения;
+                                li 
+                                    |Ведущие профессионалы города, прошедшие стажировку в лучших клиниках России и мира;
+                                li
+                                    |Высокий уровень сервиса в соответствии с мировыми стандартами.
+                            p Группа компаний Jeternel стоит на страже красоты и здоровья с 1998 года. В 2009 году самые передовые и прогрессивные технологии в косметологии были выделены в отдельное направление работы. Так появилась Лаборатория красоты Jeternel.
+                            p Лучшие мировые технологии омоложения, коррекции эстетических недостатков и лечения кожных заболеваний. Комплексный сервис: от базового ухода до революционных косметологических новаций. Самое большое количество оригинального оборудования для эстетической медицины в Челябинске. Самый широкий выбор косметологических препаратов последнего поколения. Ведущие профессионалы города, прошедшие стажировку в лучших клиниках России и мира. Высокий уровень сервиса в соответствии с мировыми стандартами.
+                            p Все аппараты и косметические средства имеют необходимые лицензии, сертификаты качества и регистрационные удостоверения.
+                        .gallery__inner
+                            .gallery__item(style="background-image: url(images/today/today1.png)")
+                            .gallery__item(style="background-image: url(images/today/today2.png)")
+                            .gallery__item(style="background-image: url(images/today/today3.png)")
+                            .gallery__item(style="background-image: url(images/today/today5.png)")
+                            .gallery__item(style="background-image: url(images/today/today6.png)")
+                            .gallery__item(style="background-image: url(images/today/today7.png)")
+                            .gallery__item(style="background-image: url(images/today/today4.png)")      
+                    include components/publcation.pug
+                    section.equipment__wrap.equipment__wrap--inside
+                        .equipment 
+                            .equipment__box
+                                .equipment__head 
+                                    h2.equipment__title Услуги
+                                    a.common__button-link(href="")
+                                        |Прайс-лист
+                                ul.equipment__list
+                                    li.equipment__item.equipment__item--half
+                                        a(href="#").equipment__link.equipment__link--row 
+                                            span.equipment__link-title Аппарат газожидкостного пилинга «АтисМед»
+                                            span.equipment__link-price от 1940 руб
+                                    li.equipment__item.equipment__item--half
+                                        a(href="#").equipment__link.equipment__link--row 
+                                            span.equipment__link-title Заполнение носогубных складок, складок на переносице, морщин вокруг губ
+                                            span.equipment__link-price от 1980 руб
+                                    li.equipment__item.equipment__item--half
+                                        a(href="#").equipment__link.equipment__link--row 
+                                            span.equipment__link-title Объемное Моделирование щёк, скул, подбородка, углов нижней челюсти, височных областей
+                                            span.equipment__link-price от 1279 руб
+                                    li.equipment__item.equipment__item--half
+                                        a(href="#").equipment__link.equipment__link--row 
+                                            span.equipment__link-title Увеличение и коррекция объёма губ
+                                            span.equipment__link-price от 1590 руб
+                                    li.equipment__item.equipment__item--half
+                                        a(href="#").equipment__link.equipment__link--row 
+                                            span.equipment__link-title Коррекция носослезной борозды
+                                            span.equipment__link-price от 590 руб
+                                    li.equipment__item.equipment__item--half
+                                        a(href="#").equipment__link.equipment__link--row 
+                                            span.equipment__link-title Коррекция атрофических рубцов
+                                            span.equipment__link-price от 3850 руб
 
-                            
         //= partials/footer.pug
         include components/menu-catalog.pug
         div.intro-curtain

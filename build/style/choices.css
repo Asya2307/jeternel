@@ -61,6 +61,10 @@
 }
 .choices--white[data-type*='select-one']:after {
   content: '';
+  background-image: url("../images/icons/select-arrow-white.svg");
+}
+.choices--white[data-type*='select-one']:after {
+  content: '';
 }
 .choices[data-type*='select-one'].is-open:after {
   -webkit-transform: rotate(180deg);
@@ -371,3 +375,7 @@
   opacity 0.5
 */
 /*=====  End of Choices  ======*/
+.choices__inner--white {
+  border-bottom: 1px solid rgba(255,255,255,0.25);
+  text-align: center;
+}

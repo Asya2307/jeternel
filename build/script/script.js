@@ -77,7 +77,6 @@
             };
         };
     });
-
 })();
 
 // Скрыть/показать мнею в шапке
@@ -203,6 +202,21 @@
                     containerOuter: "choices choices--black",
                     containerInner: "choices__inner choices__inner--black",
                     item: "choices__item choices__item--black",
+                },
+            });
+        };
+
+        let choicesWhite = document.querySelectorAll("[data-choices-white]");
+        for (i = 0; i < choicesWhite.length; ++i) {
+            let choicesItem = choicesWhite[i];
+            new Choices(choicesItem, {
+                silent: false,
+                searchEnabled: false,
+                resetScrollPosition: true,
+                classNames: {
+                    containerOuter: "choices choices--white",
+                    containerInner: "choices__inner choices__inner--white",
+                    item: "choices__item choices__item--white",
                 },
             });
         };
@@ -453,6 +467,24 @@ document.addEventListener('DOMContentLoaded', function() {
       }
   
       resizeWatcher();
+      
+      const actionSlider = document.querySelectorAll('.js-action-slider');
+
+      if (actionSlider) {
+        actionSlider.forEach((item) => {
+          new Swiper(item, {
+            speed: 700,
+            slidesPerView: 1,
+            loop: true,
+            effect: 'fade',
+            direction: 'vertical',
+            navigation: {
+              nextEl: item.querySelector('.action__slider-arrow--left'),
+              prevEl: item.querySelector('.action__slider-arrow--right'),
+            },
+          });
+        })
+      }
 });
 
 // Фильтры
