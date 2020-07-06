@@ -22,6 +22,35 @@
                 align-items center
                 height unset
                 width unset
+            &--row
+                background-color transparent 
+                display flex
+                align-items center
+                margin 0
+                width 100%
+                color black
+                padding-left 40px
+                padding-right 40px
+                .action__slider-arrow
+                    svg 
+                        path 
+                            fill black 
+                    &--left 
+                        left 0
+                    &--right
+                        right 0
+                .action__slider-content
+                    padding-left 0
+                    max-width: 520px
+                    width 100%
+        @media screen and (max-width: 1024px)
+            &-box
+                &--row
+                    flex-direction: column
+                    .action__slider-content
+                        padding-right 0
+                        padding-bottom 40px
+
         &-title
             display block
             text-align center

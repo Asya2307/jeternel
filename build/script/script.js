@@ -577,7 +577,13 @@ if (windowWidth > 768) {
 
 // Scroll menu
 document.addEventListener('DOMContentLoaded', () => {
-    const menuCatalogScroll = new PerfectScrollbar(".js-menu-catalog", {
-
+    new Swiper(".js-menu-catalog", {
+        direction: 'vertical',
+        slidesPerView: 'auto',
+        freeMode: true,
+        scrollbar: {
+          el: '.swiper-scrollbar',
+        },
+        mousewheel: true,
     });
 })
