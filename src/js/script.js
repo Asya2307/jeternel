@@ -40,3 +40,6 @@
 // Scroll menu
 //= partials/menu-catalog.js
 
+// Tabs
+//= partials/tabs.js
+

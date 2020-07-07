@@ -37,10 +37,34 @@
             flex-wrap wrap
             font-size 26px
             width calc(100%/2 - 48px)
+        & > a 
+            color: black
+            text-decoration: none
+            border-bottom 1px solid transparent 
+            transition: border-bottom-color .3s
+            &:hover
+                border-bottom-color rgba(56,47,45,0.25)
+
     @media tablet-hor
         &__item 
             &--part 
                 width 100%
+    &__list 
+        font-family default
+        list-style-type none
+        padding-left 0
+        margin-top 15px
+        &-item
+            margin-bottom 5px
+            &:last-child
+                margin-bottom 0
+        &-link
+            text-decoration: none
+            span
+                color: black
+                font-weight 400
+                font-size 15px
+
 
 
             
