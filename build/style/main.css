@@ -49,9 +49,14 @@ button,
 a {
   cursor: pointer;
 }
+html {
+  scroll-behavior: smooth;
+}
 body {
   min-width: 320px;
   color: #382f2d;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 .content {
   background-color: #fafafa;
@@ -5255,14 +5260,17 @@ body.js-burger-menu-is-open .burger__crossed:hover {
   font-size: 13px;
 }
 .menu__catalog {
-  display: none;
   position: fixed;
   width: 100%;
   top: 0;
   left: 0;
   background-color: #fff;
-  z-index: 1000;
+  z-index: -1;
   height: 100vh;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 .menu__catalog-wrap {
   position: relative;
@@ -5318,6 +5326,47 @@ body.js-burger-menu-is-open .burger__crossed:hover {
 .menu__catalog .swiper-slide,
 .menu__catalog .swiper-wrapper {
   height: auto;
+}
+.menu__catalog.active {
+  opacity: 1;
+  visibility: visible;
+  z-index: 1000;
+}
+@media (max-width: 1480px) {
+  .menu__catalog-wrap {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .menu__catalog-box {
+    width: calc(100% / 2 - 98px);
+  }
+}
+@media (max-width: 600px) {
+  .menu__catalog-box {
+    width: 100%;
+  }
+}
+.btn__close {
+  position: absolute;
+  top: 43px;
+  right: 75px;
+  width: 24px;
+  height: 24px;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  z-index: 1;
+  cursor: pointer;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.btn__close svg {
+  width: 100%;
+  height: 100%;
+}
+.btn__close:hover {
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
 }
 .action__slider {
   position: relative;
@@ -5513,6 +5562,7 @@ body.js-burger-menu-is-open .burger__crossed:hover {
   padding: 0;
   border: none;
   background-color: transparent;
+  text-decoration: none;
 }
 .ancors__list-button span {
   font-size: 24px;
@@ -5521,7 +5571,7 @@ body.js-burger-menu-is-open .burger__crossed:hover {
   -webkit-transition: border-bottom-color 0.3s;
   transition: border-bottom-color 0.3s;
 }
-.ancors__list-button span:hover {
+.ancors__list-button:hover span {
   border-bottom-color: rgba(0,0,0,0.25);
 }
 .tabs {

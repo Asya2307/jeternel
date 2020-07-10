@@ -187,25 +187,25 @@ html(lang="ru")
                     section.ancors
                         ul.ancors__list
                             li.ancors__list-item
-                                button.ancors__list-button.js-ancor-button(data-ancor="price")
+                                a.ancors__list-button(href="#price")
                                     span Цены
                             li.ancors__list-item
-                                button.ancors__list-button.js-ancor-button(data-ancor="application")
+                                a.ancors__list-button(href="#application")
                                     span Применение
                             li.ancors__list-item
-                                button.ancors__list-button.js-ancor-button(data-ancor="before-after")
+                                a.ancors__list-button(href="#before-after")
                                     span До и после
                             li.ancors__list-item
-                                button.ancors__list-button.js-ancor-button(data-ancor="specialist")
+                                a.ancors__list-button(href="#specialist")
                                     span Врачи
                             li.ancors__list-item
-                                button.ancors__list-button(data-ancor="action")
+                                a.ancors__list-button(href="#action")
                                     span Акции
                             li.ancors__list-item
-                                button.ancors__list-button(data-ancor="reviews")
+                                a.ancors__list-button(href="#reviews")
                                     span Отзывы
                             li.ancors__list-item
-                                button.ancors__list-button(data-ancor="form")
+                                a.ancors__list-button(href="#form")
                                     span Записаться на процедуру
                     section.gallery
                         .gallery__content.main__content
@@ -366,7 +366,7 @@ html(lang="ru")
                                                 tr 
                                                     td Врач-косметолог
                                                     td 4580 руб
-                    section.infobox
+                    section.infobox(id="application")
                         h2.infobox__title В каких случаях применяется
                         .infobox__inner.infobox__inner--part
                             .infobox__item.infobox__item--part
@@ -379,7 +379,7 @@ html(lang="ru")
                                 span Сухость кожи
                             .infobox__item.infobox__item--part
                                 span Отеки (в том числе, после липосакции, липолиза)
-                    section.before-after__container.before-after__container--slider
+                    section.before-after__container.before-after__container--slider(id="before-after")
                         h2.infobox__title
                             |До и после
                         .js-before-after-slider.before-after__box.swiper-container
@@ -536,7 +536,7 @@ html(lang="ru")
                         a.common__button-link(href="")
                             |Все результаты 
                     include components/special.pug  
-                    section.action__slider-inner
+                    section.action__slider-inner(id="action")
                         .action__slider-box
                             .action__slider-content
                                 span.action__slider-title Акции

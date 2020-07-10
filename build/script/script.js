@@ -577,9 +577,18 @@ if (windowWidth > 768) {
 
 // Scroll menu
 document.addEventListener('DOMContentLoaded', () => {
-    const menuCatalogScroll = new PerfectScrollbar(".js-menu-catalog", {
+    const openCatalogButton = document.querySelector('.js-open-catalog');
 
-    });
+    if (openCatalogButton) {
+        const openCatalog = (e) => {
+            document.querySelector('.js-menu-catalog').classList.add('active')
+        }
+        openCatalogButton.addEventListener('click', openCatalog)
+    }
+
+    document.querySelector('.js-close-catalog').addEventListener('click', (e) => {
+        e.currentTarget.closest('.menu__catalog').classList.remove('active')
+    })
 })
 
 // Tabs
@@ -602,3 +611,5 @@ if (tabsButton) {
         item.addEventListener('click', tabsSwitch)
     })
 }
+
+// Ancor

@@ -43,3 +43,6 @@
 // Tabs
 //= partials/tabs.js
 
+// Ancor
+//= partials/ancors.js
+
