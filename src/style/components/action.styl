@@ -11,6 +11,14 @@
             margin-bottom 70px
             margin-left -24px
             margin-right -24px
+        @media screen and (max-width: 1024px)
+            &-inner
+                flex-direction: column
+        @media tablet-landscape-large
+            &-inner 
+                margin-left 0
+                margin-right 0
+
         &-box
             width calc(100%/2 - 48px)
             margin 0 24px
@@ -45,6 +53,10 @@
                     width 100%
         @media screen and (max-width: 1024px)
             &-box
+                width 100%
+                margin-left 0
+                margin-right 0
+                margin-bottom 20px
                 &--row
                     flex-direction: column
                     .action__slider-content
@@ -63,6 +75,9 @@
             align-items: center
             flex-direction: column
             overflow hidden
+        @media phone-portrait
+            &-slide
+                justify-content start
         &-img
             width 100%
             &:before
@@ -91,6 +106,16 @@
             &--right
                 right 55px
                 transform rotate(180deg)
+        @media phone-portrait
+            &-arrow 
+                top: 350px
+                &--left 
+                    transform: rotate(-90deg)
+                    left calc(50% - 100px)
+                &--right 
+                    transform: rotate(90deg)
+                    right calc(50% - 100px)
+
         &-head 
             font-size 13px
             font-family defaut
@@ -99,6 +124,9 @@
             text-align center
             margin-top 40px
             margin-bottom 15px
+        @media phone-portrait
+            &-head 
+                margin-top 110px
         &-text
             font-family default
             font-size 15px
@@ -116,8 +144,15 @@
             margin-bottom 60px
             .action__slider-title
                 margin-bottom 40px
+        @media phone-portrait
+            &-content 
+                padding-left 15px
+                padding-right 15px
         &-desc 
             font-family default
+    @media phone-portrait
+        &__slider 
+            max-height 550px
 
 
 

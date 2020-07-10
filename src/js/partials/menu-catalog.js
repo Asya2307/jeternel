@@ -10,5 +10,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
     document.querySelector('.js-close-catalog').addEventListener('click', (e) => {
         e.currentTarget.closest('.menu__catalog').classList.remove('active')
-    })
+    });
+
+    new Swiper('.js-menu-catalog', {
+        direction: 'vertical',
+        slidesPerView: 'auto',
+        freeMode: true,
+        scrollbar: {
+          el: '.swiper-scrollbar',
+        },
+        mousewheel: true,
+    });
 })

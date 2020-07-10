@@ -39,6 +39,65 @@
         width 100%
         margin-top 30px
 
+.filter 
+    background-color: white
+    padding: 70px 80px
+    max-width: 1283px
+    &__inner 
+        display flex
+        margin-bottom 50px
+        max-width 1238px
+    @media phone-portrait
+        &__inner
+            flex-direction: column
+    &__check
+        &-inner
+            margin-top 17px
+    @media phone-portrait
+        &__check
+            &-inner
+               display flex
+               margin-top 0
+               margin-left 20px 
+    &__box
+        max-width: 110px
+        &--full
+            display flex
+            flex-wrap: wrap
+            justify-content space-between
+            padding-left 139px
+            width 100%
+            max-width: calc(100% - 100px)
+            margin-bottom -30px
+    @media phone-portrait
+        &__box
+            max-width: 100%
+            display flex
+            align-items center
+            &--full
+                max-width: 100%
+                padding-left 0
+                margin-top 40px
+   
+
+
+    &__button 
+        display flex
+        justify-content flex-end
+        &-item
+            width 250px
+    @media phone-portrait
+        &__button
+            justify-content center
+    @media phone
+        &__button
+            flex-direction: column
+            align-items center
+@media phone-portrait
+    .filter
+        padding 40px
+
+
 
         
         

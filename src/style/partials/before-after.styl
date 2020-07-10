@@ -26,6 +26,9 @@
             background-color transparent
             position relative
             margin-top 123px
+        &--index 
+            background-color transparent
+            width 100%
         @media desktop-medium
             width 100%
         @media laptop
@@ -47,16 +50,29 @@
         margin 0 auto
         padding 0
         list-style none
+        &--index
+            width 100%
+            .before-after__item
+                margin-bottom 70px
         @media laptop
             width 1078px
+            &--index
+                width 100%
         @media tablet-landscape-large
             width calc(100% - 80px)
             max-width 1078px
             flex-direction column
+            &--index
+                width 100%
+
         @media tablet-portrait
             width calc(100% - 60px)
+            &--index
+                width 100%
         @media phone
             width calc(100% - 40px)
+            &--index
+                width 100%
 
     &__item:not(:nth-last-child(1))
         @media tablet-landscape-large
