@@ -26,8 +26,6 @@ if (form) {
         const emailInput = e.currentTarget.querySelector('.js-input-email')
         const textareaInput = e.currentTarget.querySelector('.js-input-textarea');
         const checkboxInput = e.currentTarget.querySelector('.js-input-checkbox');
-
-        
     }
 }
 

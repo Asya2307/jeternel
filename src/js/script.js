@@ -18,34 +18,16 @@
 
 // До и после
 //= partials/before-after.js
-
-// Фильтры
 //= partials/filters.js
-
-// Фильтры
 //= partials/content.js
-
-// Фильтры
 //= partials/special.js
-
-// Faq
 //= partials/faq.js
-
-// Validation
 //= partials/validation.js
-
-// Validation
 //= partials/equipment.js
-
-// Scroll menu
 //= partials/menu-catalog.js
-
-// Tabs
 //= partials/tabs.js
-
-// Ancor
 //= partials/ancors.js
-
-// Ancor
 //= partials/cookies.js
+//= partials/slide.js
+//= partials/quiz.js
 

@@ -23,5 +23,8 @@
 // Mask location
 //= plugins/clever.ru.js
 
+// Mask location
+// = plugins/jquery-3.5.1.min.js
+
 
 

@@ -399,8 +399,6 @@ if(document.getElementById("map")){
     }
 
 })();
-
-// Фильтры
 (function () {
     
     // Конструктор фильтров в виде селекта
@@ -460,8 +458,6 @@ if(document.getElementById("map")){
     };
 
 })();
-
-// Фильтры
 document.addEventListener('DOMContentLoaded', function() {
     function resizeWatcher() {
         var tableSel = document.querySelectorAll('table');
@@ -506,8 +502,6 @@ document.addEventListener('DOMContentLoaded', function() {
         })
       }
 });
-
-// Фильтры
 document.addEventListener('DOMContentLoaded', (e) => {
     const specialSlider = document.querySelectorAll('.js-special-slider');
 
@@ -536,15 +530,11 @@ document.addEventListener('DOMContentLoaded', (e) => {
         })
     }
 })
-
-// Faq
 document.querySelectorAll('.js-open-faq').forEach((item) => {
     item.addEventListener('click', (e) => {
         e.currentTarget.classList.toggle('active')
     })
 });
-
-// Validation
 const form = document.querySelectorAll('.js-form');
 
 const cleaveMaskPhone = document.querySelectorAll('.js-phone-mask')
@@ -573,12 +563,8 @@ if (form) {
         const emailInput = e.currentTarget.querySelector('.js-input-email')
         const textareaInput = e.currentTarget.querySelector('.js-input-textarea');
         const checkboxInput = e.currentTarget.querySelector('.js-input-checkbox');
-
-        
     }
 }
-
-// Validation
 const equipmentItem = document.querySelectorAll('.js-equipment__link');
 const windowWidth = window.outerWidth
 
@@ -594,8 +580,6 @@ if (windowWidth > 768) {
         });
     }
 }
-
-// Scroll menu
 document.addEventListener('DOMContentLoaded', () => {
     const openCatalogButton = document.querySelector('.js-open-catalog');
 
@@ -627,8 +611,6 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
 })
-
-// Tabs
 const tabsButton = document.querySelectorAll('.js-tabs-button');
 
 if (tabsButton) {
@@ -649,10 +631,6 @@ if (tabsButton) {
     })
 }
 
-// Ancor
-
-
-// Ancor
 const cookiesShow = document.querySelector('.js-shown-cookie');
 
 if (cookiesShow) {
@@ -664,4 +642,52 @@ if (cookiesShow) {
     cookiesClose.addEventListener('click', (e) => {
         e.target.closest('.cookies').classList.remove('active');
     })
+}
+var quizButton = document.querySelectorAll('.js-slide-button');
+
+if (quizButton) {
+    quizButton.forEach(function (item, index) {
+        item.style.zIndex = quizButton.length - index;
+    });
+}
+const quizStep = document.querySelectorAll('.js-step');
+
+if (quizStep) {
+    quizStep.forEach((item, index) => {
+        item.setAttribute('data-step', index+1);
+    });
+
+    quizStep[0].classList.add('active');
+
+    const countSteps = quizStep.length
+
+    
+    
+    const switcherNext = (_this, countTab) => {
+        document.querySelector('.js-quiz-current').innerHTML = countTab + 1;
+        document.querySelector('[data-tab="prev"]').removeAttribute('disabled');
+        document.querySelector(`[data-step='${countTab + 1}']`).classList.add('active');
+        // document.querySelector('.js-step-result').classList.add('active')
+    }
+
+    const switcherPrev = (_this, countTab) => {
+        document.querySelector(`[data-step='${countTab - 1}']`).classList.add('active');
+        document.querySelector('.js-quiz-current').innerHTML = countTab - 1;
+        if (countTab - 1  == 1) {
+            _this.setAttribute('disabled', true);
+        }  
+    };
+
+    const stepButton = document.querySelectorAll('.js-btn');
+
+    stepButton.forEach((item) => {
+        item.addEventListener('click', (e) => {
+            const _this = e.currentTarget;
+            const direction = _this.getAttribute('data-tab');
+            const countTab = parseInt(document.querySelector('.js-step.active').getAttribute('data-step'));
+            document.querySelector('.js-step.active').classList.remove('active');
+            direction === 'next' ? switcherNext(_this, countTab) : switcherPrev(_this, countTab);
+        });
+    });
+
 }

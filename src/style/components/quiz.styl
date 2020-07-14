@@ -1,6 +1,6 @@
 .quiz
     position relative 
-    z-index 1
+    z-index 22
     &__wrap 
         position relative
         background-color default-cherry
@@ -16,13 +16,33 @@
             background-position center 
             background-repeat no-repeat
             background-size contain
-            transform translateX(-40%) translateY(-27%)
+            transform translateX(-22%) translateY(-27%)
+    @media tablet-landscape-small
+        &__wrap 
+            padding-left 15px
+            padding-right 15px
+            &:after 
+                content: none
     &__inner 
         position relative
+        z-index 1
     &__step 
-        position relative
+        position absolute 
+        width 100%
+        opacity 0
+        z-index -1
+        visibility hidden
         padding-top 66px
         padding-bottom 66px
+        &.active
+            position relative
+            z-index 1
+            opacity 1
+            visibility visible
+    @media tablet-landscape-small
+        &__step 
+            padding-top 100px
+
     &__part
         display flex
         flex-direction column 
@@ -47,11 +67,14 @@
         &--current
             &:after 
                 content '/' 
+    @media tablet-landscape-small
+        &__count 
+            top 34px
     &__button 
         display flex
         flex-direction: column
         align-items center
-        
+        margin-bottom 12px
         margin-right 12px
         &:last-child 
             margin-right 0
@@ -59,11 +82,76 @@
             padding-top 65px
         &-inner 
             display flex
+            flex-wrap: wrap
         &--icon 
             width 296px 
             &:after 
                 content ''
                 float left 
+    @media phone-portrait
+        &__button 
+            margin-right 0
+            width 100%
+    &__result
+        position relative
+        width calc(100%/2 - 42px)
+        margin: 21px
+        border-top: 1px solid rgba(255,255,255,.15)
+        padding: 40px 0px 40px 50px
+        margin-bottom 50px
+        transition: .5s 
+        &-inner 
+            display flex
+            flex-wrap wrap
+            align-items stretch
+            margin-left -21px
+            margin-right -21px
+        @media phone-portrait
+            &-inner
+                margin-left 0
+                margin-right 0
+        &-link 
+            color: white
+            font-size: 24px
+            line-height 28px
+            text-decoration none 
+        &-box 
+            position absolute
+            bottom: 0
+            left 0
+            padding-left 50px
+            width 100%
+            font-family default 
+            font-size 14px
+            line-height 24px
+            color: white 
+            opacity 0
+            overflow hidden
+            bottom: 0
+            transform: translateY(calc(100% - 15px));
+            transition: opacity .5s ease 0s
+            background-color gray-cherry
+            visibility hidden
+            pointer-events: none
+        &-price 
+            font-size: 24px
+            font-family serif
+            display block
+            padding-bottom 40px
+        &:hover 
+            background-color gray-cherry
+            .quiz__result-box
+                opacity 1
+                visibility visible
+    @media phone-portrait
+        &__result
+            margin-left 0
+            margin-right 0 
+            width 100%
+
+
+                
+
 
 .btn__forward 
     position absolute
@@ -82,3 +170,10 @@
             fill white
     &:disabled 
         display none
+@media tablet-landscape-small
+    .btn__forward 
+        top 40px
+        left 0
+
+        
+
