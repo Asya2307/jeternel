@@ -5,20 +5,27 @@ document.addEventListener('DOMContentLoaded', () => {
         const openCatalog = (e) => {
             document.querySelector('.js-menu-catalog').classList.add('active')
         }
-        openCatalogButton.addEventListener('click', openCatalog)
+        openCatalogButton.addEventListener('click', openCatalog);
+
+        document.querySelector('.js-close-catalog').addEventListener('click', (e) => {
+            e.currentTarget.closest('.menu__catalog').classList.remove('active')
+        });
     }
 
-    document.querySelector('.js-close-catalog').addEventListener('click', (e) => {
-        e.currentTarget.closest('.menu__catalog').classList.remove('active')
-    });
+    const popupScroll = document.querySelectorAll('.js-popup-scroll');
 
-    new Swiper('.js-menu-catalog', {
-        direction: 'vertical',
-        slidesPerView: 'auto',
-        freeMode: true,
-        scrollbar: {
-          el: '.swiper-scrollbar',
-        },
-        mousewheel: true,
-    });
+    if (popupScroll) {
+        popupScroll.forEach((item) => {
+            new Swiper(item, {
+                direction: 'vertical',
+                slidesPerView: 'auto',
+                freeMode: true,
+                scrollbar: {
+                    el: '.swiper-scrollbar',
+                },
+                mousewheel: true,
+            });
+        });
+    };
+
 })

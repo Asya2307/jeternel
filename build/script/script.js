@@ -378,6 +378,26 @@ if(document.getElementById("map")){
         neededWidth = Math.round((event.clientX - this.offset) / this.step + this.skewCompensation);
     };
 
+    const openPopup = document.querySelectorAll('.js-open-popup');
+
+    if (openPopup) {
+        openPopup.forEach((item) => {
+            item.addEventListener('click', (e) => {
+                document.querySelector('.before-after__popup').classList.add('active');
+            })
+        });
+    }
+
+    const closePopup = document.querySelectorAll('.js-close-popup');
+
+    if (closePopup) {
+        closePopup.forEach((item) => {
+            item.addEventListener('click', (e) => {
+                e.currentTarget.closest('.before-after__popup').classList.remove('active');
+            })
+        });
+    }
+
 })();
 
 // Фильтры
@@ -583,22 +603,29 @@ document.addEventListener('DOMContentLoaded', () => {
         const openCatalog = (e) => {
             document.querySelector('.js-menu-catalog').classList.add('active')
         }
-        openCatalogButton.addEventListener('click', openCatalog)
+        openCatalogButton.addEventListener('click', openCatalog);
+
+        document.querySelector('.js-close-catalog').addEventListener('click', (e) => {
+            e.currentTarget.closest('.menu__catalog').classList.remove('active')
+        });
     }
 
-    document.querySelector('.js-close-catalog').addEventListener('click', (e) => {
-        e.currentTarget.closest('.menu__catalog').classList.remove('active')
-    });
+    const popupScroll = document.querySelectorAll('.js-popup-scroll');
 
-    new Swiper('.js-menu-catalog', {
-        direction: 'vertical',
-        slidesPerView: 'auto',
-        freeMode: true,
-        scrollbar: {
-          el: '.swiper-scrollbar',
-        },
-        mousewheel: true,
-    });
+    if (popupScroll) {
+        popupScroll.forEach((item) => {
+            new Swiper(item, {
+                direction: 'vertical',
+                slidesPerView: 'auto',
+                freeMode: true,
+                scrollbar: {
+                    el: '.swiper-scrollbar',
+                },
+                mousewheel: true,
+            });
+        });
+    };
+
 })
 
 // Tabs
@@ -623,3 +650,18 @@ if (tabsButton) {
 }
 
 // Ancor
+
+
+// Ancor
+const cookiesShow = document.querySelector('.js-shown-cookie');
+
+if (cookiesShow) {
+    setTimeout(() => {
+        cookiesShow.classList.add('active')
+    }, 7000)
+    const cookiesClose = document.querySelector('.js-shown-cookie');
+
+    cookiesClose.addEventListener('click', (e) => {
+        e.target.closest('.cookies').classList.remove('active');
+    })
+}

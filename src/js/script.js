@@ -46,3 +46,6 @@
 // Ancor
 //= partials/ancors.js
 
+// Ancor
+//= partials/cookies.js
+
