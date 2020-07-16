@@ -6428,6 +6428,10 @@ body.js-burger-menu-is-open .burger__crossed:hover {
     margin-left: 0;
     margin-right: 0;
     width: 100%;
+    padding-left: 20px;
+  }
+  .quiz__result-box {
+    padding-left: 20px;
   }
 }
 .btn__forward {
@@ -6477,6 +6481,11 @@ body.js-burger-menu-is-open .burger__crossed:hover {
 }
 .main__wrap--quiz {
   padding-top: 0;
+}
+@media (max-width: 1024px) {
+  .main__wrap {
+    padding-top: 0;
+  }
 }
 .main__content {
   font-family: "Cormorant";

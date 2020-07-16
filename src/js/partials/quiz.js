@@ -6,16 +6,14 @@ if (quizStep) {
     });
 
     quizStep[0].classList.add('active');
+    console.log(quizStep.length)
 
-    const countSteps = quizStep.length
-
-    
+    document.querySelector('.js-quiz-all').innerHTML = quizStep.length
     
     const switcherNext = (_this, countTab) => {
         document.querySelector('.js-quiz-current').innerHTML = countTab + 1;
         document.querySelector('[data-tab="prev"]').removeAttribute('disabled');
         document.querySelector(`[data-step='${countTab + 1}']`).classList.add('active');
-        // document.querySelector('.js-step-result').classList.add('active')
     }
 
     const switcherPrev = (_this, countTab) => {
