@@ -1,20 +1,10 @@
 // Swiper
 //= plugins/swiper.js
 
-
-
-
-
-//________________________________________________________________
-
-
-
-
-
 // Choices
 //= plugins/choices.js
 
-// Choices
+// Customscroll
 //= plugins/perfectscrollbar.js
 
 // Mask
@@ -23,8 +13,12 @@
 // Mask location
 //= plugins/clever.ru.js
 
-// Mask location
-// = plugins/jquery-3.5.1.min.js
+// JQ
+//= plugins/jquery-3.5.1.min.js
+
+// Version
+//= plugins/uhpv-full.min.js
+
 
 
 

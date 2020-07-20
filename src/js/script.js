@@ -18,8 +18,14 @@
 
 // До и после
 //= partials/before-after.js
+
+// Фильтры
 //= partials/filters.js
+
+//Таблицы
 //= partials/content.js
+
+
 //= partials/special.js
 //= partials/faq.js
 //= partials/validation.js
@@ -30,4 +36,5 @@
 //= partials/cookies.js
 //= partials/slide.js
 //= partials/quiz.js
+//= partials/buttons.js
 

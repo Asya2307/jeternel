@@ -399,6 +399,8 @@ if(document.getElementById("map")){
     }
 
 })();
+
+// Фильтры
 (function () {
     
     // Конструктор фильтров в виде селекта
@@ -458,6 +460,8 @@ if(document.getElementById("map")){
     };
 
 })();
+
+//Таблицы
 document.addEventListener('DOMContentLoaded', function() {
     function resizeWatcher() {
         var tableSel = document.querySelectorAll('table');
@@ -502,6 +506,8 @@ document.addEventListener('DOMContentLoaded', function() {
         })
       }
 });
+
+
 document.addEventListener('DOMContentLoaded', (e) => {
     const specialSlider = document.querySelectorAll('.js-special-slider');
 
@@ -643,16 +649,10 @@ if (cookiesShow) {
         e.target.closest('.cookies').classList.remove('active');
     })
 }
-var quizButton = document.querySelectorAll('.js-slide-button');
 
-if (quizButton) {
-    quizButton.forEach(function (item, index) {
-        item.style.zIndex = quizButton.length - index;
-    });
-}
 const quizStep = document.querySelectorAll('.js-step');
 
-if (quizStep) {
+if (quizStep.length) {
     quizStep.forEach((item, index) => {
         item.setAttribute('data-step', index+1);
     });

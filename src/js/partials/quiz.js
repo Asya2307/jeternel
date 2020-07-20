@@ -1,6 +1,6 @@
 const quizStep = document.querySelectorAll('.js-step');
 
-if (quizStep) {
+if (quizStep.length) {
     quizStep.forEach((item, index) => {
         item.setAttribute('data-step', index+1);
     });
