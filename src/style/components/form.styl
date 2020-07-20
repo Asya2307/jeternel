@@ -9,8 +9,14 @@
         &__container
             flex-direction column 
     &__group
+        padding-left 0
+        margin 0
         &--half
             width calc(50% - 24px)
+        &-item 
+            margin-bottom 50px
+            &:last-child 
+                margin-bottom 0
     @media tablet-landscape-small
         &__group 
             &--half 
@@ -36,6 +42,12 @@
             background-position: center
             background-size contain
             background-repeat no-repeat
+        &--popup 
+            opacity 0
+            transition: opacity 1s 0s ease;
+            position relative
+            z-index 1
+            background-color transparent
     @media tablet-landscape-medium
         &__wrap
             padding-left 20px
@@ -66,12 +78,20 @@
        position relative
        width 100% 
        margin-bottom 50px
+       cursor pointer
        &:last-child
            margin-bottom 0
         &--half 
             width 48%
         &--filter
             margin-bottom 30px
+        &.active .form__label 
+            transform: translateY(-29px) scale(.9)
+            color: milk-cherry
+        &.js-valid-error
+            border-bottom-color #ba8c58
+            .form__label 
+                color: #ba8c58
     @media phone 
         &__item
             &--half
@@ -87,6 +107,8 @@
         resize none
         height 100%
     &__input
+        position relative
+        z-index 2
         width 100%
         background-color transparent
         border none
@@ -95,8 +117,9 @@
         font-family default
         font-size 15px
         color white
-        padding-bottom 10px
+        padding-bottom 14px
         transition .3s
+        font-weight 300
 
         &--left
             text-align left
@@ -122,7 +145,8 @@
             font-size 14px
             &::placeholder
                 font-size 14px
-
+        
+        
     &__checkbox
          &--filter 
             margin-bottom 12px
@@ -135,6 +159,34 @@
                 margin-bottom 0
                 &:last-child 
                     margin-right 0
+    &__label 
+        position absolute
+        color white 
+        font-size: 15px
+        font-family default 
+        left 0
+        right 0
+        width 100%
+        height 100%
+        text-align center
+        transition transform .7s 0s ease  
+    &__info 
+        display flex
+        flex-direction: column 
+        text-align: center
+        margin-top 47px
+        &-item 
+            display flex
+            flex-direction: column 
+            justify-content center
+            margin-bottom 20px
+            color white
+            font-size: 26px
+            line-height: 34px
+        &-title 
+            color: milk-cherry
+
+        
 .custom__checkbox
     position absolute
     width 100%

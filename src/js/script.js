@@ -37,4 +37,5 @@
 //= partials/slide.js
 //= partials/quiz.js
 //= partials/buttons.js
+//= partials/popup.js
 
