@@ -40,6 +40,5 @@ if (quizStep.length) {
     resultButton.forEach((item, index) => {
         console.log(item)
         item.style.zIndex = `${resultButton.length - index}`
-    })
-
+    });
 }

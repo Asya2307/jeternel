@@ -1,4 +1,3 @@
-// Свайпер
 (function(){
 
     // Основной слайдер на главной странице
@@ -78,8 +77,6 @@
         };
     });
 })();
-
-// Скрыть/показать мнею в шапке
 (function(){
 
     const burgerButton = document.querySelector(".burger");
@@ -98,8 +95,6 @@
     };
     
 })();
-
-// Прилипающая шапка
 (function(){
 
     const pageHeader = document.querySelector("header");
@@ -154,8 +149,6 @@
 
 
 })();
-
-// Интро для главной страницы
 (function(){
 
     window.addEventListener("load", closeIntro);
@@ -167,8 +160,6 @@
     };
 
 })();
-
-// Кастомные селекты
 (function(){
 
     /*let branches = [
@@ -223,8 +214,6 @@
     });
 
 })();
-
-// Яндекс-карта
 // Инициализация карты Яндекс
 if(document.getElementById("map")){
     ymaps.ready(init);
@@ -294,8 +283,6 @@ if(document.getElementById("map")){
         locationMap.controls.remove("routeButtonControl");
     };    
 };
-
-// До и после
 (function(){
 
     var swiper = new Swiper('.js-before-after-slider', {
@@ -399,8 +386,6 @@ if(document.getElementById("map")){
     }
 
 })();
-
-// Фильтры
 (function () {
     
     // Конструктор фильтров в виде селекта
@@ -460,8 +445,6 @@ if(document.getElementById("map")){
     };
 
 })();
-
-//Таблицы
 document.addEventListener('DOMContentLoaded', function() {
     function resizeWatcher() {
         var tableSel = document.querySelectorAll('table');
@@ -506,8 +489,6 @@ document.addEventListener('DOMContentLoaded', function() {
         })
       }
 });
-
-
 document.addEventListener('DOMContentLoaded', (e) => {
     const specialSlider = document.querySelectorAll('.js-special-slider');
 
@@ -852,8 +833,7 @@ if (quizStep.length) {
     resultButton.forEach((item, index) => {
         console.log(item)
         item.style.zIndex = `${resultButton.length - index}`
-    })
-
+    });
 }
 
 const popup = document.querySelectorAll('[data-open]');
@@ -873,5 +853,28 @@ if (popup) {
         item.addEventListener('click', (e) => {
             e.currentTarget.closest('.popup').classList.remove('active');
         } )
+    })
+}
+
+const sectionBird = document.querySelector('.section__bird');
+
+if (sectionBird) {
+    const pens = sectionBird.querySelectorAll('.section__bird-item');
+    const blockPosition = sectionBird.scrollHeight;
+
+    document.addEventListener('scroll', (e) => {
+        const scroll = window.pageYOffset;
+        console.log((blockPosition - 300), scroll)
+        if (scroll > (blockPosition - 800)) {
+            pens.forEach((item,index) => {
+                item.classList.add(`section__bird-item--${ index + 1 }`)
+            });
+            setTimeout(() => {
+                pens.forEach((item) => {
+                    item.classList.add(`active`)
+                });
+            }, 2000)
+        };
+        
     })
 }

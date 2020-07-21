@@ -20,6 +20,8 @@
         background-color black
         text-align center
         overflow hidden
+        &--video 
+            background-color transparent
 
     &__image
         position absolute
@@ -166,6 +168,28 @@
                 animation-duration .75s
                 animation-timing-function ease
                 animation-iteration-count 1
+    &__video 
+        position absolute
+        top 0
+        left 0
+        width 100%
+        height 100vh
+        &:after
+            content: ''
+            display block
+            position absolute
+            top 0
+            left 0
+            width 100%
+            height 100%
+            background-color: #382f2d
+            opacity 0.5
+        iframe 
+            width 100%
+            height 100%
+            display block
+        
+
 
 .main-slider__item.swiper-slide-active
     & .main-slider__title
