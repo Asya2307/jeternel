@@ -83,22 +83,29 @@ section.popup.popup--main.js-popup(data-popup="order-call")
 section.popup.popup--main.js-popup(data-popup="review")
     button.popup__close--main.js-popup-close
         <svg xmlns="http://www.w3.org/2000/svg"><path d="M.01 23.282l11.285-11.284L.01.714.715.009 12 11.293 23.284.009l.705.705-11.284 11.284 11.284 11.284-.705.705L12 12.703.716 23.987z"/></svg>
-    section.form__wrap.form__wrap--index
+    div.form__wrap.form__wrap--index
         form.form(action="").js-form
             .form__inner.form__inner--big
                 span.form__title Оставить отзыв
                 .form__box
                     .form__container
-                        .form__group.form__group--half
-                            .form__item 
-                                input(type="text" name="name" placeholder="Имя").form__input.form__input--left.required.js-input-name
-                            .form__item
-                                input(type="text" name="phone" placeholder="Телефон*").form__input.form__input--left.js-input-phone.js-phone-mask.required
-                            .form__item
-                                input(type="text" name="email" placeholder="Электронная почта*").form__input.form__input--left.required.js-input-email
-                        .form__group.form__group--half
-                            .form__item.form__item-textarea
-                                textarea(name="textarea", cols="30", rows="10").form__textarea.required.js-input-textarea Текст отзыва *
+                        ul.form__group.form__group--half
+                            li.form__group-item
+                                label.form__item(for="name")
+                                    input(type="text" data-req name="name").form__input
+                                    span.form__label Имя
+                            li.form__group-item
+                                label.form__item
+                                    input(type="text" data-req name="phone").form__input.js-input-phone.js-phone-mask
+                                    span.form__label Телефон
+                            li.form__group-item
+                                label.form__item
+                                    input(type="text" data-req name="email").form__input
+                                    span.form__label Email
+                        ul.form__group.form__group--half
+                            li.form__group-item
+                                .form__item.form__item-textarea
+                                    textarea(name="textarea", cols="30", rows="10").form__textarea.required.js-input-textarea Текст отзыва *
                     .form__checkbox
                         .custom__checkbox-wrap
                             input(type="checkbox" name="checkbox").custom__checkbox.required.js-input-checkbox

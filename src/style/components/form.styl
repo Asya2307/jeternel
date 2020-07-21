@@ -123,6 +123,9 @@
 
         &--left
             text-align left
+            & ~ .form__label 
+                text-align: left 
+
 
         &::placeholder
             font-family default
@@ -145,6 +148,9 @@
             font-size 14px
             &::placeholder
                 font-size 14px
+        &[data-req] ~ .form__label:after 
+            content: '*'
+            vertical-align top
         
         
     &__checkbox

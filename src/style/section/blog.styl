@@ -139,6 +139,7 @@
         flex-direction column
         align-items center
         margin-top 27px
+
         &-auth 
             width 50px
             height 50px
@@ -155,6 +156,7 @@
             &:hover ~ .blog__profile-name
                 opacity 1
                 transform translateY(0)
+                visibility visible
         
         &-name 
             position absolute
@@ -162,6 +164,9 @@
             transform translateY(-100%)
             transition .8s
             bottom -35px
+            visibility hidden
+            font-size: 13px
+            line-height: 15px
             &--inside 
                 transform translateY(0)
                 position unset
@@ -170,9 +175,11 @@
                 font-size 13px
                 line-height 15px
                 margin-top 19px
+                visibility visible
         &--art
             position relative
             transform translate(0)
+            opacity 1
     @media tablet-hor
         &__profile
             display flex
