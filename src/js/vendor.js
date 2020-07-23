@@ -19,8 +19,7 @@
 // Version
 //= plugins/uhpv-full.min.js
 
-// Gallery
-//= plugins/jquery.fancybox.min.js
+
 
 
 
