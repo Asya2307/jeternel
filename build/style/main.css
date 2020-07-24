@@ -5686,6 +5686,9 @@ body.without-imgs .main-slider__desc .top[class*="h-background-"] {
 .form__wrap--popup:after {
   content: none;
 }
+.form__wrap--branch {
+  margin-top: 100px;
+}
 @media (max-width: 1200px) {
   .form__wrap {
     padding-left: 20px;
@@ -5767,6 +5770,8 @@ body.without-imgs .main-slider__desc .top[class*="h-background-"] {
   font-family: "Helvetica-Neue";
   resize: none;
   height: 100%;
+  padding-bottom: 16px;
+  font-weight: 300;
 }
 .form__input {
   position: relative;
@@ -5789,6 +5794,8 @@ body.without-imgs .main-slider__desc .top[class*="h-background-"] {
 }
 .form__input--left ~ .form__label {
   text-align: left;
+  -webkit-transform-origin: left center;
+  transform-origin: left center;
 }
 .form__input::-webkit-input-placeholder {
   font-family: "Helvetica-Neue";
@@ -5935,7 +5942,8 @@ body.without-imgs .main-slider__desc .top[class*="h-background-"] {
 }
 .custom__checkbox-wrap {
   position: relative;
-  margin: 50px 0;
+  margin-top: 50px;
+  margin-bottom: 50px;
   font-family: "Cormorant";
 }
 .custom__checkbox-wrap--filter {
@@ -5943,6 +5951,9 @@ body.without-imgs .main-slider__desc .top[class*="h-background-"] {
 }
 .custom__checkbox-wrap--filter:last-child {
   margin-bottom: 0;
+}
+.custom__checkbox-wrap:last-child {
+  margin-bottom: 50px;
 }
 .custom__checkbox-label {
   color: #fff;
@@ -6206,7 +6217,7 @@ body.without-imgs .main-slider__desc .top[class*="h-background-"] {
 .faq__title-inner .common__button {
   height: 90px;
 }
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   .faq__title-inner {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -6547,6 +6558,18 @@ body.without-imgs .main-slider__desc .top[class*="h-background-"] {
 }
 .equipment__head .equipment__title {
   margin-bottom: 0;
+}
+@media (max-width: 768px) {
+  .equipment__head {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+  .equipment__head .equipment__title {
+    margin-bottom: 20px;
+  }
 }
 .equipment__wrap--inside {
   margin-top: 80px;
@@ -7422,6 +7445,7 @@ body.without-imgs .main-slider__desc .top[class*="h-background-"] {
   max-width: 1270px;
   margin-left: auto;
   margin-right: auto;
+  width: 100%;
 }
 .main__wrap--biggest {
   max-width: 1332px;
@@ -8312,6 +8336,16 @@ body.without-imgs .main-slider__desc .top[class*="h-background-"] {
   margin-top: 19px;
   visibility: visible;
 }
+@media (max-width: 1024px) {
+  .blog__profile-name {
+    visibility: visible;
+    position: unset;
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    margin-top: 20px;
+  }
+}
 .blog__profile--art {
   position: relative;
   -webkit-transform: translate(0);
@@ -9095,6 +9129,48 @@ body.without-imgs .main-slider__desc .top[class*="h-background-"] {
   height: 425px;
   background-image: url("../images/pattern-prm.png");
 }
+@media (max-width: 1100px) {
+  .expert__inner {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .expert__info--mobile {
+    display: block;
+  }
+  .expert__name-wrap {
+    position: relative;
+    -webkit-transform: none;
+    transform: none;
+    margin-top: 40px;
+    margin-bottom: 30px;
+  }
+  .expert__name-wrap--desctop {
+    display: none;
+  }
+  .expert__image {
+    width: 200px;
+    height: 200px;
+    top: 40px;
+    right: 70px;
+    overflow: hidden;
+    border-radius: 50%;
+  }
+  .expert__image--desctop {
+    display: none;
+  }
+  .expert__image img {
+    display: block;
+    -o-object-fit: fill;
+    object-fit: fill;
+    width: 100%;
+  }
+  .expert__image--mobile {
+    position: unset;
+  }
+  .expert__pattern {
+    display: none;
+  }
+}
 .popup {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -9142,6 +9218,17 @@ body.without-imgs .main-slider__desc .top[class*="h-background-"] {
   opacity: 0;
   -webkit-transition: opacity 1s 0s ease;
   transition: opacity 1s 0s ease;
+}
+.popup--main .swiper-slide {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 .popup.active {
   width: 100%;

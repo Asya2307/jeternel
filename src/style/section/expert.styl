@@ -9,6 +9,7 @@
         right 190px
         img
             display block
+    
     &__inner
         display flex
         align-items flex-start
@@ -74,6 +75,39 @@
         width 563px
         height 425px
         background-image url(../images/pattern-prm.png)
+@media tablet-landscape-small
+    .expert
+        &__inner 
+            padding-left 10px
+            padding-right 10px
+        &__info
+            &--mobile 
+                display block
+        &__name
+            &-wrap 
+                position relative
+                transform: none
+                margin-top 40px
+                margin-bottom 30px
+                &--desctop 
+                    display none
+        &__image 
+            width 200px
+            height 200px
+            top 40px
+            right 70px
+            overflow hidden
+            border-radius: 50%
+            &--desctop 
+                display none
+            img 
+                display block
+                object-fit: fill 
+                width 100%
+            &--mobile
+                position unset
+        &__pattern 
+            display none
     
                 
 

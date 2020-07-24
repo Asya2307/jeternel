@@ -20,7 +20,7 @@ section.popup.popup--main.js-popup.js-popup-scroll(data-popup="consult")
                                                 input(type="text" data-req name="phone").form__input.js-input-phone.js-phone-mask
                                                 span.form__label Телефон
                                     .form__checkbox
-                                        .custom__checkbox-wrap
+                                        .form__item.custom__checkbox-wrap
                                             input(type="checkbox" data-req).custom__checkbox
                                             label.custom__checkbox-label Согласен на обработку персональных данных
                                     button.common__button.common__button--gray-cherry(type="submit") Записаться
@@ -61,7 +61,7 @@ section.popup.popup--main.js-popup.swiper-container.js-popup-scroll(data-popup="
                                                 input(type="text" data-req name="phone").form__input.js-input-phone.js-phone-mask
                                                 span.form__label Телефон
                                     .form__checkbox
-                                        .custom__checkbox-wrap
+                                        .form__item.custom__checkbox-wrap
                                             input(type="checkbox" data-req).custom__checkbox
                                             label.custom__checkbox-label Согласен на обработку персональных данных
                                     button.common__button.common__button--gray-cherry(type="submit") Записаться
@@ -90,7 +90,7 @@ section.popup.popup--main.js-popup.js-popup-scroll(data-popup="order-call")
                                                 input(type="text" data-req name="phone").form__input.js-input-phone.js-phone-mask
                                                 span.form__label Телефон
                                     .form__checkbox
-                                        .custom__checkbox-wrap
+                                        .form__item.custom__checkbox-wrap
                                             input(type="checkbox" data-req).custom__checkbox
                                             label.custom__checkbox-label Согласен на обработку персональных данных
                                     button.common__button.common__button--gray-cherry(type="submit") Заказать
@@ -112,25 +112,25 @@ section.popup.popup--main.js-popup.js-popup-scroll(data-popup="review")
                                         ul.form__group.form__group--half
                                             li.form__group-item
                                                 label.form__item(for="name")
-                                                    input(type="text" data-req name="name").form__input
-                                                    span.form__label Имя
+                                                    input(type="text" data-req name="name").form__input.form__input--left
+                                                    span.form__label.form__label--left Имя
                                             li.form__group-item
                                                 label.form__item
-                                                    input(type="text" data-req name="phone").form__input.js-input-phone.js-phone-mask
-                                                    span.form__label Телефон
+                                                    input(type="text" data-req name="phone").form__input.js-input-phone.js-phone-mask.form__input--left
+                                                    span.form__label.form__label--left Телефон
                                             li.form__group-item
                                                 label.form__item
-                                                    input(type="text" data-req name="email").form__input
-                                                    span.form__label Email
+                                                    input(type="text" data-req name="email").form__input.form__input--left
+                                                    span.form__label.form__label--left Email
                                         ul.form__group.form__group--half
                                             li.form__group-item
                                                 .form__item.form__item-textarea
                                                     textarea(name="textarea", cols="30", rows="10").form__textarea.required.js-input-textarea Текст отзыва *
                                     .form__checkbox
-                                        .custom__checkbox-wrap
+                                        .form__item.custom__checkbox-wrap
                                             input(type="checkbox" name="checkbox").custom__checkbox.required.js-input-checkbox
                                             label.custom__checkbox-label Согласен на обработку персональных данных
-                                    button.common__button.common__button--half.common__button--gray-cherry Отправить отзыв 
+                                    button.common__button.common__button--half.common__button--gray-cherry Отправить отзыв  
     .swiper-scrollbar
 
 
@@ -168,7 +168,7 @@ section.popup.popup--main.js-popup(data-popup="conslt-whidth-info-free")
                                                     input(type="text" data-req name="phone").form__input.js-input-phone.js-phone-mask
                                                     span.form__label Телефон
                                         .form__checkbox
-                                            .custom__checkbox-wrap
+                                            .form__item.custom__checkbox-wrap
                                                 input(type="checkbox" data-req).custom__checkbox
                                                 label.custom__checkbox-label Согласен на обработку персональных данных
                                         button.common__button.common__button--gray-cherry(type="submit") Записаться

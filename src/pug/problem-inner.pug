@@ -190,7 +190,13 @@ html(lang="ru")
                             .expert__inner
                                 .expert__box
                                     p.expert__text Высокая эффективность и абсолютно безболезненное, комфортное решение многих эстетических проблем: целлюлит, локальные жировые отложения, дряблость кожи, темные круги вокруг глаз, второй подбородок.
-                                    button.common__button.common__button--gray-cherry Спросить эксперта
+                                    .expert__info--mobile
+                                        .expert__image.expert__image--mobile 
+                                            img(src="/images/expert.png", alt="")
+                                        .expert__name-wrap.expert__name-wrap
+                                            span.expert__name Смирнова Елизавета
+                                            span.expert__position врач косметолог
+                                    button.common__button.common__button--gray-cherry(data-open="consult-width-info") Спросить эксперта
                                 ul.expert__info
                                     li.expert__info-item 
                                         a(href="#").expert__info-link О косметологии
@@ -200,12 +206,13 @@ html(lang="ru")
                                         a(href="#").expert__info-link Об эксперте
                                     li.expert__info-item 
                                         a(href="#").expert__info-link.expert__info-link--sound Подкаст «Сенсация в косметологии»
-                            .expert__name-wrap
+                            .expert__name-wrap.expert__name-wrap--desctop
                                 span.expert__name Смирнова Елизавета
                                 span.expert__position врач косметолог
-                            .expert__pattern 
-                            .expert__image 
-                                img(src="/images/expert.png", alt="")
+                            .expert__pattern
+                            .expert__info--desctop
+                                .expert__image.expert__image--desctop 
+                                    img(src="/images/expert.png", alt="")
                     section.faq
                         include components/faq-problem.pug    
                     section.equipment__wrap.equipment__wrap--inside
