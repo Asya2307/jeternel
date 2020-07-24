@@ -144,6 +144,9 @@ body {
 .see__more--margin {
   padding-top: 77px;
 }
+::marker {
+  color: transparent;
+}
 svg path,
 svg line,
 svg rect,
@@ -5646,6 +5649,9 @@ body.without-imgs .main-slider__desc .top[class*="h-background-"] {
 .form__group-item:last-child {
   margin-bottom: 0;
 }
+.form__group-item:before {
+  content: none;
+}
 @media (max-width: 1100px) {
   .form__group--half {
     width: 100%;
@@ -8198,6 +8204,11 @@ body.without-imgs .main-slider__desc .top[class*="h-background-"] {
 }
 .blog__categories-heading span {
   border-bottom: 1px solid rgba(0,0,0,0.25);
+  -webkit-transition: border-bottom-color 0.3s;
+  transition: border-bottom-color 0.3s;
+}
+.blog__categories-heading:hover span {
+  border-bottom-color: transparent;
 }
 .blog__categories-count {
   color: #7c3d44;
