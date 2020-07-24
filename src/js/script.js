@@ -21,4 +21,5 @@
 //= partials/popup.js
 //= partials/video.js
 //= partials/bird.js
+//= partials/gallery.js
 

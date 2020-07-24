@@ -19,6 +19,15 @@
 // Version
 //= plugins/uhpv-full.min.js
 
+// Gallery
+//= plugins/lightgallery.js
+
+// Gallery
+//= plugins/lightgallery.js
+
+// Gallery
+//= plugins/lg-video.js
+
 
 
 

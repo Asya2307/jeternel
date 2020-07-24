@@ -7,6 +7,7 @@ html(lang="ru")
         link(rel="stylesheet" href="style/normalize.css" type="text/css")
         link(rel="stylesheet" href="style/swiper.css" type="text/css")
         link(rel="stylesheet" href="style/choices.css" type="text/css")
+        link(rel="stylesheet" href="style/lightbox.css" type="text/css")
         link(rel="stylesheet" href="style/main.css" type="text/css")
         title Центр косметологии Jeternel
     body.content.js-intro-is-shown
@@ -191,15 +192,25 @@ html(lang="ru")
                                     p Аппарат оснащен самыми современными и высокоэффективными функциями: криолиполиз, LPG липомоделирующий массаж, лазерное липомоделирование. Одной из главных отличительных особенностей этой модели, является возможность работы с тремя пациентами сразу одновременно!
                                     p Также предусмотрена возможность совмещения различных техник на одном пациенте. Технология лазерного липолиза используется для разрушения жировых клеток, с использованием сдвоенного эффекта.
                                     p Кроме расщепления подкожного жира, происходит стимуляция подкожных тканей и волокон, в результате достигается значительный эффект большей упругости кожи (при традиционной липосакции может возникать побочный эффект дряблости кожи).
-                                .gallery__inner
-                                    .gallery__item(style="background-image: url(images/equipment/e1.png)")
-                                    .gallery__item(style="background-image: url(images/equipment/e2.png)")
-                                    .gallery__item(style="background-image: url(images/equipment/e3.png)")
-                                    .gallery__item(style="background-image: url(images/equipment/e4.png)")
-                                    .gallery__item(style="background-image: url(images/equipment/e1.png)")
-                                    .gallery__item(style="background-image: url(images/equipment/e2.png)")
-                                    .gallery__item(style="background-image: url(images/equipment/e3.png)")
-                                    .gallery__item(style="background-image: url(images/equipment/e4.png)")
+                                .gallery__inner.js-gallery
+                                    a(href="images/equipment/e1.png" style="background-image: url(images/equipment/e1.png)").gallery__item
+                                        img(src="images/equipment/e1.png" alt="gallery1")
+                                    a(href="images/equipment/e2.png" style="background-image: url(images/equipment/e2.png)").gallery__item
+                                        img(src="images/today/today2.png" alt="gallery2")
+                                    a(href="images/equipment/e3.png" style="background-image: url(images/equipment/e3.png)").gallery__item
+                                        img(src="images/equipment/e3.png" alt="gallery3")
+                                    a(href="images/equipment/e4.png" style="background-image: url(images/equipment/e4.png)").gallery__item
+                                        img(src="images/equipment/e4.png" alt="gallery4")
+                                    a(href="images/equipment/e1.png" style="background-image: url(images/equipment/e1.png)").gallery__item
+                                        img(src="images/equipment/e1.png" alt="gallery1")
+                                    a(href="images/equipment/e2.png" style="background-image: url(images/equipment/e2.png)").gallery__item
+                                        img(src="images/today/today2.png" alt="gallery2")
+                                    a(href="images/equipment/e3.png" style="background-image: url(images/equipment/e3.png)").gallery__item
+                                        img(src="images/equipment/e3.png" alt="gallery3")
+                                    a(href="images/equipment/e4.png" style="background-image: url(images/equipment/e4.png)").gallery__item
+                                        img(src="images/equipment/e4.png" alt="gallery4")
+                                    a(href="https://www.youtube.com/embed/E83DVERrmUk?autoplay=1&amp;loop=1&amp;mute=1&amp" style="background-image: url(images/today/today1.png)").gallery__item
+                                        <iframe src="https://www.youtube.com/embed/E83DVERrmUk?autoplay=1&amp;loop=1&amp;mute=1&amp" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>                
                     section.infobox
                         h2.infobox__title В каких случаях применяется
                         .infobox__inner.infobox__inner--part

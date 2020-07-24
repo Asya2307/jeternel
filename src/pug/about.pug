@@ -6,6 +6,7 @@ html(lang="ru")
         link(rel="stylesheet" href="style/normalize.css" type="text/css")
         link(rel="stylesheet" href="style/swiper.css" type="text/css")
         link(rel="stylesheet" href="style/choices.css" type="text/css")
+        link(rel="stylesheet" href="style/lightbox.css" type="text/css")
         link(rel="stylesheet" href="style/main.css" type="text/css")
         title Центр косметологии Jeternel
     body.content.js-intro-is-shown
@@ -180,14 +181,21 @@ html(lang="ru")
                             use(xlink:href="#glass-icon")
         section.main-slider.main-slider--video
                 .main-slider__video
-                    <iframe src="https://www.youtube.com/embed/E83DVERrmUk?autoplay=1&amp;loop=1&amp;" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>                
+                    <iframe src="https://www.youtube.com/embed/E83DVERrmUk?autoplay=1&amp;loop=1&amp;mute=1&amp" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>                
                 h4.common__hidden-heading
                 |Центр косметологии Jeternel
                 ul.main-slider__list
                     li.main-slider__item.main-slider__item--video
                         div.main-slider__text
-                            span.main-slider__title
-                                a.main-slider__link(href="") О компании
+                            section.breadcumbs.breadcumbs--center
+                                ul.breadcumbs__list
+                                    li.breadcumbs__item
+                                        a.breadcumbs__link
+                                            span
+                                                |Главная
+                                    li.breadcumbs__item
+                                        span О компании
+                            span.main-slider__title.main-slider__title--small О компании
                             p.main-slider__description.main-slider__description--about.common__description-small.common__description-small--white Группа компаний Jeternel стоит на страже красоты и здоровья с 1998 года.
                             p.main-slider__description.main-slider__description--about.common__description-small.common__description-small--white 
                                 |В 2009 году самые передовые и прогрессивные технологии в косметологии были выделены в отдельное направление работы. Так появилась Лаборатория красоты Jeternel.
@@ -237,37 +245,46 @@ html(lang="ru")
                             p Группа компаний Jeternel стоит на страже красоты и здоровья с 1998 года. В 2009 году самые передовые и прогрессивные технологии в косметологии были выделены в отдельное направление работы. Так появилась Лаборатория красоты Jeternel.
                             p Лучшие мировые технологии омоложения, коррекции эстетических недостатков и лечения кожных заболеваний. Комплексный сервис: от базового ухода до революционных косметологических новаций. Самое большое количество оригинального оборудования для эстетической медицины в Челябинске. Самый широкий выбор косметологических препаратов последнего поколения. Ведущие профессионалы города, прошедшие стажировку в лучших клиниках России и мира. Высокий уровень сервиса в соответствии с мировыми стандартами.
                             p Все аппараты и косметические средства имеют необходимые лицензии, сертификаты качества и регистрационные удостоверения.
-                        .gallery__inner
-                            .gallery__item(style="background-image: url(images/today/today1.png)")
-                            .gallery__item(style="background-image: url(images/today/today2.png)")
-                            .gallery__item(style="background-image: url(images/today/today3.png)")
-                            .gallery__item(style="background-image: url(images/today/today5.png)")
-                            .gallery__item(style="background-image: url(images/today/today6.png)")
-                            .gallery__item(style="background-image: url(images/today/today7.png)")
-                            .gallery__item(style="background-image: url(images/today/today4.png)")
+                        .gallery__inner.js-gallery
+                            a(href="images/today/today1.png" style="background-image: url(images/today/today1.png)").gallery__item
+                                img(src="images/today/today1.png" alt="gallery1")
+                            a(href="images/today/today2.png" style="background-image: url(images/today/today2.png)").gallery__item
+                                img(src="images/today/today2.png" alt="gallery2")
+                            a(href="images/today/today3.png" style="background-image: url(images/today/today3.png)").gallery__item
+                                img(src="images/today/today3.png" alt="gallery3")
+                            a(href="images/today/today4.png" style="background-image: url(images/today/today4.png)").gallery__item
+                                img(src="images/today/today4.png" alt="gallery4")
+                            a(href="images/today/today5.png" style="background-image: url(images/today/today5.png)").gallery__item
+                                img(src="images/today/today5.png" alt="gallery5")
+                            a(href="images/today/today6.png" style="background-image: url(images/today/today6.png)").gallery__item
+                                img(src="images/today/today6.png" alt="gallery6")
+                            a(href="images/today/today7.png" style="background-image: url(images/today/today7.png)").gallery__item
+                                img(src="images/today/today7.png" alt="gallery7")
+                            a(href="https://www.youtube.com/embed/E83DVERrmUk?autoplay=1&amp;loop=1&amp;mute=1&amp" style="background-image: url(images/today/today1.png)").gallery__item
+                                <iframe src="https://www.youtube.com/embed/E83DVERrmUk?autoplay=1&amp;loop=1&amp;mute=1&amp" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>                
                 include components/special.pug
                 section.gallery
                         .gallery__content.main__content
                             h2.gallery__title Лицензии
                             p Лаборатория красоты Jeternel — лицензированное учреждение. Мы имеем право и все необходимые разрешения для проведения сложных косметологических процедур. Будьте уверены в результате — все процедуры пройдут по регламентированному порядку с соблюдением всех норм безопасности! Мы работает только с лицензированными препаратами и лучшими европейскими технологиями с мировыми стандартами качества.
-                        .gallery__inner
-                            .gallery__item.gallery__item--popup
-                                img(src="images/liense/liense1.png", alt="", srcset="")
-                            .gallery__item.gallery__item--popup
-                                img(src="images/liense/liense2.png", alt="", srcset="")
-                            .gallery__item.gallery__item--popup
-                                img(src="images/liense/liense3.png", alt="", srcset="")
+                        .gallery__inner.js-gallery
+                            a(href="images/liense/liense1.png").gallery__item.gallery__item--popup
+                                img(src="images/liense/liense1.png" alt="liense1")
+                            a(href="images/liense/liense2.png").gallery__item.gallery__item--popup
+                                img(src="images/liense/liense2.png" alt="liense2")
+                            a(href="images/liense/liense3.png").gallery__item.gallery__item--popup
+                                img(src="images/liense/liense3.png" alt="liense1")
                 section.gallery
                         .gallery__content.main__content
                             h2.gallery__title Достижения
                             p Группа компания Jeternel за активную жизненную позицию — мы участвуем и проводим различные профессиональные конкурсы, семинары-практикумы, мастер-классы для профессионалов индустрии красоты. Достижения наших специалистов неоднократно были отмечены Дипломами, Сертификатами и Свидетельствами профессионального мастерства.
-                        .gallery__inner
-                            .gallery__item.gallery__item--popup
-                                img(src="images/liense/dos1.png", alt="", srcset="")
-                            .gallery__item.gallery__item--popup
-                                img(src="images/liense/dos2.png", alt="", srcset="")
-                            .gallery__item.gallery__item--popup
-                                img(src="images/liense/dos3.png", alt="", srcset="")
+                        .gallery__inner.js-gallery
+                            a(href="images/liense/dos1.png").gallery__item.gallery__item--popup
+                                img(src="images/liense/dos1.png" alt="dos1")
+                            a(href="images/liense/dos2.png").gallery__item.gallery__item--popup
+                                img(src="images/liense/dos2.png" alt="dos2")
+                            a(href="images/liense/dos3.png").gallery__item.gallery__item--popup
+                                img(src="images/liense/dos3.png" alt="dos3")
                 include components/reviews.pug
         //= partials/footer.pug
         div.intro-curtain

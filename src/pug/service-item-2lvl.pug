@@ -7,6 +7,7 @@ html(lang="ru")
         link(rel="stylesheet" href="style/normalize.css" type="text/css")
         link(rel="stylesheet" href="style/swiper.css" type="text/css")
         link(rel="stylesheet" href="style/choices.css" type="text/css")
+        link(rel="stylesheet" href="style/lightbox.css" type="text/css")
         link(rel="stylesheet" href="style/main.css" type="text/css")
         title Центр косметологии Jeternel
     body.content.js-intro-is-shown
@@ -225,14 +226,23 @@ html(lang="ru")
                             p Группа компаний Jeternel стоит на страже красоты и здоровья с 1998 года. В 2009 году самые передовые и прогрессивные технологии в косметологии были выделены в отдельное направление работы. Так появилась Лаборатория красоты Jeternel.
                             p Лучшие мировые технологии омоложения, коррекции эстетических недостатков и лечения кожных заболеваний. Комплексный сервис: от базового ухода до революционных косметологических новаций. Самое большое количество оригинального оборудования для эстетической медицины в Челябинске. Самый широкий выбор косметологических препаратов последнего поколения. Ведущие профессионалы города, прошедшие стажировку в лучших клиниках России и мира. Высокий уровень сервиса в соответствии с мировыми стандартами.
                             p Все аппараты и косметические средства имеют необходимые лицензии, сертификаты качества и регистрационные удостоверения.
-                        .gallery__inner
-                            .gallery__item(style="background-image: url(images/today/today1.png)")
-                            .gallery__item(style="background-image: url(images/today/today2.png)")
-                            .gallery__item(style="background-image: url(images/today/today3.png)")
-                            .gallery__item(style="background-image: url(images/today/today5.png)")
-                            .gallery__item(style="background-image: url(images/today/today6.png)")
-                            .gallery__item(style="background-image: url(images/today/today7.png)")
-                            .gallery__item(style="background-image: url(images/today/today4.png)") 
+                        .gallery__inner.js-gallery
+                            a(href="images/today/today1.png" style="background-image: url(images/today/today1.png)").gallery__item
+                                img(src="images/today/today1.png" alt="gallery1")
+                            a(href="images/today/today2.png" style="background-image: url(images/today/today2.png)").gallery__item
+                                img(src="images/today/today2.png" alt="gallery2")
+                            a(href="images/today/today3.png" style="background-image: url(images/today/today3.png)").gallery__item
+                                img(src="images/today/today3.png" alt="gallery3")
+                            a(href="images/today/today4.png" style="background-image: url(images/today/today4.png)").gallery__item
+                                img(src="images/today/today4.png" alt="gallery4")
+                            a(href="images/today/today5.png" style="background-image: url(images/today/today5.png)").gallery__item
+                                img(src="images/today/today5.png" alt="gallery5")
+                            a(href="images/today/today6.png" style="background-image: url(images/today/today6.png)").gallery__item
+                                img(src="images/today/today6.png" alt="gallery6")
+                            a(href="images/today/today7.png" style="background-image: url(images/today/today7.png)").gallery__item
+                                img(src="images/today/today7.png" alt="gallery7")
+                            a(href="https://www.youtube.com/embed/E83DVERrmUk?autoplay=1&amp;loop=1&amp;mute=1&amp" style="background-image: url(images/today/today1.png)").gallery__item
+                                <iframe src="https://www.youtube.com/embed/E83DVERrmUk?autoplay=1&amp;loop=1&amp;mute=1&amp" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
                     section.tabs(id="price")
                         h2.common__h4-heading Цены на услуги 
                         .tabs__wrap
@@ -613,14 +623,23 @@ html(lang="ru")
                             p Группа компаний Jeternel стоит на страже красоты и здоровья с 1998 года. В 2009 году самые передовые и прогрессивные технологии в косметологии были выделены в отдельное направление работы. Так появилась Лаборатория красоты Jeternel.
                             p Лучшие мировые технологии омоложения, коррекции эстетических недостатков и лечения кожных заболеваний. Комплексный сервис: от базового ухода до революционных косметологических новаций. Самое большое количество оригинального оборудования для эстетической медицины в Челябинске. Самый широкий выбор косметологических препаратов последнего поколения. Ведущие профессионалы города, прошедшие стажировку в лучших клиниках России и мира. Высокий уровень сервиса в соответствии с мировыми стандартами.
                             p Все аппараты и косметические средства имеют необходимые лицензии, сертификаты качества и регистрационные удостоверения.
-                        .gallery__inner
-                            .gallery__item(style="background-image: url(images/today/today1.png)")
-                            .gallery__item(style="background-image: url(images/today/today2.png)")
-                            .gallery__item(style="background-image: url(images/today/today3.png)")
-                            .gallery__item(style="background-image: url(images/today/today5.png)")
-                            .gallery__item(style="background-image: url(images/today/today6.png)")
-                            .gallery__item(style="background-image: url(images/today/today7.png)")
-                            .gallery__item(style="background-image: url(images/today/today4.png)")    
+                        .gallery__inner.js-gallery
+                            a(href="images/today/today1.png" style="background-image: url(images/today/today1.png)").gallery__item
+                                img(src="images/today/today1.png" alt="gallery1")
+                            a(href="images/today/today2.png" style="background-image: url(images/today/today2.png)").gallery__item
+                                img(src="images/today/today2.png" alt="gallery2")
+                            a(href="images/today/today3.png" style="background-image: url(images/today/today3.png)").gallery__item
+                                img(src="images/today/today3.png" alt="gallery3")
+                            a(href="images/today/today4.png" style="background-image: url(images/today/today4.png)").gallery__item
+                                img(src="images/today/today4.png" alt="gallery4")
+                            a(href="images/today/today5.png" style="background-image: url(images/today/today5.png)").gallery__item
+                                img(src="images/today/today5.png" alt="gallery5")
+                            a(href="images/today/today6.png" style="background-image: url(images/today/today6.png)").gallery__item
+                                img(src="images/today/today6.png" alt="gallery6")
+                            a(href="images/today/today7.png" style="background-image: url(images/today/today7.png)").gallery__item
+                                img(src="images/today/today7.png" alt="gallery7")
+                            a(href="https://www.youtube.com/embed/E83DVERrmUk?autoplay=1&amp;loop=1&amp;mute=1&amp" style="background-image: url(images/today/today1.png)").gallery__item
+                                <iframe src="https://www.youtube.com/embed/E83DVERrmUk?autoplay=1&amp;loop=1&amp;mute=1&amp" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>    
 
         //= partials/footer.pug
         include components/menu-catalog.pug

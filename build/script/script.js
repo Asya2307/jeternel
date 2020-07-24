@@ -799,7 +799,6 @@ if (quizStep.length) {
     });
 
     quizStep[0].classList.add('active');
-    console.log(quizStep.length)
 
     document.querySelector('.js-quiz-all').innerHTML = quizStep.length
     
@@ -856,25 +855,31 @@ if (popup) {
     })
 }
 
-const sectionBird = document.querySelector('.section__bird');
 
-if (sectionBird) {
-    const pens = sectionBird.querySelectorAll('.section__bird-item');
-    const blockPosition = sectionBird.scrollHeight;
+const gallery = document.querySelectorAll('.js-gallery');
 
-    document.addEventListener('scroll', (e) => {
-        const scroll = window.pageYOffset;
-        console.log((blockPosition - 300), scroll)
-        if (scroll > (blockPosition - 800)) {
-            pens.forEach((item,index) => {
-                item.classList.add(`section__bird-item--${ index + 1 }`)
-            });
-            setTimeout(() => {
-                pens.forEach((item) => {
-                    item.classList.add(`active`)
-                });
-            }, 2000)
-        };
-        
+if (gallery) {
+    gallery.forEach( (item)=> {
+        lightGallery(item); 
+
+        const itemGallery = item.querySelectorAll('.gallery__item');
+
+        const youTubeLink = 'youtube';
+        const mapLink = 'google.com/maps';
+
+        const isVideo = (href) => href.includes(youTubeLink);
+        const isMap = (href) => href.includes(mapLink);
+    
+
+        itemGallery.forEach((item) => {
+            const href = item.getAttribute('href');
+            if (isVideo(href)) {
+                item.classList.add('gallery__item--video');
+            }  
+
+            if (isMap(href)) {
+                item.classList.add('gallery__item--map');
+            } 
+        })
     })
 }

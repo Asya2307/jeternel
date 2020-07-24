@@ -7,6 +7,7 @@ html(lang="ru")
         link(rel="stylesheet" href="style/normalize.css" type="text/css")
         link(rel="stylesheet" href="style/swiper.css" type="text/css")
         link(rel="stylesheet" href="style/choices.css" type="text/css")
+        link(rel="stylesheet" href="style/lightbox.css" type="text/css")
         link(rel="stylesheet" href="style/main.css" type="text/css")
         title Центр косметологии Jeternel
     body.content.js-intro-is-shown
@@ -186,46 +187,94 @@ html(lang="ru")
                     h1.main__title Услуги
                     section.problem__catalog
                         ul.problem__catalog-list
-                            li.problem__catalog-item
-                                a(href="#").problem__catalog-link 
-                                    .problem__catalog-img(style="background-image: url(/images/services/services-01.jpg)")
-                                        img(src="/images/services/services-01.png", alt="")
-                                    span.problem__catalog-name Диагностика
-                            li.problem__catalog-item
-                                a(href="#").problem__catalog-link 
-                                    .problem__catalog-img(style="background-image: url(/images/services/services-02.jpg)")
-                                        img(src="/images/services/services-02.png", alt="")
-                                    span.problem__catalog-name Косметология
-                            li.problem__catalog-item
-                                a(href="#").problem__catalog-link 
-                                    .problem__catalog-img(style="background-image: url(/images/services/services-03.jpg)")
-                                        img(src="/images/services/services-03.png", alt="")
-                                    span.problem__catalog-name Дерматология
-                            li.problem__catalog-item
-                                a(href="#").problem__catalog-link 
-                                    .problem__catalog-img(style="background-image: url(/images/services/services-04.jpg)")
-                                        img(src="/images/services/services-04.png", alt="")
-                                    span.problem__catalog-name Управление возрастом и здоровье
-                            li.problem__catalog-item
-                                a(href="#").problem__catalog-link 
-                                    .problem__catalog-img(style="background-image: url(/images/services/services-05.png)")
-                                        img(src="/images/services/services-05.png", alt="")
-                                    span.problem__catalog-name Эндокринология и диетология
-                            li.problem__catalog-item
-                                a(href="#").problem__catalog-link 
-                                    .problem__catalog-img(style="background-image: url(/images/services/services-06.png)")
-                                        img(src="/images/services/services-06.png", alt="")
-                                    span.problem__catalog-name Трихология
-                            li.problem__catalog-item
-                                a(href="#").problem__catalog-link 
-                                    .problem__catalog-img(style="background-image: url(/images/services/services-07.png)")
-                                        img(src="/images/services/services-07.png", alt="")
-                                    span.problem__catalog-name Терапия
-                            li.problem__catalog-item
-                                a(href="#").problem__catalog-link 
-                                    .problem__catalog-img(style="background-image: url(/images/services/services-08.png)")
-                                        img(src="/images/services/services-08.png", alt="")
-                                    span.problem__catalog-name Beauty акцент
+                            li.service-preview.service-preview--small.services__item.problem__catalog-item
+                                a.service-preview__link(href="")
+                                    div.service-preview__image-container
+                                        div.service-preview__decoration.service-preview__decoration--01
+                                        div.service-preview__decoration.service-preview__decoration--02
+                                        div.service-preview__decoration.service-preview__decoration--03
+                                        div.service-preview__image-wrapper
+                                            img.service-preview__image(src="/images/services/services-01.jpg", alt="/images/problem/p1")
+                                span.service-preview__title
+                                    a.service-preview__link(href="")
+                                        |Диагностика
+                            li.service-preview.service-preview--small.services__item.problem__catalog-item
+                                a.service-preview__link(href="")
+                                    div.service-preview__image-container
+                                        div.service-preview__decoration.service-preview__decoration--01
+                                        div.service-preview__decoration.service-preview__decoration--02
+                                        div.service-preview__decoration.service-preview__decoration--03
+                                        div.service-preview__image-wrapper
+                                            img.service-preview__image(src="/images/services/services-02.jpg", alt="/images/problem/2")
+                                span.service-preview__title
+                                    a.service-preview__link(href="")
+                                        |Косметология
+                            li.service-preview.service-preview--small.services__item.problem__catalog-item
+                                a.service-preview__link(href="")
+                                    div.service-preview__image-container
+                                        div.service-preview__decoration.service-preview__decoration--01
+                                        div.service-preview__decoration.service-preview__decoration--02
+                                        div.service-preview__decoration.service-preview__decoration--03
+                                        div.service-preview__image-wrapper
+                                            img.service-preview__image(src="/images/services/services-03.jpg", alt="/images/problem/2")
+                                span.service-preview__title
+                                    a.service-preview__link(href="")
+                                        |Дерматология
+                            li.service-preview.service-preview--small.services__item.problem__catalog-item
+                                a.service-preview__link(href="")
+                                    div.service-preview__image-container
+                                        div.service-preview__decoration.service-preview__decoration--01
+                                        div.service-preview__decoration.service-preview__decoration--02
+                                        div.service-preview__decoration.service-preview__decoration--03
+                                        div.service-preview__image-wrapper
+                                            img.service-preview__image(src="/images/services/services-04.jpg", alt="/images/problem/2")
+                                span.service-preview__title
+                                    a.service-preview__link(href="")
+                                        |Управление возрастом и здоровье
+                            li.service-preview.service-preview--small.services__item.problem__catalog-item
+                                a.service-preview__link(href="")
+                                    div.service-preview__image-container
+                                        div.service-preview__decoration.service-preview__decoration--01
+                                        div.service-preview__decoration.service-preview__decoration--02
+                                        div.service-preview__decoration.service-preview__decoration--03
+                                        div.service-preview__image-wrapper
+                                            img.service-preview__image(src="/images/services/services-05.png", alt="/images/problem/2")
+                                span.service-preview__title
+                                    a.service-preview__link(href="")
+                                        |Эндокринология и диетология
+                            li.service-preview.service-preview--small.services__item.problem__catalog-item
+                                a.service-preview__link(href="")
+                                    div.service-preview__image-container
+                                        div.service-preview__decoration.service-preview__decoration--01
+                                        div.service-preview__decoration.service-preview__decoration--02
+                                        div.service-preview__decoration.service-preview__decoration--03
+                                        div.service-preview__image-wrapper
+                                            img.service-preview__image(src="/images/services/services-06.png", alt="/images/problem/2")
+                                span.service-preview__title
+                                    a.service-preview__link(href="")
+                                        |Трихология
+                            li.service-preview.service-preview--small.services__item.problem__catalog-item
+                                a.service-preview__link(href="")
+                                    div.service-preview__image-container
+                                        div.service-preview__decoration.service-preview__decoration--01
+                                        div.service-preview__decoration.service-preview__decoration--02
+                                        div.service-preview__decoration.service-preview__decoration--03
+                                        div.service-preview__image-wrapper
+                                            img.service-preview__image(src="/images/services/services-07.png", alt="/images/problem/2")
+                                span.service-preview__title
+                                    a.service-preview__link(href="")
+                                        |Терапия
+                            li.service-preview.service-preview--small.services__item.problem__catalog-item
+                                a.service-preview__link(href="")
+                                    div.service-preview__image-container
+                                        div.service-preview__decoration.service-preview__decoration--01
+                                        div.service-preview__decoration.service-preview__decoration--02
+                                        div.service-preview__decoration.service-preview__decoration--03
+                                        div.service-preview__image-wrapper
+                                            img.service-preview__image(src="/images/services/services-08.png", alt="/images/problem/2")
+                                span.service-preview__title
+                                    a.service-preview__link(href="")
+                                        |Beauty акцент
                         .see__more.see__more--center.see__more--margin
                             button.common__button Прайс-лист 
         //= partials/footer.pug

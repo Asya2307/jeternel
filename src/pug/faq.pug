@@ -7,6 +7,7 @@ html(lang="ru")
         link(rel="stylesheet" href="style/normalize.css" type="text/css")
         link(rel="stylesheet" href="style/swiper.css" type="text/css")
         link(rel="stylesheet" href="style/choices.css" type="text/css")
+        link(rel="stylesheet" href="style/lightbox.css" type="text/css")
         link(rel="stylesheet" href="style/main.css" type="text/css")
         title Центр косметологии Jeternel
     body.content.js-intro-is-shown
@@ -185,7 +186,7 @@ html(lang="ru")
                     include components/breadcumbs.pug
                     .faq__title-inner
                         h1.main__title Вопросы и ответы
-                        button.common__button Задать вопрос
+                        button.common__button(data-open="consult") Задать вопрос
                     section.faq.faq--index
                         .faq__inner
                             .faq__item 

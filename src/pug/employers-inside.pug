@@ -6,6 +6,7 @@ html(lang="ru")
         link(rel="stylesheet" href="style/normalize.css" type="text/css")
         link(rel="stylesheet" href="style/swiper.css" type="text/css")
         link(rel="stylesheet" href="style/choices.css" type="text/css")
+        link(rel="stylesheet" href="style/lightbox.css" type="text/css")
         link(rel="stylesheet" href="style/main.css" type="text/css")
         title Центр косметологии Jeternel
     body.content.js-intro-is-shown
@@ -184,36 +185,37 @@ html(lang="ru")
                     .em__profile
                         .em__profile-photo
                             img(src="images/employers/e1.png", alt="")
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 375 227.5"><path d="M375 25.5c-72.2 37.6-120.3 34-184.8.4C121.7-9.7 65.8-7.7 0 26.5v201h375v-202z" fill-rule="evenodd" clip-rule="evenodd"/></svg>
                         .em__profile-inner
                             include components/breadcumbs.pug
                             h2.em__profile-name Филькова Ольга Юрьевна
                             p.em__profile-about Врач-дерматовенеролог, врач-косметолог. Профессиональная деятельность с 1999 года.
-                            button.common__button Записаться на прием
+                            button.common__button(data-open="consult-width-info") Записаться на прием
                     include components/history.pug
                     section.gallery
                         .gallery__content.main__content
                             h2.gallery__title Дипломы и сертификаты 
-                        .gallery__inner
-                            .gallery__item.gallery__item--ser
-                                img(src="images/sertificate/s1.png", alt="", srcset="")
-                            .gallery__item.gallery__item--ser
-                                img(src="images/sertificate/s2.png", alt="", srcset="")
-                            .gallery__item.gallery__item--ser
-                                img(src="images/sertificate/s3.png", alt="", srcset="")
-                            .gallery__item.gallery__item--ser
-                                img(src="images/sertificate/s4.png", alt="", srcset="")
-                            .gallery__item.gallery__item--ser
-                                img(src="images/sertificate/s5.png", alt="", srcset="")
-                            .gallery__item.gallery__item--ser
-                                img(src="images/sertificate/s6.png", alt="", srcset="")
-                            .gallery__item.gallery__item--ser
-                                img(src="images/sertificate/s7.png", alt="", srcset="")
-                            .gallery__item.gallery__item--ser
-                                img(src="images/sertificate/s8.png", alt="", srcset="")
-                            .gallery__item.gallery__item--ser
-                                img(src="images/sertificate/s9.png", alt="", srcset="")
-                            .gallery__item.gallery__item--ser
-                                img(src="images/sertificate/s10.png", alt="", srcset="")        
+                        .gallery__inner.js-gallery
+                            a(href="images/sertificate/s1.png").gallery__item.gallery__item--ser
+                                img(src="images/sertificate/s1.png" alt="liense1")
+                            a(href="images/sertificate/s2.png").gallery__item.gallery__item--ser
+                                img(src="images/sertificate/s2.png" alt="liense2")
+                            a(href="images/sertificate/s3.png").gallery__item.gallery__item--ser
+                                img(src="images/sertificate/s3.png" alt="liense1")      
+                            a(href="images/sertificate/s4.png").gallery__item.gallery__item--ser
+                                img(src="images/sertificate/s4.png" alt="liense1")  
+                            a(href="images/sertificate/s5.png").gallery__item.gallery__item--ser
+                                img(src="images/sertificate/s5.png" alt="liense1")  
+                            a(href="images/sertificate/s6.png").gallery__item.gallery__item--ser
+                                img(src="images/sertificate/s6.png" alt="liense1")  
+                            a(href="images/sertificate/s7.png").gallery__item.gallery__item--ser
+                                img(src="images/sertificate/s7.png" alt="liense1")  
+                            a(href="images/sertificate/s8.png").gallery__item.gallery__item--ser
+                                img(src="images/sertificate/s8.png" alt="liense1")  
+                            a(href="images/sertificate/s9.png").gallery__item.gallery__item--ser
+                                img(src="images/sertificate/s9.png" alt="liense1")  
+                            a(href="images/sertificate/s10.png").gallery__item.gallery__item--ser
+                                img(src="images/sertificate/s10.png" alt="liense1")  
                     section.infobox
                         h2.infobox__title Научные работы 
                         .infobox__inner

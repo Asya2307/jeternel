@@ -3,11 +3,19 @@
     align-items flex-start
     margin-top 85px
     &-photo
+        position relative
         display flex
         width 100%
         max-width 300px
+        overflow hidden
         img 
             width 100%
+        svg  
+            position absolute
+            bottom: 0
+            transform: translateY(50%)
+            path 
+                fill #fafafa
     &-inner
         display flex
         flex-direction column 

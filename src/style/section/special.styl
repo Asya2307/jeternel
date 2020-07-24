@@ -16,7 +16,7 @@
        text-transform uppercase
        text-align center
        display block
-       padding: 40px 40px 20px 40px
+       padding: 0px 40px 20px 40px
     @media phone
         &__title 
             padding: 20px 0
@@ -24,6 +24,14 @@
         height 400px
         display flex
         align-items flex-end
+        position relative
+        overflow hidden
+        svg 
+            position absolute
+            bottom: 0
+            transform: translateY(50%)
+            path 
+                fill #fafafa
     @media tablet-hor
         &__img 
             height auto

@@ -7,6 +7,7 @@ html(lang="ru")
         link(rel="stylesheet" href="style/normalize.css" type="text/css")
         link(rel="stylesheet" href="style/swiper.css" type="text/css")
         link(rel="stylesheet" href="style/choices.css" type="text/css")
+        link(rel="stylesheet" href="style/lightbox.css" type="text/css")
         link(rel="stylesheet" href="style/main.css" type="text/css")
         title Центр косметологии Jeternel
     body.content.js-intro-is-shown
@@ -439,10 +440,10 @@ html(lang="ru")
                             |Все акции    
                 .main__wrap--biggest 
                     include components/sections.pug
-        include components/before-after-popup.pug 
         //= partials/footer.pug
         div.intro-curtain
         include components/popups.pug
+        include components/before-after-popup.pug 
         script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript")
         script(src="script/vendor.js" type="text/javascript")
         script(src="script/script.js" type="text/javascript")

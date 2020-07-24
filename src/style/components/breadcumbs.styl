@@ -1,5 +1,6 @@
 .breadcumbs
     font-family default
+
     &__list
         display flex
         align-items center
@@ -14,7 +15,7 @@
             color middle-gray
             margin 0 5px
             font-size 11px
-        &:last-child
+        &:last-child:after
             content: none
     &__link
         position relative
@@ -30,13 +31,20 @@
             background-color middle-gray
             opacity: 0.25
             transition: opacity 0.5s 0s ease
-    &__link span
+    span
+        color middle-gray
         display block
         position relative
-        font-weight 400
+        font-weight 300
         font-size: 12px
     &__link:hover:before
         opacity 0
+    &--center 
+        display flex
+        justify-content center
+        margin-bottom 30px
+        span
+            color: white
 
 
 

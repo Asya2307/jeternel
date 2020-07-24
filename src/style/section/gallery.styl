@@ -4,6 +4,8 @@
         flex-wrap wrap
         margin: 0 -12px
     &__item
+        position relative
+        text-decoration: none
         width calc(100%/5 - 24px)
         margin 11px
         height 164px
@@ -11,6 +13,9 @@
         background-size cover
         background-repeat no-repeat
         border 1px solid #e7e7e7
+        img, 
+        iframe 
+            display none
         &--ser
             background-size: contain
             height unset
@@ -24,12 +29,39 @@
             img 
                 margin-left auto
                 margin-right auto
+                display block
         &--popup 
             height unset
+            background-image none
             img 
                 display block
                 margin auto 
                 padding 11px
+        &--video:after
+            content: 'Видео'
+            display block
+            position absolute
+            bottom: 20px
+            left 20px
+            font-family default 
+            color black 
+            background-color white 
+            font-size: 13px
+            border-radius: 17px
+            padding: 9px 17px
+        &--map:after
+            content: 'Виртуальный тур'
+            display block
+            position absolute
+            bottom: 20px
+            left 20px
+            font-family default 
+            color black 
+            background-color white 
+            font-size: 13px
+            border-radius: 17px
+            padding: 9px 17px
+
     @media tablet-hor
         &__item
             width calc(100%/2 - 24px)

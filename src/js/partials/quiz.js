@@ -6,7 +6,6 @@ if (quizStep.length) {
     });
 
     quizStep[0].classList.add('active');
-    console.log(quizStep.length)
 
     document.querySelector('.js-quiz-all').innerHTML = quizStep.length
     

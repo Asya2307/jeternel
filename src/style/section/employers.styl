@@ -31,12 +31,14 @@
        text-transform uppercase
        text-align center
        display block
-       padding: 40px 40px 20px 40px
+       padding: 0px 40px 20px 40px
     @media phone-portrait
         &__name
             padding-left 0
             padding-right 0
     &__img
+        position relative
+        overflow hidden
         height 400px
         display flex
         align-items flex-end
@@ -45,6 +47,12 @@
             height 100%
             object-fit contain
             object-position bottom
+        svg  
+            position absolute
+            bottom: 0
+            transform: translateY(50%)
+            path 
+                fill: #fafafa
     @media tablet-hor
         &__img
             height auto
@@ -55,6 +63,9 @@
         &:hover .employers__pattern-item
             opacity 1
             animation-play-state running 
+        &--slider 
+            width unset 
+            margin 0
     
     @media tablet-landscape-large
         &__item
@@ -98,20 +109,20 @@
             &--1
                 width 67px
                 height 67px
-                background-image url(../images/employers/pen1.png)
+                background-image url(../images/icons/decor-01.svg)
                 top 50%
                 left -24px
                 animation-direction reverse
             &--2
                 width 101px
                 height 101px
-                background-image url(../images/employers/pen2.png)
+                background-image url(../images/icons/decor-02.svg)
                 top 37%
                 right -100px
             &--3
                 width 177px
                 height 177px
-                background-image url(../images/employers/pen3.png)
+                background-image url(../images/icons/decor-02.svg)
                 top 10%
                 animation-direction reverse
     @media tablet-landscape-medium
