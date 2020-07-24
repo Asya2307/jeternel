@@ -1,18 +1,18 @@
 const form = document.querySelectorAll('.js-form');
 
-const cleaveMaskPhone = document.querySelectorAll('.js-phone-mask')
+// const cleaveMaskPhone = document.querySelectorAll('.js-phone-mask')
 
-if (cleaveMaskPhone) {
-    cleaveMaskPhone.forEach((item) => {
-        item.addEventListener('focus', (e) => {
-            new Cleave(e.currentTarget, {
-                phone: true,
-                phoneRegionCode: 'ru',
-                prefix: '+7'
-            });
-        })
-    });
-};
+// if (cleaveMaskPhone) {
+//     cleaveMaskPhone.forEach((item) => {
+//         item.addEventListener('focus', (e) => {
+//             new Cleave(e.currentTarget, {
+//                 phone: true,
+//                 phoneRegionCode: 'ru',
+//                 prefix: '+7'
+//             });
+//         })
+//     });
+// };
 
 if (form) {
     
@@ -31,9 +31,9 @@ if (form) {
             function noErrors(elem){
                 let elemParent = elem.parentElement;
                 console.log(elemParent)
-                while(!elemParent.classList.contains("form__group")){
-                    elemParent = elemParent.parentElement;
-                };
+                // while(!elemParent.classList.contains("form__item")){
+                //     elemParent = elemParent.parentElement;
+                // };
                 if(elemParent.classList.contains("js-valid-error")){
                     elemParent.classList.remove("js-valid-error");
                 };
@@ -81,7 +81,7 @@ if (form) {
                 }
     
                 switch(elemType){
-    
+
                     // Для инпутов
                     case "text":
                         if(formElems[i].value == ""){ 
@@ -168,11 +168,7 @@ if (form) {
         form.forEach((item) => {
             item.addEventListener('submit', validationCheck)
         });
-        
-
-
     
-
 
     const formItem = document.querySelectorAll('.form__input');
 

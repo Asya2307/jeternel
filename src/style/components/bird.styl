@@ -9,32 +9,54 @@
     background-repeat no-repeat
     background-color #fff
     height 1124px
+    overflow hidden
     &-item
         position absolute
-        top 20%
-        left 20%
-        transition: 4s 
-        transition-timing-function: ease
-        transition-delay: 0s
-        transform-origin: left center
-        animation-duration 10s
-        animation-timing-function ease-in-out
+        top 0
+        left 0
+        transition-delay 0s
+        transform-origin left center
+        animation-duration 20s
+        animation-delay 0
+        animation-timing-function linear
         animation-iteration-count infinite
         &--1
-            animation-name pen(100vw)
+            animation-name fly--1
+            transform: translate(32vw, 57vh)
+            svg  
+                animation-delay: 1s
+        &--2
+            animation-name fly--2
+            transform: translate(32vw, 57vh)
+            svg  
+                animation-delay: 2s
+        &--3
+            transform: translate(32vw, 57vh)
+            animation-name fly--3
+            svg  
+                animation-delay: 3s
+        &--4
+            animation-name fly--4
+            transform: translate(32vw, 54vh)
+            svg  
+                animation-delay: 4s
+        &--5
+            animation-name fly--5
+            transform: translate(32vw, 54vh)
+            svg  
+                animation-delay: 5s
         svg  
+            transform-origin: left center
+            animation-name rotate
+            animation-duration 15s
+            animation-timing-function ease
+            animation-iteration-count infinite 
             path 
                 fill #fafafa
 @media tablet-hor
     .section-bird
         display none
 
-pen(n)
-  @keyframes flyPen
-    0%
-      transform: translate(0, 0)
-    100%
-      transform: translate(0, n)
 
 
     

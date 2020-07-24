@@ -58,12 +58,69 @@
         opacity 1
         top 50%
 
-slideShow(from, to, name)
-  @keyframes name
-    0%
-      opacity from
+@keyframes fly--1
+    0% 
+        transform: translate(32vw, 57vh)
     100%
-      opacity to
+        transform translate(55vw, -10vh)
+
+@keyframes fly--2
+    0% 
+        transform: translate(32vw, 57vh)
+        opacity 0
+    10%
+        opacity .3
+    25%
+        opacity 1
+    100%
+        transform translate(100vw, -15vh)
+
+@keyframes fly--3
+    0% 
+        transform: translate(32vw, 57vh)
+        opacity 0
+    10%
+        opacity .3
+    25%
+        opacity 1
+    100%
+        transform translate(100vw, 84vh)
+
+@keyframes fly--4
+    0% 
+        transform: translate(32vw, 54vh)
+        opacity 0
+    10%
+        opacity .3
+    25%
+        opacity 1
+    100%
+        transform translate(50vw, 140vh)
+
+@keyframes fly--5
+    0% 
+        transform: translate(32vw, 54vh)
+        opacity 0
+    10%
+        opacity .5
+    100%
+        transform translate(100vw, 30vh)
+        opacity 1
+
+@keyframes rotate 
+    0%
+        transform: rotate(05deg)
+    25%
+      transform: rotate(-15deg)  
+    50%
+        transform: rotate(0deg)  
+    75%
+        transform: rotate(25deg)
+    100%
+        transform: rotate(0deg) 
+
+
+    
 
 
 

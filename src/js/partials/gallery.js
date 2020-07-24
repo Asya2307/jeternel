@@ -17,11 +17,11 @@ if (gallery) {
             const href = item.getAttribute('href');
             if (isVideo(href)) {
                 item.classList.add('gallery__item--video');
-            }  
+            };
 
             if (isMap(href)) {
                 item.classList.add('gallery__item--map');
-            } 
+            };
         })
     })
 }
