@@ -1006,6 +1006,9 @@ body.js-intro-is-shown .main-slider__image {
   font-weight: 300;
   color: inherit;
 }
+.logo__description--inside {
+  color: #382f2d;
+}
 @media (max-width: 1480px) {
   .logo__description {
     font-size: 14px;
@@ -1016,6 +1019,10 @@ body.js-intro-is-shown .main-slider__image {
   .logo__description {
     display: none;
   }
+}
+.logo--inside {
+  color: #382f2d;
+  text-decoration: none;
 }
 .head--white .logo svg {
   fill: #fff;
