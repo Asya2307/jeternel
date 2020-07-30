@@ -27,7 +27,7 @@ html(lang="ru")
                                 |Cеть медицинских центров косметологии Jeternel
                         aside.burger-menu__aside
                             div.helpers
-                                button.helpers__button
+                                button.helpers__button(data-open="consult")
                                     svg(width="23" height="23")
                                         use(xlink:href="#pen-icon")
                                 button.helpers__button
@@ -171,7 +171,7 @@ html(lang="ru")
                 a.head__phone(href="tel:")
                     |+7 351 225-55-55
                 div.helpers
-                    button.helpers__button
+                    button.helpers__button(data-open="consult")
                         svg(width="23" height="23")
                             use(xlink:href="#pen-icon")
                     button.helpers__button
@@ -223,15 +223,15 @@ html(lang="ru")
                                     ul.form__group.form__group--half
                                         li.form__group-item
                                             label.form__item(for="name")
-                                                input(type="text" data-req name="name").form__input.form__input--left
+                                                input(type="text" data-req name="name" autocomplete="off").form__input.form__input--left
                                                 span.form__label Имя
                                         li.form__group-item
                                             label.form__item
-                                                input(type="text" data-req name="phone").form__input.js-input-phone.js-phone-mask.form__input--left
+                                                input(type="text" data-req name="name" autocomplete="off").form__input.js-input-phone.js-phone-mask.form__input--left
                                                 span.form__label Телефон
                                         li.form__group-item
                                             label.form__item
-                                                input(type="text" data-req name="email").form__input.form__input--left
+                                                input(type="text" data-req name="email" autocomplete="off").form__input.form__input--left
                                                 span.form__label Email
                                     ul.form__group.form__group--half
                                         li.form__group-item
@@ -239,8 +239,11 @@ html(lang="ru")
                                                 textarea(name="textarea", cols="30", rows="10").form__textarea.required.js-input-textarea Текст отзыва *
                                 .form__checkbox
                                     .custom__checkbox-wrap
-                                        input(type="checkbox" name="checkbox").custom__checkbox.required.js-input-checkbox
-                                        label.custom__checkbox-label Согласен на обработку персональных данных
+                                        label.custom__checkbox-label 
+                                            input(type="checkbox" name="checkbox").custom__checkbox.required.js-input-checkbox
+                                            span.custom__checkbox-check
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="11"><path fill="#fff" d="M15.158.01l.83.835L5.9 10.985l-.254-.255-.254.255-5.38-5.413.83-.834 4.805 4.834z"/></svg>
+                                            span.custom__checkbox-info Согласен на обработку <a href="/">персональных данных</a>
                                 button.common__button.common__button--half.common__button--gray-cherry Отправить отзыв    
         //= partials/footer.pug
         div.intro-curtain

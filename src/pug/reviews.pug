@@ -27,7 +27,7 @@ html(lang="ru")
                                 |Cеть медицинских центров косметологии Jeternel
                         aside.burger-menu__aside
                             div.helpers
-                                button.helpers__button
+                                button.helpers__button(data-open="consult")
                                     svg(width="23" height="23")
                                         use(xlink:href="#pen-icon")
                                 button.helpers__button
@@ -171,7 +171,7 @@ html(lang="ru")
                 a.head__phone(href="tel:")
                     |+7 351 225-55-55
                 div.helpers
-                    button.helpers__button
+                    button.helpers__button(data-open="consult")
                         svg(width="23" height="23")
                             use(xlink:href="#pen-icon")
                     button.helpers__button
@@ -251,15 +251,15 @@ html(lang="ru")
                                         ul.form__group.form__group--half
                                             li.form__group-item
                                                 label.form__item(for="name")
-                                                    input(type="text" data-req name="name").form__input.form__input--left
+                                                    input(type="text" data-req name="name" autocomplete="off").form__input.form__input--left
                                                     span.form__label.form__label--left Имя
                                             li.form__group-item
                                                 label.form__item
-                                                    input(type="text" data-req name="phone").form__input.js-input-phone.js-phone-mask.form__input--left
+                                                    input(type="text" data-req name="name" autocomplete="off").form__input.js-input-phone.js-phone-mask.form__input--left
                                                     span.form__label.form__label--left Телефон
                                             li.form__group-item
                                                 label.form__item
-                                                    input(type="text" data-req name="email").form__input.form__input--left
+                                                    input(type="text" data-req name="email" autocomplete="off").form__input.form__input--left
                                                     span.form__label.form__label--left Email
                                         ul.form__group.form__group--half
                                             li.form__group-item
