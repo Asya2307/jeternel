@@ -22,4 +22,5 @@
 //= partials/video.js
 //= partials/bird.js
 //= partials/gallery.js
+//= partials/search.js
 

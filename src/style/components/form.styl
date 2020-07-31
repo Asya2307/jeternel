@@ -68,6 +68,8 @@
         margin-right auto
         &--big 
             max-width 950px
+        &--search 
+            max-width 598px
     &__box
         display flex
         flex-direction column
@@ -204,6 +206,26 @@
             line-height: 34px
         &-title 
             color: milk-cherry
+    &__search 
+        &-button 
+            position absolute
+            top: -6px
+            right 10px
+            display block
+            width 19px
+            height 19px
+            padding: 0
+            background-color transparent
+            border none
+            transform: scale(-1, 1)
+            cursor pointer
+            svg 
+                width 100%
+                height 100%
+                path
+                    fill white
+            &:disabled 
+                opacity .5
 
         
 .custom__checkbox
@@ -271,6 +293,8 @@
     &:checked ~ &-check
         svg  
             opacity 1
+
+    
 
    
 
