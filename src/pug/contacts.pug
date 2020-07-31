@@ -181,8 +181,8 @@ html(lang="ru")
                         svg(width="26" height="22")
                             use(xlink:href="#glass-icon")
         main.main
-            .container
-                .main__wrap--biggest
+            .main__wrap--biggest
+                .container
                     section.breadcumbs
                         ul.breadcumbs__list
                             li.breadcumbs__item
@@ -216,8 +216,9 @@ html(lang="ru")
                                 span Центр косметологии Jeternel на Братьев Кашириных, 131Б
                             .branch__info.branch__info--contacts
                                 span.branch__info-phone +7 351 225-75-50
-                div#map.location__map.location__map--full
-                .main__wrap--biggest
+            div#map.location__map.location__map--full
+            .main__wrap--biggest
+                .container
                     section.requisites
                         h2.requisites__title Реквизиты ООО «Вдохновение»
                         ul.requisites__list 
@@ -236,8 +237,8 @@ html(lang="ru")
                             li.requisites__item
                                 span.requisites__item-title р/с:
                                 span.requisites__item-info 4070 2810 6720 0002 4621 в Челябинске ОСБ №8597, г. Челябинск 
-                include components/form.pug
-                    
+            include components/form.pug
+                
         //= partials/footer.pug
         div.intro-curtain
         include components/popups.pug

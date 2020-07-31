@@ -214,6 +214,7 @@ html(lang="ru")
                     .section__bird-item.section__bird-item--5
                         <svg xmlns="http://www.w3.org/2000/svg" width="212" height="59"><path d="M212.007 36.257S160.601 56.055 106.361 58.61C41.22 61.675 22.48 44.94 12.6 34.472.328 21.47-.013 6.538-.013 6.538S16.727 34.4 64.66 18.112C112.59 1.821 123.782-.014 147.005.008c10.543.009 28.335 4.254 41.094 12.085 19.494 11.963 23.908 24.164 23.908 24.164z"/></svg>
                 section.legend__wrap 
+                    .container
                         .legend__item
                             .legend__inner
                                 span.legend__title Легенда Jeternel
@@ -226,7 +227,8 @@ html(lang="ru")
                                         |Cказку о Жар-птице и молодильных яблоках мы превратили в современную историю Jeternel. Мы помогаем нашим клиентам вернуть вечное сияние молодости и красоты!  
                     
             .main__wrap.main__wrap--big
-                section.gallery
+                .container
+                    section.gallery
                         .gallery__content.main__content
                             h2.gallery__title Jeternel сегодня 
                             ul.gallery__list
@@ -263,30 +265,30 @@ html(lang="ru")
                             a(href="https://www.youtube.com/embed/E83DVERrmUk?autoplay=1&amp;loop=1&amp;mute=1&amp").gallery__item
                                 img(src="images/today/today7.png" alt="gallery7")
                                 <iframe src="https://www.youtube.com/embed/E83DVERrmUk?autoplay=1&amp;loop=1&amp;mute=1&amp" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>                
-                include components/special.pug
-                section.gallery
-                        .gallery__content.main__content
-                            h2.gallery__title Лицензии
-                            p Лаборатория красоты Jeternel — лицензированное учреждение. Мы имеем право и все необходимые разрешения для проведения сложных косметологических процедур. Будьте уверены в результате — все процедуры пройдут по регламентированному порядку с соблюдением всех норм безопасности! Мы работает только с лицензированными препаратами и лучшими европейскими технологиями с мировыми стандартами качества.
-                        .gallery__inner.js-gallery
-                            a(href="images/liense/liense1.png").gallery__item.gallery__item--popup
-                                img(src="images/liense/liense1.png" alt="liense1")
-                            a(href="images/liense/liense2.png").gallery__item.gallery__item--popup
-                                img(src="images/liense/liense2.png" alt="liense2")
-                            a(href="images/liense/liense3.png").gallery__item.gallery__item--popup
-                                img(src="images/liense/liense3.png" alt="liense1")
-                section.gallery
-                        .gallery__content.main__content
-                            h2.gallery__title Достижения
-                            p Группа компания Jeternel за активную жизненную позицию — мы участвуем и проводим различные профессиональные конкурсы, семинары-практикумы, мастер-классы для профессионалов индустрии красоты. Достижения наших специалистов неоднократно были отмечены Дипломами, Сертификатами и Свидетельствами профессионального мастерства.
-                        .gallery__inner.js-gallery
-                            a(href="images/liense/dos1.png").gallery__item.gallery__item--popup
-                                img(src="images/liense/dos1.png" alt="dos1")
-                            a(href="images/liense/dos2.png").gallery__item.gallery__item--popup
-                                img(src="images/liense/dos2.png" alt="dos2")
-                            a(href="images/liense/dos3.png").gallery__item.gallery__item--popup
-                                img(src="images/liense/dos3.png" alt="dos3")
-                include components/reviews.pug
+                    include components/special.pug
+                    section.gallery
+                            .gallery__content.main__content
+                                h2.gallery__title Лицензии
+                                p Лаборатория красоты Jeternel — лицензированное учреждение. Мы имеем право и все необходимые разрешения для проведения сложных косметологических процедур. Будьте уверены в результате — все процедуры пройдут по регламентированному порядку с соблюдением всех норм безопасности! Мы работает только с лицензированными препаратами и лучшими европейскими технологиями с мировыми стандартами качества.
+                            .gallery__inner.js-gallery
+                                a(href="images/liense/liense1.png").gallery__item.gallery__item--popup
+                                    img(src="images/liense/liense1.png" alt="liense1")
+                                a(href="images/liense/liense2.png").gallery__item.gallery__item--popup
+                                    img(src="images/liense/liense2.png" alt="liense2")
+                                a(href="images/liense/liense3.png").gallery__item.gallery__item--popup
+                                    img(src="images/liense/liense3.png" alt="liense1")
+                    section.gallery
+                            .gallery__content.main__content
+                                h2.gallery__title Достижения
+                                p Группа компания Jeternel за активную жизненную позицию — мы участвуем и проводим различные профессиональные конкурсы, семинары-практикумы, мастер-классы для профессионалов индустрии красоты. Достижения наших специалистов неоднократно были отмечены Дипломами, Сертификатами и Свидетельствами профессионального мастерства.
+                            .gallery__inner.js-gallery
+                                a(href="images/liense/dos1.png").gallery__item.gallery__item--popup
+                                    img(src="images/liense/dos1.png" alt="dos1")
+                                a(href="images/liense/dos2.png").gallery__item.gallery__item--popup
+                                    img(src="images/liense/dos2.png" alt="dos2")
+                                a(href="images/liense/dos3.png").gallery__item.gallery__item--popup
+                                    img(src="images/liense/dos3.png" alt="dos3")
+                    include components/reviews.pug
         //= partials/footer.pug
         div.intro-curtain
         include components/popups.pug

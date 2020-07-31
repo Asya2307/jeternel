@@ -181,8 +181,8 @@ html(lang="ru")
                         svg(width="26" height="22")
                             use(xlink:href="#glass-icon")
         main.main
-            .container
-                .main__wrap--biggest
+            .main__wrap--biggest
+                .container
                     section.breadcumbs
                         ul.breadcumbs__list
                             li.breadcumbs__item
@@ -223,37 +223,37 @@ html(lang="ru")
                             a(data-iframe="true" href="https://www.google.com/maps/embed?pb=!4v1595488794938!6m8!1m7!1s0rSZCx7EMVmXpr4LfHTzvA!2m2!1d55.24396459402779!2d61.38466701011318!3f294.8789943795935!4f0!5f0.7820865974627469" data-src="https://www.google.com/maps/embed?pb=!4v1595488794938!6m8!1m7!1s0rSZCx7EMVmXpr4LfHTzvA!2m2!1d55.24396459402779!2d61.38466701011318!3f294.8789943795935!4f0!5f0.7820865974627469" style="background-image: url(images/today/today7.png)").gallery__item
                                 <iframe src="https://www.google.com/maps/embed?pb=!4v1595488794938!6m8!1m7!1s0rSZCx7EMVmXpr4LfHTzvA!2m2!1d55.24396459402779!2d61.38466701011318!3f294.8789943795935!4f0!5f0.7820865974627469" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>                    
                     include components/reviews.pug
-                section.form__wrap.form__wrap--index.form__wrap--branch
-                    form.form(action="").js-form
-                        .form__inner.form__inner--big
-                            span.form__title Оставить отзыв
-                            .form__box
-                                .form__container
-                                    ul.form__group.form__group--half
-                                        li.form__group-item
-                                            label.form__item(for="name")
-                                                input(type="text" data-req name="name" autocomplete="off").form__input.form__input--left
-                                                span.form__label Имя
-                                        li.form__group-item
-                                            label.form__item
-                                                input(type="text" data-req name="name" autocomplete="off").form__input.js-input-phone.js-phone-mask.form__input--left
-                                                span.form__label Телефон
-                                        li.form__group-item
-                                            label.form__item
-                                                input(type="text" data-req name="email" autocomplete="off").form__input.form__input--left
-                                                span.form__label Email
-                                    ul.form__group.form__group--half
-                                        li.form__group-item
-                                            .form__item.form__item-textarea
-                                                textarea(name="textarea", cols="30", rows="10").form__textarea.required.js-input-textarea Текст отзыва *
-                                .form__checkbox
-                                    .custom__checkbox-wrap
-                                        label.custom__checkbox-label 
-                                            input(type="checkbox" name="checkbox").custom__checkbox.required.js-input-checkbox
-                                            span.custom__checkbox-check
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="11"><path fill="#fff" d="M15.158.01l.83.835L5.9 10.985l-.254-.255-.254.255-5.38-5.413.83-.834 4.805 4.834z"/></svg>
-                                            span.custom__checkbox-info Согласен на обработку <a href="/">персональных данных</a>
-                                button.common__button.common__button--half.common__button--gray-cherry Отправить отзыв    
+            section.form__wrap.form__wrap--index.form__wrap--branch
+                form.form(action="").js-form
+                    .form__inner.form__inner--big
+                        span.form__title Оставить отзыв
+                        .form__box
+                            .form__container
+                                ul.form__group.form__group--half
+                                    li.form__group-item
+                                        label.form__item(for="name")
+                                            input(type="text" data-req name="name" autocomplete="off").form__input.form__input--left
+                                            span.form__label Имя
+                                    li.form__group-item
+                                        label.form__item
+                                            input(type="text" data-req name="name" autocomplete="off").form__input.js-input-phone.js-phone-mask.form__input--left
+                                            span.form__label Телефон
+                                    li.form__group-item
+                                        label.form__item
+                                            input(type="text" data-req name="email" autocomplete="off").form__input.form__input--left
+                                            span.form__label Email
+                                ul.form__group.form__group--half
+                                    li.form__group-item
+                                        .form__item.form__item-textarea
+                                            textarea(name="textarea", cols="30", rows="10").form__textarea.required.js-input-textarea Текст отзыва *
+                            .form__checkbox
+                                .custom__checkbox-wrap
+                                    label.custom__checkbox-label 
+                                        input(type="checkbox" name="checkbox").custom__checkbox.required.js-input-checkbox
+                                        span.custom__checkbox-check
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="11"><path fill="#fff" d="M15.158.01l.83.835L5.9 10.985l-.254-.255-.254.255-5.38-5.413.83-.834 4.805 4.834z"/></svg>
+                                        span.custom__checkbox-info Согласен на обработку <a href="/">персональных данных</a>
+                            button.common__button.common__button--half.common__button--gray-cherry Отправить отзыв    
         //= partials/footer.pug
         div.intro-curtain
         include components/popups.pug
