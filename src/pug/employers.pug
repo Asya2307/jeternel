@@ -182,11 +182,20 @@ html(lang="ru")
         main.main
             .container
                 .main__wrap.main__wrap--big
-                   include components/breadcumbs.pug
+                   section.breadcumbs
+                        ul.breadcumbs__list
+                            li.breadcumbs__item
+                                a.breadcumbs__link
+                                    span Главная
+                            li.breadcumbs__item
+                                a.breadcumbs__link
+                                    span О компании
+                            li.breadcumbs__item
+                                span Сотрудники
                    h1.main__title.main__title--inside Сотрудники
                    section.employers
                     .employers__box
-                        .employers__title Руководство
+                        h2.employers__title Руководство
                         .employers__wrap
                             .employers__inner
                                 .employers__item
@@ -223,7 +232,7 @@ html(lang="ru")
                                         .employers__pattern-item.employers__pattern-item--2
                                         .employers__pattern-item.employers__pattern-item--3
                     .employers__box
-                        .employers__title Врачи
+                        h2.employers__title Врачи
                         .filters
                             ul.filters__list
                                 li.filters__item

@@ -3,7 +3,7 @@
         max-width: 992px
         margin-left auto
         margin-right auto
-        padding-top 90px
+        padding-top 73px
         &--big 
             max-width 1270px
             margin-left auto
@@ -13,6 +13,8 @@
             max-width 1332px
             margin-left auto
             margin-right auto
+            width 100%
+            padding-top 73px
         &--quiz 
             padding-top 0
         &--window 
@@ -30,6 +32,10 @@
         p
             font-size 24px
             line-height 32px
+        @media phone
+            p
+                font-size 20px
+                line-height 24px
         h2
             font-size 60px
             font-weight 400
@@ -38,9 +44,11 @@
             h2
                 font-size 45px
                 margin-top 49px
-        @media phone-portrait
+        @media phone
             h2
                 font-size 32px
+
+            
         h3
             font-size 42px
             line-height 46px
@@ -49,10 +57,10 @@
         @media phone-portrait
             h3
                 font-size 36px
-                margin-top 49px
         @media phone
             h3
                 font-size 30px
+                line-height 34px
         ul
             list-style-type none
             padding 0
@@ -73,6 +81,10 @@
                     margin-right 10px
                     position relative
                     top 13px
+            @media phone
+                li
+                    font-size 20px
+                    line-height 24px
         table
             border 1px solid #e7e7e7
             background-color default-gray
@@ -120,10 +132,21 @@
         position relative
     &--prm
         background-color default-cherry
-@media laptop
-    .main 
-        padding-left 20px
-        padding-right 20px
+
+    @media desktop-medium
+        padding 25px 64px 28px 64px
+    @media laptop
+        padding 20px 64px 23px 64px
+    @media tablet-landscape-large
+        padding 20px 40px 23px 40px
+    @media tablet-portrait
+        padding 20px 30px 23px 30px
+    @media phone
+        flex-direction row-reverse
+        justify-content space-between
+        padding 20px 20px 23px 20px
+
+  
 .show__more
     display flex
     align-items center

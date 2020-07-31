@@ -183,13 +183,19 @@ html(lang="ru")
         main.main
             .container
                 .main__wrap--biggest
-                    include components/breadcumbs.pug
+                    section.breadcumbs
+                        ul.breadcumbs__list
+                            li.breadcumbs__item
+                                a.breadcumbs__link
+                                    span Главная
+                            li.breadcumbs__item
+                                span Вопросы и ответы
                     .faq__title-inner
                         h1.main__title Вопросы и ответы
                         button.common__button(data-open="consult") Задать вопрос
                     section.faq.faq--index
                         .faq__inner
-                            .faq__item 
+                            .faq__item.js-faq-item 
                                 .faq__box.js-open-faq
                                     button.faq__title 
                                         span Как правильно пользоваться масками для лица? Как часто ими можно пользоваться?
@@ -203,7 +209,7 @@ html(lang="ru")
                                                     span.faq__auth-position врач-косметолог
                                             .faq__date 
                                                 span 18.03.2020
-                            .faq__item 
+                            .faq__item.js-faq-item 
                                 .faq__box.js-open-faq
                                     button.faq__title 
                                         span Как происходит естественное очищение кожи?
@@ -217,7 +223,7 @@ html(lang="ru")
                                                     span.faq__auth-position врач-косметолог
                                             .faq__date 
                                                 span 18.03.2020
-                            .faq__item
+                            .faq__item.js-faq-item
                                 .faq__box.js-open-faq
                                     button.faq__title 
                                         span Косметологические процедуры улучшают внешний вид. Не создают ли они других, скрытых проблем?

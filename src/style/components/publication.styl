@@ -41,14 +41,18 @@
         
     &__image 
         width 100%
+        overflow hidden
         img 
             width 100%
             height 100%
             object-fit cover
+            transition: .5s
+            transition-timing-function easy-in-out
         &:after 
             content ''
             float  left 
             padding-bottom 100%
+        
     &__title 
         font-size 13px
         line-height 23px
@@ -70,3 +74,8 @@
     &__link
         text-decoration none
         color black
+        &:hover 
+            .publication__image 
+                img
+                    transform: scale(1.05)
+

@@ -183,7 +183,19 @@ html(lang="ru")
         main.main
             .container
                 .main__wrap--biggest
-                    include components/breadcumbs.pug
+                    section.breadcumbs
+                        ul.breadcumbs__list
+                            li.breadcumbs__item
+                                a.breadcumbs__link
+                                    span Главная
+                            li.breadcumbs__item
+                                a.breadcumbs__link
+                                    span  О компании
+                            li.breadcumbs__item
+                                a.breadcumbs__link
+                                    span Аппараты
+                            li.breadcumbs__item
+                                span Косметологический аппарат Velashape Sculptor
                     h1.main__title Косметологический аппарат Velashape Sculptor
                     section.equipment__wrap
                         .equipment 

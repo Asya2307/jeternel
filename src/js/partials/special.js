@@ -5,8 +5,8 @@ document.addEventListener('DOMContentLoaded', (e) => {
         specialSlider.forEach(function(item) {
                  new Swiper(item, {
                     speed: 1200,
-                    spaceBetween: 150,
-                    slidesPerView: 1,
+                    slidesPerView: 2,
+                    spaceBetween: 15,
                     autoHeight: true,
                     loop: true,
                     navigation: {
@@ -16,10 +16,12 @@ document.addEventListener('DOMContentLoaded', (e) => {
                     breakpoints: {
                         // when window width is >= 320px
                         768: {
-                          slidesPerView: 3,
+                          slidesPerView: 2,
+                          spaceBetween: 50,
                         },
-                        1024: {
+                        1336: {
                             slidesPerView: 3,
+                            spaceBetween: 150
                         }
                       }
                 })

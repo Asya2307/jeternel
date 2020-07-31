@@ -183,7 +183,13 @@ html(lang="ru")
         main.main
             .container
                 .main__wrap--biggest
-                    include components/breadcumbs.pug
+                    section.breadcumbs
+                        ul.breadcumbs__list
+                            li.breadcumbs__item
+                                a.breadcumbs__link
+                                    span Главная
+                            li.breadcumbs__item
+                                span Филиалы
                     h1.main__title Филиалы
                 div#map.location__map.location__map--full
                 .main__wrap--biggest

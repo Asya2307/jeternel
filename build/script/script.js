@@ -496,8 +496,8 @@ document.addEventListener('DOMContentLoaded', (e) => {
         specialSlider.forEach(function(item) {
                  new Swiper(item, {
                     speed: 1200,
-                    spaceBetween: 150,
-                    slidesPerView: 1,
+                    slidesPerView: 2,
+                    spaceBetween: 15,
                     autoHeight: true,
                     loop: true,
                     navigation: {
@@ -507,21 +507,42 @@ document.addEventListener('DOMContentLoaded', (e) => {
                     breakpoints: {
                         // when window width is >= 320px
                         768: {
-                          slidesPerView: 3,
+                          slidesPerView: 2,
+                          spaceBetween: 50,
                         },
-                        1024: {
+                        1336: {
                             slidesPerView: 3,
+                            spaceBetween: 150
                         }
                       }
                 })
         })
     }
 })
-document.querySelectorAll('.js-open-faq').forEach((item) => {
-    item.addEventListener('click', (e) => {
-        e.currentTarget.classList.toggle('active')
-    })
-});
+const faqItem = document.querySelectorAll('.js-faq-item');
+const faqButtonAll = document.querySelectorAll('.js-open-faq')
+
+if (faqItem) {
+    faqItem.forEach((item, index) => {
+        item.setAttribute('style', `z-index: ${index + 1}`);
+        const faqButton = item.querySelector('.js-open-faq');
+        faqButton.addEventListener('click', (e) => {
+            faqButtonAll.forEach((item) => {
+                item.classList.remove('active');
+            });
+            faqItem.forEach((item) => {
+                item.classList.remove('active');
+            });
+            if(!e.currentTarget.classList.contains('active')) {
+                e.currentTarget.classList.add('active');
+                e.currentTarget.closest('.js-faq-item').classList.add('active');
+            } else {
+                e.currentTarget.classList.remove('active');
+                e.currentTarget.closest('.js-faq-item').classList.remove('active');
+            }
+        });
+    });
+}
 const form = document.querySelectorAll('.js-form');
 
 // const cleaveMaskPhone = document.querySelectorAll('.js-phone-mask')
@@ -677,7 +698,6 @@ if (form) {
                 for(let i = 0; i < validErrors.length; i++){
     
                     let elemParent = validErrors[i].parentElement;
-                    console.log(elemParent);
 
                     while(!elemParent.classList.contains("form__item")){
                         elemParent = elemParent.parentElement;
@@ -701,7 +721,6 @@ if (form) {
             e.currentTarget.closest('.form__item').classList.add('active');
         });
         item.addEventListener('blur', (e) => {
-            console.log(e.currentTarget.value)
             if (!e.target.value) {
                 e.currentTarget.closest('.form__item').classList.remove('active');
             }

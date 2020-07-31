@@ -183,7 +183,16 @@ html(lang="ru")
         main.main
             .container
                 .main__wrap--biggest
-                    include components/breadcumbs.pug
+                    section.breadcumbs
+                        ul.breadcumbs__list
+                            li.breadcumbs__item
+                                a.breadcumbs__link
+                                    span Главная
+                            li.breadcumbs__item
+                                a.breadcumbs__link
+                                    span  О компании
+                            li.breadcumbs__item
+                                span Аппараты
                     h1.main__title Аппараты
                     section.equipment__wrap
                         .equipment 

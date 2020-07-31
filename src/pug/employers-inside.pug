@@ -181,13 +181,25 @@ html(lang="ru")
                             use(xlink:href="#glass-icon")
         main.main
             .container
-                .main__wrap--big.main__wrap--biggest
+                .main__wrap--biggest
                     .em__profile
                         .em__profile-photo
                             img(src="images/employers/e1.png", alt="")
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 375 227.5"><path d="M375 25.5c-72.2 37.6-120.3 34-184.8.4C121.7-9.7 65.8-7.7 0 26.5v201h375v-202z" fill-rule="evenodd" clip-rule="evenodd"/></svg>
                         .em__profile-inner
-                            include components/breadcumbs.pug
+                            section.breadcumbs
+                                ul.breadcumbs__list
+                                    li.breadcumbs__item
+                                        a.breadcumbs__link
+                                            span Главная
+                                    li.breadcumbs__item
+                                        a.breadcumbs__link
+                                            span О компании
+                                    li.breadcumbs__item
+                                        a.breadcumbs__link
+                                            span Сотрудники
+                                    li.breadcumbs__tem
+                                        span Филькова Ольга Юрьевна 
                             h2.em__profile-name Филькова Ольга Юрьевна
                             p.em__profile-about Врач-дерматовенеролог, врач-косметолог. Профессиональная деятельность с 1999 года.
                             button.common__button(data-open="consult-width-info") Записаться на прием

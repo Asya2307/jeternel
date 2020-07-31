@@ -181,7 +181,13 @@ html(lang="ru")
                             use(xlink:href="#glass-icon")
         main.main
             .main__wrap
-                include components/breadcumbs.pug
+                section.breadcumbs
+                        ul.breadcumbs__list
+                            li.breadcumbs__item
+                                a.breadcumbs__link
+                                    span Главная
+                            li.breadcumbs__item
+                                span Очень большой заголовок типовой страницы
                 .main__content
                     h1.main__title
                         |Очень большой заголовок типовой страницы

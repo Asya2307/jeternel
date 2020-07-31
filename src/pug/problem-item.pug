@@ -183,7 +183,19 @@ html(lang="ru")
         main.main
             .container
                 .main__wrap--biggest
-                    include components/breadcumbs.pug
+                    section.breadcumbs
+                        ul.breadcumbs__list
+                            li.breadcumbs__item
+                                a.breadcumbs__link
+                                    span Главная
+                            li.breadcumbs__item
+                                a.breadcumbs__link
+                                    span Проблемы
+                            li.breadcumbs__item
+                                a.breadcumbs__link
+                                    span Старение
+                            li.breadcumbs__item
+                                span Омоложение лица, шеи, декольте
                     h1.main__title Омоложение лица, шеи, декольте
                     section.expert__wrap
                         .expert

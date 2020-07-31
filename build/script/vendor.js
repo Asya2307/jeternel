@@ -17307,7 +17307,6 @@ var nospanclass = ":not(.specialist__section-header)";
 var noaclass = ":not(.blog__post):not(.about__image)";
 
 function uhpv(a) {
-  console.log(a)
   if (a) {
     hsc("uha", "a");
   }
@@ -17491,7 +17490,6 @@ function uhpv(a) {
 }
 
 function uvcl() {
-  console.log
   if (hgc("uha")) {
     hdc("uha");
     window.location.reload();

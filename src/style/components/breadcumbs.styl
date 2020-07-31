@@ -1,6 +1,8 @@
 .breadcumbs
     font-family default
     font-size: 13px
+    overflow hidden
+    white-space nowrap
     &__list
         display flex
         align-items center
@@ -44,11 +46,10 @@
         margin-bottom 30px
         span
             color: white
-@media tablet-landscape-large
+@media screen and (max-width: 1336px)
     .breadcumbs
         font-size 12px
-        overflow hidden
-        white-space nowrap
+        
 
 
 

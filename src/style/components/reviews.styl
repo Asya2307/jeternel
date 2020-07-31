@@ -6,7 +6,7 @@
         flex-direction column
 
     &__item
-        padding: 50px 59px
+        padding: 37px 59px 50px 59px
         margin-bottom 12px
         background-color white
 
@@ -20,11 +20,19 @@
         p
             font-size 24px
             line-height 32px
+            margin 0 0 24px 0
+            &:last-child
+                margin-bottom 0
+    @media phone 
+        &__text 
+            p
+                font-size 20px
+                line-height 24px
     &__bottom
         display flex
         align-items center
         justify-content space-between
-        margin-top 37px
+        margin-top 40px
     @media tablet-hor
         &__bottom
             flex-direction column
@@ -42,15 +50,14 @@
             text-decoration none
             color #382f2d
             font-family default
-            transition: background-color .3s
+            transition: .3s
             &:last-child
                 margin-right 0
             &:hover 
-                background-color #e7e7e7
+                background-color #F0F0EF
+                border-color #F0F0EF
     @media tablet-hor
         &__tags
-            flex-direction column
-            align-items flex-start
             &-item 
                 margin-bottom 20px
     &__info

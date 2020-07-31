@@ -183,7 +183,14 @@ html(lang="ru")
         main.main
             .container
                 .main__wrap--biggest
-                    include components/breadcumbs.pug
+                    section.breadcumbs
+                        ul.breadcumbs__list
+                            li.breadcumbs__item
+                                a.breadcumbs__link
+                                    span
+                                        |Главная
+                            li.breadcumbs__item
+                                span До и после
                     h1.main__title До и после
                     include components/filter-block.pug
                     section.before-after

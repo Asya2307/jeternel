@@ -9,10 +9,23 @@
         border-bottom 1px solid #e7e7e7
         padding-bottom 12px
         overflow auto
+        &:first-child .faq__box 
+            border-top 1px solid #e7e7e7
+        &:first-child .faq__box.active
+            border-top 1px solid transparent
+        &.active
+            top -2px
+        &:last-child 
+            border-bottom none
+            
     &__box
         padding 50px 60px 35px 60px
+        transition-duration .3s
         &.active
+            border-top 1px solid transparent
             background-color #ffffff
+            position relative
+            top -1px
             & .faq__container
                 opacity 1
                 position relative
@@ -34,10 +47,10 @@
         text-align left
         word-break break-word
         span  
-            border-bottom 1px solid rgba(0,0,0,0)
+            border-bottom 1px dashed rgba(0,0,0,0)
             transition-duration .3s
             &:hover 
-                border-bottom 1px solid rgba(0,0,0,0.1)
+                border-bottom 1px dashed rgba(0,0,0,0.1)
         &-inner
             display flex
             justify-content space-between

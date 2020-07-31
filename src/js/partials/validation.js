@@ -153,7 +153,6 @@ if (form) {
                 for(let i = 0; i < validErrors.length; i++){
     
                     let elemParent = validErrors[i].parentElement;
-                    console.log(elemParent);
 
                     while(!elemParent.classList.contains("form__item")){
                         elemParent = elemParent.parentElement;
@@ -177,7 +176,6 @@ if (form) {
             e.currentTarget.closest('.form__item').classList.add('active');
         });
         item.addEventListener('blur', (e) => {
-            console.log(e.currentTarget.value)
             if (!e.target.value) {
                 e.currentTarget.closest('.form__item').classList.remove('active');
             }

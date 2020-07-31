@@ -183,7 +183,19 @@ html(lang="ru")
         main.main
             .container
                 .main__wrap.main__wrap--biggest
-                    include components/breadcumbs.pug
+                    section.breadcumbs
+                        ul.breadcumbs__list
+                            li.breadcumbs__item
+                                a.breadcumbs__link
+                                    span Главная
+                            li.breadcumbs__item
+                                a.breadcumbs__link
+                                    span О компании
+                            li.breadcumbs__item
+                                a.breadcumbs__link
+                                    span Блог
+                            li.breadcumbs__item
+                                span Прошел вечер подведения итогов 20-летней деятельности компании Jeternel
                     .blog__inside-inner
                         .blog__inside-info.main__content
                             h1.main__title Прошел вечер подведения итогов 20-летней деятельности компании Jeternel
