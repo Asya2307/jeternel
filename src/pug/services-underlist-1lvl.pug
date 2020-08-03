@@ -181,9 +181,18 @@ html(lang="ru")
                         svg(width="26" height="22")
                             use(xlink:href="#glass-icon")
         main.main
-            .container
-                .main__wrap--biggest
-                    include components/breadcumbs.pug
+            .main__wrap--biggest
+                .container
+                    section.breadcumbs
+                        ul.breadcumbs__list
+                            li.breadcumbs__item
+                                a.breadcumbs__link
+                                    span Главная
+                            li.breadcumbs__item
+                                a.breadcumbs__link
+                                    span Услуги
+                            li.breadcumbs__item
+                                span Косметология
                     h1.main__title Косметология
                     section.infobox
                         h2.infobox__title Медицинская косметология
