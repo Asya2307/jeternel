@@ -5,8 +5,7 @@ document.addEventListener('DOMContentLoaded', (e) => {
         specialSlider.forEach(function(item) {
                  new Swiper(item, {
                     speed: 1200,
-                    slidesPerView: 2,
-                    spaceBetween: 15,
+                    slidesPerView: 1,
                     autoHeight: true,
                     loop: true,
                     navigation: {

@@ -18,12 +18,28 @@
             background-repeat no-repeat
             background-size contain
             transform translateX(-22%) translateY(-27%)
+    @media desktop-medium
+        &__wrap
+            padding 25px 64px 28px 64px
+    @media laptop
+        &__wrap
+            padding 20px 64px 23px 64px
+    @media tablet-landscape-large
+        &__wrap
+            padding 20px 40px 23px 40px
     @media tablet-landscape-small
-        &__wrap 
-            padding-left 15px
-            padding-right 15px
-            &:after 
-                content: none
+        &__wrap:after 
+            width 90%
+            padding-bottom 100%
+            margin-left auto
+            margin-right auto
+            transform translateX(0) translateY(-50%)
+    @media tablet-portrait
+        &__wrap
+            padding 20px 30px 23px 30px
+    @media phone
+        &__wrap
+            padding 20px 20px 23px 20px
     &__inner 
         position relative
         z-index 1
@@ -33,8 +49,9 @@
         opacity 0
         z-index -1
         visibility hidden
-        padding-top 66px
+        padding-top 61px
         padding-bottom 66px
+        cursor pointer
         &.active
             position relative
             z-index 1
@@ -51,11 +68,11 @@
         display flex
         align-items center
         justify-content space-between
-        margin-bottom 60px
+        margin-bottom 64px
     &__title
-        font-size 32px
-        line-height 36px
+        font-size 36px
         color white 
+        font-weight 300
         margin: 0
     &__count
         position absolute
@@ -98,7 +115,7 @@
         width calc(100%/2 - 42px)
         margin: 21px
         border-top: 1px solid rgba(255,255,255,.15)
-        padding: 40px 0px 40px 50px
+        padding: 35px 0px 40px 49px
         margin-bottom 50px
         transition: .5s 
         &-inner 
@@ -113,8 +130,8 @@
                 margin-right 0
         &-link 
             color: white
-            font-size: 24px
-            line-height 28px
+            font-size: 26px
+            line-height 30px
             text-decoration none 
         &-box 
             position absolute
@@ -123,17 +140,23 @@
             padding-left 50px
             width 100%
             font-family default 
-            font-size 14px
-            line-height 24px
+            font-size 15px
+            line-height: 25px
             color: white 
             opacity 0
             overflow hidden
             bottom: 0
-            transform: translateY(calc(100% - 15px));
+            transform: translateY(calc(100% - 39px));
             transition: opacity .5s ease 0s
             background-color gray-cherry
             visibility hidden
-            pointer-events: none
+        @media tablet-landscape-small
+            &-box 
+                position unset 
+                margin-top 35px
+                transform: translateY(0)
+                visibility visible
+                opacity 1
         &-price 
             font-size: 24px
             font-family serif
@@ -144,12 +167,17 @@
             .quiz__result-box
                 opacity 1
                 visibility visible
+    @media  tablet-landscape-small
+        &__result 
+            padding: 20px
+            background-color gray-cherry
     @media phone-portrait
         &__result
             margin-left 0
             margin-right 0 
             width 100%
             padding-left 20px
+            margin-bottom 20px
             &-box 
                 padding-left 20px
 

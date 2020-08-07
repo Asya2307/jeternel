@@ -63,6 +63,7 @@
             font-size: 96px
             text-transform: unset
             letter-spacing normal
+            font-weight 300
         @media laptop
             font-size 92px
             line-height 96px
@@ -99,16 +100,22 @@
         margin 0 auto
         //opacity 0
         transition top 1.5s .1s ease, opacity 1.5s .1s ease
+        &--about 
+            font-size 26px
+            font-family serif
+            margin-bottom 40px
+            line-height 34px
+            width 46.7%
         @media laptop
             width 45%
         @media tablet-portrait
             width 65%
         @media phone
             width 100%
-        &--about 
-            font-size 24px
-            font-family serif
-            margin-bottom 40px
+            &--about 
+                width 100%
+        
+
 
     &__title + &__description
         margin-top 32px

@@ -285,20 +285,12 @@ if(document.getElementById("map")){
 };
 (function(){
 
-    var swiper = new Swiper('.js-before-after-slider', {
-        slidesPerView: 3,
-        spaceBetween: 30,
-        pagination: {
-          el: '.swiper-pagination',
-          clickable: true,
-        },
-    });
+   
 
 
     let beforeAfterElements = document.querySelectorAll(".js-before-after-container");
 
     window.addEventListener("load", function(){
-
         if(beforeAfterElements){
             calculateBeforeAfter();
             window.addEventListener("resize", updateBeforeAfter);
@@ -366,6 +358,12 @@ if(document.getElementById("map")){
     };
 
     const openPopup = document.querySelectorAll('.js-open-popup');
+
+
+    // var swiper = new Swiper('.js-before-after-slider', {
+    //     slidesPerView: 3,
+    //     spaceBetween: 30,
+    // });
 
     if (openPopup) {
         openPopup.forEach((item) => {
@@ -445,6 +443,35 @@ if(document.getElementById("map")){
     };
 
 })();
+
+const filterButton = document.querySelectorAll('.js-filters__button');
+const filterItems = document.querySelectorAll('.js-employers__item');
+
+if (filterButton) {
+    const setItemsStyle = (items, style) => {
+        items.style.display = style;
+    };
+    const filterAct = (e) => {
+        const current = e.currentTarget;
+        const dataFilter = current.getAttribute('data-filter-info');
+        if (dataFilter) {
+            const filtersItemCurrent = document.querySelectorAll(`[data-filter='${dataFilter}']`);
+            filterItems.forEach((item) => {
+                setItemsStyle(item, 'none')
+            });
+            filtersItemCurrent.forEach((item) => {
+                setItemsStyle(item, 'block')
+            });
+        } else {
+            filterItems.forEach((item) => {
+                setItemsStyle(item, 'block')
+            });
+        }
+    };
+    filterButton.forEach((item) => {
+        item.addEventListener('click', filterAct)
+    });
+}
 document.addEventListener('DOMContentLoaded', function() {
     function resizeWatcher() {
         var tableSel = document.querySelectorAll('table');
@@ -496,8 +523,7 @@ document.addEventListener('DOMContentLoaded', (e) => {
         specialSlider.forEach(function(item) {
                  new Swiper(item, {
                     speed: 1200,
-                    slidesPerView: 2,
-                    spaceBetween: 15,
+                    slidesPerView: 1,
                     autoHeight: true,
                     loop: true,
                     navigation: {
@@ -845,7 +871,6 @@ if (quizStep.length) {
 
     const resultButton = document.querySelectorAll('.js-slide-button');
     resultButton.forEach((item, index) => {
-        console.log(item)
         item.style.zIndex = `${resultButton.length - index}`
     });
 }

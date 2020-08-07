@@ -203,7 +203,7 @@ html(lang="ru")
                             span.branch__contacts-info 09:00 – 19:00  
                     div#map.location__map.location__map--full.location__map--low
                     section.gallery
-                        .gallery__content.main__content
+                        .main__content.gallery__content
                             p Описание филиала. Её образ было решено использовать в знаке группы компаний. Название стало идеологическим продолжением символа: от русской вечно-молодой Жар-птицы была взята первая буква Ж (J), которая соединилась с французским словом eternel (вечность).
                         .gallery__inner.js-gallery
                             a(href="images/today/today1.png" style="background-image: url(images/today/today1.png)").gallery__item
@@ -231,7 +231,7 @@ html(lang="ru")
                             .form__container
                                 ul.form__group.form__group--half
                                     li.form__group-item
-                                        label.form__item(for="name")
+                                        label.form__item
                                             input(type="text" data-req name="name" autocomplete="off").form__input.form__input--left
                                             span.form__label Имя
                                     li.form__group-item
@@ -244,8 +244,10 @@ html(lang="ru")
                                             span.form__label Email
                                 ul.form__group.form__group--half
                                     li.form__group-item
-                                        .form__item.form__item-textarea
-                                            textarea(name="textarea", cols="30", rows="10").form__textarea.required.js-input-textarea Текст отзыва *
+                                        label.form__item.form__item-textarea
+                                            textarea(name="textarea", cols="30", rows="10" data-type="textarea" data-req).form__textarea.required.js-input-textarea 
+                                            span.form__label Текст отзыва
+
                             .form__checkbox
                                 .custom__checkbox-wrap
                                     label.custom__checkbox-label 

@@ -248,34 +248,34 @@ html(lang="ru")
                                         span Юлия, 08.05.2019
                         .see__more.see__more--center
                             button.common__button Показать еще
-                section.form__wrap.form__wrap--index
-                    form.form(action="").js-form
-                            .form__inner.form__inner--big
-                                span.form__title Оставить отзыв
-                                .form__box
-                                    .form__container
-                                        ul.form__group.form__group--half
-                                            li.form__group-item
-                                                label.form__item(for="name")
-                                                    input(type="text" data-req name="name" autocomplete="off").form__input.form__input--left
-                                                    span.form__label.form__label--left Имя
-                                            li.form__group-item
-                                                label.form__item
-                                                    input(type="text" data-req name="name" autocomplete="off").form__input.js-input-phone.js-phone-mask.form__input--left
-                                                    span.form__label.form__label--left Телефон
-                                            li.form__group-item
-                                                label.form__item
-                                                    input(type="text" data-req name="email" autocomplete="off").form__input.form__input--left
-                                                    span.form__label.form__label--left Email
-                                        ul.form__group.form__group--half
-                                            li.form__group-item
-                                                .form__item.form__item-textarea
-                                                    textarea(name="textarea", cols="30", rows="10").form__textarea.required.js-input-textarea Текст отзыва *
-                                    .form__checkbox
-                                        .form__item.custom__checkbox-wrap
-                                            input(type="checkbox" name="checkbox").custom__checkbox.required.js-input-checkbox
-                                            label.custom__checkbox-label Согласен на обработку персональных данных
-                                    button.common__button.common__button--half.common__button--gray-cherry Отправить отзыв             
+            section.form__wrap.form__wrap--index
+                form.form(action="").js-form
+                    .form__inner.form__inner--big
+                        span.form__title Оставить отзыв
+                        .form__box
+                            .form__container
+                                ul.form__group.form__group--half
+                                    li.form__group-item
+                                        label.form__item(for="name")
+                                            input(type="text" data-req name="name" autocomplete="off").form__input.form__input--left
+                                            span.form__label.form__label--left Имя
+                                    li.form__group-item
+                                        label.form__item
+                                            input(type="text" data-req name="name" autocomplete="off").form__input.js-input-phone.js-phone-mask.form__input--left
+                                            span.form__label.form__label--left Телефон
+                                    li.form__group-item
+                                        label.form__item
+                                            input(type="text" data-req name="email" autocomplete="off").form__input.form__input--left
+                                            span.form__label.form__label--left Email
+                                ul.form__group.form__group--half
+                                    li.form__group-item
+                                        .form__item.form__item-textarea
+                                            textarea(name="textarea", cols="30", rows="10").form__textarea.required.js-input-textarea Текст отзыва *
+                            .form__checkbox
+                                .form__item.custom__checkbox-wrap
+                                    input(type="checkbox" name="checkbox").custom__checkbox.required.js-input-checkbox
+                                    label.custom__checkbox-label Согласен на обработку персональных данных
+                            button.common__button.common__button--half.common__button--gray-cherry Отправить отзыв             
         //= partials/footer.pug
         div.intro-curtain
         include components/popups.pug

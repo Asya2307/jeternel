@@ -75,7 +75,7 @@ body
          background-color default-cherry
 
 .main
-    margin-bottom 100px
+    margin-bottom 93px
     @media laptop
         margin-bottom 70px
 
@@ -92,13 +92,14 @@ body
     line-height 54px
     color black
     font-family serif
-    font-weight 400
-@media phone-portrait
+    font-weight 300
+@media screen and (max-width: 1366px)
     .block__title 
-        font-size 45px
+        font-size 42px
 @media phone
     .block__title 
         font-size 32px
+        line-height 36px
 
 .slider__nav 
     position: absolute;
@@ -114,7 +115,7 @@ body
         &:last-child
             margin-right 0
     &--before-after
-        transform: translate(0)
+        transform: translateY(39%)
 @media phone
     .slider__nav 
         position relative
@@ -122,7 +123,19 @@ body
         display flex
         justify-content center
         margin-top 30px
-            
+        &--em
+            position: absolute;
+            width 100%
+            justify-content space-between
+            left 0
+            .slider__nav-item--prev
+                position absolute
+                left -15px
+                margin: 0
+            .slider__nav-item--next
+                position absolute
+                right -15px
+                margin 0 
 
 .see__more
     margin-top 20px
@@ -131,9 +144,18 @@ body
         justify-content center
     &--margin 
         padding-top 77px
+    &--gallery 
+        margin-top 50px
+@media tablet-landscape-small
+    .see__more 
+        display flex
+        justify-content center
 
 &::marker 
     color: transparent
+
+.video 
+    width 100%
     
 
 @import "partials/common.styl"

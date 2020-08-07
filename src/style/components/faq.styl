@@ -57,15 +57,21 @@
             align-items center
             .common__button
                 height 90px
-        @media phone-portrait 
+        @media tablet-landscape-small
             &-inner 
                 flex-direction column
+                align-items flex-start
+                margin-bottom 40px
                 .common__button
                     height unset
         &--nolink
             span 
                 &:hover 
                     border-bottom 1px solid rgba(0,0,0,0)
+    @media phone-portrait 
+        &__title 
+            font-size 26px
+            line-height 30px 
     &--index 
         margin-top 0
         margin-bottom 100px
@@ -109,7 +115,25 @@
         font-family default
         margin-left auto
     &__button 
-        margin-top 60px
+        margin-top 17px
         &--center 
             display flex
             justify-content center
+    @media tablet-landscape-small
+        &__button 
+            display flex
+            justify-content center
+@media phone-portrait 
+    .faq 
+        &__text
+            font-size 26px
+            line-height 30px
+        &__bottom 
+            flex-direction: column
+            align-items flex-start
+        &__auth
+            margin-top 20px
+            margin-bottom 5px
+        &__date
+            margin-left 0
+

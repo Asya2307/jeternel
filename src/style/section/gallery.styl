@@ -3,12 +3,29 @@
         display flex
         align-items stretch
         flex-wrap wrap
-        margin: 0 -12px
+        margin: -6px
+    &__content 
+        h2
+            margin-bottom 53px
+            margin-top 0
+            font-size 50px
+            line-height 54px
+    @media screen and (max-width: 1366px) 
+        &__content 
+            h2 
+                font-size: 42px
+    @media phone
+        &__content 
+            h2 
+                font-size: 32px
+                line-height 36px
+    &--inside 
+        margin-top 100px
     &__item
         position relative
         text-decoration: none
-        width calc(100%/5 - 24px)
-        margin 11px
+        width calc(100%/5 - 12px)
+        margin 6px
         background-position center
         background-size cover
         background-repeat no-repeat
@@ -25,6 +42,7 @@
             align-items center
             justify-content center
             border 1px solid #e7e7e7
+            padding: 11px
             &:after
                 content ''
                 float left 
@@ -77,6 +95,9 @@
         &__item
             &--popup 
                 height unset
-
+@media phone 
+    .gallery 
+        &__title 
+            text-align: center
 
         

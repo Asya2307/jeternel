@@ -57,3 +57,32 @@
     };
 
 })();
+
+const filterButton = document.querySelectorAll('.js-filters__button');
+const filterItems = document.querySelectorAll('.js-employers__item');
+
+if (filterButton) {
+    const setItemsStyle = (items, style) => {
+        items.style.display = style;
+    };
+    const filterAct = (e) => {
+        const current = e.currentTarget;
+        const dataFilter = current.getAttribute('data-filter-info');
+        if (dataFilter) {
+            const filtersItemCurrent = document.querySelectorAll(`[data-filter='${dataFilter}']`);
+            filterItems.forEach((item) => {
+                setItemsStyle(item, 'none')
+            });
+            filtersItemCurrent.forEach((item) => {
+                setItemsStyle(item, 'block')
+            });
+        } else {
+            filterItems.forEach((item) => {
+                setItemsStyle(item, 'block')
+            });
+        }
+    };
+    filterButton.forEach((item) => {
+        item.addEventListener('click', filterAct)
+    });
+}

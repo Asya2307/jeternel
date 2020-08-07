@@ -37,7 +37,6 @@ if (quizStep.length) {
 
     const resultButton = document.querySelectorAll('.js-slide-button');
     resultButton.forEach((item, index) => {
-        console.log(item)
         item.style.zIndex = `${resultButton.length - index}`
     });
 }

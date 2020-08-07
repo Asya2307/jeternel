@@ -236,18 +236,18 @@ html(lang="ru")
                             .filters
                                 ul.filters__list
                                     li.filters__item
-                                        button.filters__button Все
+                                        button.filters__button.js-filters__button Все
                                     li.filters__item
-                                        button.filters__button Воровского, 13
+                                        button.filters__button.js-filters__button(data-filter-info="Воровского, 13") Воровского, 13
                                     li.filters__item
-                                        button.filters__button Комсомольский проспект, 48
+                                        button.filters__button.js-filters__button(data-filter-info="Комсомольский проспект, 48") Комсомольский проспект, 48
                                     li.filters__item
-                                        button.filters__button Проспект Ленина, 66
+                                        button.filters__button.js-filters__button(data-filter-info="Проспект Ленина, 66") Проспект Ленина, 66
                                     li.filters__item
-                                        button.filters__button Братьев Кашириных, 131Б
+                                        button.filters__button.js-filters__button(data-filter-info="Братьев Кашириных, 131Б") Братьев Кашириных, 131Б
                             .employers__wrap
                                 .employers__inner
-                                    .employers__item
+                                    .employers__item.js-employers__item(data-filter="Братьев Кашириных, 131Б")
                                         a(href="#").employers__link
                                             .employers__img
                                                 img(src="../images/employers/e4.png", alt="")
@@ -258,7 +258,7 @@ html(lang="ru")
                                             .employers__pattern-item.employers__pattern-item--1
                                             .employers__pattern-item.employers__pattern-item--2
                                             .employers__pattern-item.employers__pattern-item--3
-                                    .employers__item
+                                    .employers__item.js-employers__item(data-filter="Проспект Ленина, 66")
                                         a(href="#").employers__link
                                             .employers__img
                                                 img(src="../images/employers/e5.png", alt="")
@@ -269,7 +269,7 @@ html(lang="ru")
                                             .employers__pattern-item.employers__pattern-item--1
                                             .employers__pattern-item.employers__pattern-item--2
                                             .employers__pattern-item.employers__pattern-item--3
-                                    .employers__item
+                                    .employers__item.js-employers__item(data-filter="Проспект Ленина, 66")
                                         a(href="#").employers__link
                                             .employers__img
                                                 img(src="../images/employers/e6.png", alt="")
@@ -280,7 +280,7 @@ html(lang="ru")
                                             .employers__pattern-item.employers__pattern-item--1
                                             .employers__pattern-item.employers__pattern-item--2
                                             .employers__pattern-item.employers__pattern-item--3
-                                    .employers__item
+                                    .employers__item.js-employers__item(data-filter="Воровского, 13")
                                         a(href="#").employers__link
                                             .employers__img
                                                 img(src="../images/employers/e7.png", alt="")
@@ -291,7 +291,7 @@ html(lang="ru")
                                             .employers__pattern-item.employers__pattern-item--1
                                             .employers__pattern-item.employers__pattern-item--2
                                             .employers__pattern-item.employers__pattern-item--3
-                                    .employers__item
+                                    .employers__item.js-employers__item(data-filter="Все")
                                         a(href="#").employers__link
                                             .employers__img
                                                 img(src="../images/employers/e8.png", alt="")
@@ -302,7 +302,73 @@ html(lang="ru")
                                             .employers__pattern-item.employers__pattern-item--1
                                             .employers__pattern-item.employers__pattern-item--2
                                             .employers__pattern-item.employers__pattern-item--3
-                                    .employers__item
+                                    .employers__item.js-employers__item(data-filter="Комсомольский проспект, 48")
+                                        a(href="#").employers__link
+                                            .employers__img
+                                                img(src="../images/employers/e9.png", alt="")
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 375 227.5"><path d="M375 25.5c-72.2 37.6-120.3 34-184.8.4C121.7-9.7 65.8-7.7 0 26.5v201h375v-202z" fill-rule="evenodd" clip-rule="evenodd"/></svg>
+                                            span.employers__name Жубоева Аминат Руслановна
+                                            span.employers__position Врач-косметолог
+                                        .employers__pattern
+                                            .employers__pattern-item.employers__pattern-item--1
+                                            .employers__pattern-item.employers__pattern-item--2
+                                            .employers__pattern-item.employers__pattern-item--3
+                                    .employers__item.js-employers__item(data-filter="Комсомольский проспект, 48")
+                                        a(href="#").employers__link
+                                            .employers__img
+                                                img(src="../images/employers/e4.png", alt="")
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 375 227.5"><path d="M375 25.5c-72.2 37.6-120.3 34-184.8.4C121.7-9.7 65.8-7.7 0 26.5v201h375v-202z" fill-rule="evenodd" clip-rule="evenodd"/></svg>
+                                            span.employers__name Герман Фарида Загитовна
+                                            span.employers__position Врач-дерматовенеролог
+                                        .employers__pattern
+                                            .employers__pattern-item.employers__pattern-item--1
+                                            .employers__pattern-item.employers__pattern-item--2
+                                            .employers__pattern-item.employers__pattern-item--3
+                                    .employers__item.js-employers__item(data-filter="Проспект Ленина, 66")
+                                        a(href="#").employers__link
+                                            .employers__img
+                                                img(src="../images/employers/e5.png", alt="")
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 375 227.5"><path d="M375 25.5c-72.2 37.6-120.3 34-184.8.4C121.7-9.7 65.8-7.7 0 26.5v201h375v-202z" fill-rule="evenodd" clip-rule="evenodd"/></svg>
+                                            span.employers__name Подивилова Оксана Валерьевна
+                                            span.employers__position Врач-косметолог
+                                        .employers__pattern
+                                            .employers__pattern-item.employers__pattern-item--1
+                                            .employers__pattern-item.employers__pattern-item--2
+                                            .employers__pattern-item.employers__pattern-item--3
+                                    .employers__item.js-employers__item(data-filter="Проспект Ленина, 66")
+                                        a(href="#").employers__link
+                                            .employers__img
+                                                img(src="../images/employers/e6.png", alt="")
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 375 227.5"><path d="M375 25.5c-72.2 37.6-120.3 34-184.8.4C121.7-9.7 65.8-7.7 0 26.5v201h375v-202z" fill-rule="evenodd" clip-rule="evenodd"/></svg>
+                                            span.employers__name Сарыгина Любовь Андреевна
+                                            span.employers__position Врач-косметолог
+                                        .employers__pattern
+                                            .employers__pattern-item.employers__pattern-item--1
+                                            .employers__pattern-item.employers__pattern-item--2
+                                            .employers__pattern-item.employers__pattern-item--3
+                                    .employers__item.js-employers__item(data-filter="Воровского, 13")
+                                        a(href="#").employers__link
+                                            .employers__img
+                                                img(src="../images/employers/e7.png", alt="")
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 375 227.5"><path d="M375 25.5c-72.2 37.6-120.3 34-184.8.4C121.7-9.7 65.8-7.7 0 26.5v201h375v-202z" fill-rule="evenodd" clip-rule="evenodd"/></svg>
+                                            span.employers__name Никулиина Екатерина Дмитриевна
+                                            span.employers__position Врач-косметолог
+                                        .employers__pattern
+                                            .employers__pattern-item.employers__pattern-item--1
+                                            .employers__pattern-item.employers__pattern-item--2
+                                            .employers__pattern-item.employers__pattern-item--3
+                                    .employers__item.js-employers__item(data-filter="Комсомольский проспект, 48")
+                                        a(href="#").employers__link
+                                            .employers__img
+                                                img(src="../images/employers/e8.png", alt="")
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 375 227.5"><path d="M375 25.5c-72.2 37.6-120.3 34-184.8.4C121.7-9.7 65.8-7.7 0 26.5v201h375v-202z" fill-rule="evenodd" clip-rule="evenodd"/></svg>
+                                            span.employers__name Брюхова Надежда Александровна
+                                            span.employers__position Врач-косметолог, дерматовенеролог, преподаватель
+                                        .employers__pattern
+                                            .employers__pattern-item.employers__pattern-item--1
+                                            .employers__pattern-item.employers__pattern-item--2
+                                            .employers__pattern-item.employers__pattern-item--3
+                                    .employers__item.js-employers__item(data-filter="Воровского, 13")
                                         a(href="#").employers__link
                                             .employers__img
                                                 img(src="../images/employers/e9.png", alt="")
@@ -318,7 +384,7 @@ html(lang="ru")
                 .container
                     include components/sections.pug 
                     section.gallery
-                        .gallery__content.main__content
+                        .main__content.gallery__content
                             h2.gallery__title Jeternel сегодня 
                             ul.gallery__list
                                 li 

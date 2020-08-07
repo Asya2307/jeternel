@@ -230,7 +230,7 @@ html(lang="ru")
                                 a.ancors__list-button(href="#form")
                                     span Записаться на процедуру
                     section.gallery
-                        .gallery__content.main__content
+                        .main__content.gallery__content
                             ul.gallery__list
                                 li 
                                     |Лучшие мировые технологии омоложения, коррекции эстетических недостатков и лечения кожных заболеваний;
@@ -564,8 +564,9 @@ html(lang="ru")
                                 <svg xmlns="http://www.w3.org/2000/svg" width="18" height="35"><path fill="#382f2d" d="M.696 16.8L17.323.01l.693.699L1.39 17.499l16.626 16.79-.693.7L.697 18.2l-.693-.7z"/></svg>   
                             button.slider__nav-item.slider__nav-item--next
                                 <svg xmlns="http://www.w3.org/2000/svg" width="18" height="35"><path fill="#382f2d" d="M.698 34.99l-.692-.7L16.602 17.5.006.708l.692-.7L17.985 17.5z"/></svg>
-                        a.common__button-link(href="")
-                            |Все результаты 
+                        .see__more.see__more--gallery
+                            a.common__button-link(href="")
+                                |Все результаты
                     include components/special.pug  
                     section.action__slider-inner(id="action")
                         .action__slider-box
@@ -626,7 +627,7 @@ html(lang="ru")
                         include components/faq.pug
                     include components/publcation.pug
                     section.gallery
-                        .gallery__content.main__content
+                        .main__content.gallery__content
                             h2.gallery__title Jeternel сегодня 
                             ul.gallery__list
                                 li 

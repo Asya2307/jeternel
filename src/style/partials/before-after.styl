@@ -12,7 +12,6 @@
         margin-top 150px
     &__box
         margin-top 60px
-        margin-bottom 50px
         .swiper-wrapper
             height auto
     &__container
@@ -26,6 +25,8 @@
             background-color transparent
             position relative
             margin-top 123px
+            .infobox__title 
+                padding-left 28px
         &--index 
             background-color transparent
             width 100%
@@ -33,6 +34,11 @@
             width 100%
         @media laptop
             padding 62px 0 100px 0
+            &--slider
+                padding 0
+        @media tablet-portrait
+            &--slider
+                margin-top 0
         @media phone
             &--index 
                 .before-after-preview__props

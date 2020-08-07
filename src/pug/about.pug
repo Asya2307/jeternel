@@ -181,7 +181,8 @@ html(lang="ru")
                             use(xlink:href="#glass-icon")
         section.main-slider.main-slider--video
                 .main-slider__video
-                    <iframe src="https://www.youtube.com/embed/E83DVERrmUk?autoplay=1&amp;loop=1&amp;mute=1&amp" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>                
+                    video(class="video" preload="auto" autoplay="true" loop="true" muted="muted")
+                        source(src="/images/video/Jeternel.mp4" type='video/mp4' )
                 h4.common__hidden-heading
                 |Центр косметологии Jeternel
                 ul.main-slider__list
@@ -226,10 +227,10 @@ html(lang="ru")
                                 p.legend__text
                                         |Cказку о Жар-птице и молодильных яблоках мы превратили в современную историю Jeternel. Мы помогаем нашим клиентам вернуть вечное сияние молодости и красоты!  
                     
-            .main__wrap.main__wrap--big
+            .main__wrap--big
                 .container
                     section.gallery
-                        .gallery__content.main__content
+                        .main__content.gallery__content
                             h2.gallery__title Jeternel сегодня 
                             ul.gallery__list
                                 li 
@@ -266,7 +267,7 @@ html(lang="ru")
                                 img(src="images/today/today7.png" alt="gallery7")
                                 <iframe src="https://www.youtube.com/embed/E83DVERrmUk?autoplay=1&amp;loop=1&amp;mute=1&amp" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>                
                     include components/special.pug
-                    section.gallery
+                    section.gallery.gallery--inside
                             .gallery__content.main__content
                                 h2.gallery__title Лицензии
                                 p Лаборатория красоты Jeternel — лицензированное учреждение. Мы имеем право и все необходимые разрешения для проведения сложных косметологических процедур. Будьте уверены в результате — все процедуры пройдут по регламентированному порядку с соблюдением всех норм безопасности! Мы работает только с лицензированными препаратами и лучшими европейскими технологиями с мировыми стандартами качества.
@@ -277,7 +278,7 @@ html(lang="ru")
                                     img(src="images/liense/liense2.png" alt="liense2")
                                 a(href="images/liense/liense3.png").gallery__item.gallery__item--popup
                                     img(src="images/liense/liense3.png" alt="liense1")
-                    section.gallery
+                    section.gallery.gallery--inside
                             .gallery__content.main__content
                                 h2.gallery__title Достижения
                                 p Группа компания Jeternel за активную жизненную позицию — мы участвуем и проводим различные профессиональные конкурсы, семинары-практикумы, мастер-классы для профессионалов индустрии красоты. Достижения наших специалистов неоднократно были отмечены Дипломами, Сертификатами и Свидетельствами профессионального мастерства.
