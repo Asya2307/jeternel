@@ -85,4 +85,13 @@ if (filterButton) {
     filterButton.forEach((item) => {
         item.addEventListener('click', filterAct)
     });
+
+    const filterBox = document.querySelector('.js-filter-box');
+
+    if (filterBox) {
+        const filterItem = filterBox.querySelectorAll('.js-filter-item');
+        filterItem.forEach((item,index) => {
+            item.style.zIndex = `${filterItem.length - index}`
+        })
+    }
 }

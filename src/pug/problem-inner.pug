@@ -208,13 +208,19 @@ html(lang="ru")
                                     button.common__button.common__button--gray-cherry(data-open="consult-width-info") Спросить эксперта
                                 ul.expert__info
                                     li.expert__info-item 
-                                        a(href="#").expert__info-link О косметологии
+                                        a(href="#").expert__info-link 
+                                            span О косметологии
                                     li.expert__info-item 
-                                        a(href="#").expert__info-link Статьи
+                                        a(href="#").expert__info-link 
+                                            span Статьи
                                     li.expert__info-item 
-                                        a(href="#").expert__info-link Об эксперте
+                                        a(href="#").expert__info-link 
+                                            span Об эксперте
                                     li.expert__info-item 
-                                        a(href="#").expert__info-link.expert__info-link--sound Подкаст «Сенсация в косметологии»
+                                        a(href="#").expert__info-link.expert__info-link--sound 
+                                            .expert__info-icon
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30"><defs><style>.cls-1{fill:none;stroke:#231f20;stroke-linecap:round;stroke-linejoin:round;fill-rule:evenodd}</style></defs><g id="Слой_2" data-name="Слой 2"><g id="Слой_1-2" data-name="Слой 1"><path class="cls-1" d="M10.5 12.5h3l5-3v11l-5-3h-3z"/><path class="cls-1" d="M15 .5A14.5 14.5 0 11.5 15 14.5 14.5 0 0115 .5z"/></g></g></svg>                                           
+                                            span Подкаст «Сенсация в косметологии»
                             .expert__name-wrap.expert__name-wrap--desctop
                                 span.expert__name Смирнова Елизавета
                                 span.expert__position врач косметолог
@@ -222,7 +228,7 @@ html(lang="ru")
                             .expert__info--desctop
                                 .expert__image.expert__image--desctop 
                                     img(src="/images/expert.png", alt="")
-                    section.faq
+                    section.faq.faq--problem
                         include components/faq-problem.pug    
                     section.equipment__wrap.equipment__wrap--inside
                         .equipment 
@@ -232,28 +238,28 @@ html(lang="ru")
                                     a.common__button-link(href="")
                                         |Прайс-лист
                                 ul.equipment__list
-                                    li.equipment__item.equipment__item--half
-                                        a(href="#").equipment__link.equipment__link--row 
+                                    li.equipment__item.equipment__item--half.infobox__item--backdrop
+                                        a(href="#").equipment__link.equipment__link--row.infobox__link--backdrop 
                                             span.equipment__link-title Аппарат газожидкостного пилинга «АтисМед»
                                             span.equipment__link-price от 1940 руб
-                                    li.equipment__item.equipment__item--half
-                                        a(href="#").equipment__link.equipment__link--row 
+                                    li.equipment__item.equipment__item--half.infobox__item--backdrop
+                                        a(href="#").equipment__link.equipment__link--row.infobox__link--backdrop 
                                             span.equipment__link-title Заполнение носогубных складок, складок на переносице, морщин вокруг губ
                                             span.equipment__link-price от 1980 руб
-                                    li.equipment__item.equipment__item--half
-                                        a(href="#").equipment__link.equipment__link--row 
+                                    li.equipment__item.equipment__item--half.infobox__item--backdrop
+                                        a(href="#").equipment__link.equipment__link--row.infobox__link--backdrop  
                                             span.equipment__link-title Объемное Моделирование щёк, скул, подбородка, углов нижней челюсти, височных областей
                                             span.equipment__link-price от 1279 руб
-                                    li.equipment__item.equipment__item--half
-                                        a(href="#").equipment__link.equipment__link--row 
+                                    li.equipment__item.equipment__item--half.infobox__item--backdrop
+                                        a(href="#").equipment__link.equipment__link--row.infobox__link--backdrop  
                                             span.equipment__link-title Увеличение и коррекция объёма губ
                                             span.equipment__link-price от 1590 руб
-                                    li.equipment__item.equipment__item--half
-                                        a(href="#").equipment__link.equipment__link--row 
+                                    li.equipment__item.equipment__item--half.infobox__item--backdrop
+                                        a(href="#").equipment__link.equipment__link--row.infobox__link--backdrop  
                                             span.equipment__link-title Коррекция носослезной борозды
                                             span.equipment__link-price от 590 руб
-                                    li.equipment__item.equipment__item--half
-                                        a(href="#").equipment__link.equipment__link--row 
+                                    li.equipment__item.equipment__item--half.infobox__item--backdrop
+                                        a(href="#").equipment__link.equipment__link--row.infobox__link--backdrop  
                                             span.equipment__link-title Коррекция атрофических рубцов
                                             span.equipment__link-price от 3850 руб  
                     section.before-after__container.before-after__container--slider
@@ -465,23 +471,71 @@ html(lang="ru")
                                         <svg xmlns="http://www.w3.org/2000/svg">
                                             <path fill="#fff" d="M.71 17.984l-.7-.692L17.5.002l17.49 17.29-.7.692L17.5 1.386z"/>
                                     </svg>    
-                include components/form-consult.pug
-                .main__wrap--biggest
-                    section.infobox
+            include components/form-consult.pug
+            .main__wrap--biggest
+                .container
+                    section.equipment--inside
                         h2.infobox__title Аппараты
-                        .infobox__inner.infobox__inner--part
-                            .infobox__item.infobox__item--part
-                                span Оборудование для ультразвуковой терапии B-790
-                            .infobox__item.infobox__item--part
-                                span Косметологический комбайн 13 функций UK230 8003 (I-8003) Gezatone
-                            .infobox__item.infobox__item--part
-                                span Bio Sonic 3003 Оборудование для ультразвуковой терапии Gezaton
-                            .infobox__item.infobox__item--part
-                                span Bio Sonic 3003 Оборудованиедля ультразвуковой терапии Gezatone  
-                    include components/reviews.pug 
-                    section.faq
-                        include components/faq.pug 
-                    section.gallery
+                        ul.equipment__list
+                            li.equipment__item 
+                                a(href="#").infobox__link--backdrop.equipment__link.js-equipment__link 
+                                    span Аппарат газожидкостного пилинга «АтисМед»
+                                    .equipment__tooltip-inner.js-equipment-tooltip
+                                        img(src="/images/equipment.jpg" style="background-image: url(/images/equipment.jpg)").equipment__tooltip
+                            li.equipment__item 
+                                a(href="#").infobox__link--backdrop.equipment__link.js-equipment__link 
+                                    span Аппарат газожидкостного пилинга «АтисМед»
+                                    .equipment__tooltip-inner.js-equipment-tooltip
+                                        img(src="/images/equipment.jpg" style="background-image: url(/images/equipment.jpg)").equipment__tooltip
+                            li.equipment__item 
+                                a(href="#").infobox__link--backdrop.equipment__link.js-equipment__link 
+                                    span Аппарат газожидкостного пилинга «АтисМед»
+                                    .equipment__tooltip-inner.js-equipment-tooltip
+                                        img(src="/images/equipment.jpg" style="background-image: url(/images/equipment.jpg)").equipment__tooltip
+                            li.equipment__item 
+                                a(href="#").infobox__link--backdrop.equipment__link.js-equipment__link 
+                                    span Аппарат газожидкостного пилинга «АтисМед»
+                                    .equipment__tooltip-inner.js-equipment-tooltip
+                                        img(src="/images/equipment.jpg" style="background-image: url(/images/equipment.jpg)").equipment__tooltip
+                      
+                    section.reviews.reviews--problem
+                        h2.block__title Отзывы
+                        .reviews__inner
+                            .reviews__item
+                                .reviews__text 
+                                    p Огромное спасибо Наталье Андреевне за деликатный подход и внимательность к своим пациентам.
+                                    p Приходя в салон, всегда чувствуешь себя как дома.
+                                .reviews__bottom
+                                    .reviews__tags
+                                        a(href="/").reviews__tags-item Jeternel на Воровского, 13
+                                        a(href="/").reviews__tags-item Вебер Наталья Андреевна
+                                    .reviews__info 
+                                        span Екатерина, 18.03.2020
+                            .reviews__item
+                                .reviews__text 
+                                    p Хочу выразить огромную благодарность Ивановой Валерии Олеговне, за ее профессионализм! Делала удаление сосудистых звездочек на лице неодимовым лазером. Была приятно удивлена увидеть результат сразу после процедуры. Доктор все доходчиво объяснил и рассказал какие рекомендации соблюдать после. Спасибо Валерии Олеговне, теперь я ваш постоянный клиент!
+                                .reviews__bottom
+                                    .reviews__tags
+                                    .reviews__info 
+                                        span Анастасия, 24.05.2019
+                            .reviews__item
+                                .reviews__text 
+                                    p Впервые я была на консультации у врача-косметолога в вашем Центре косметологии на Комсомольском проспекте 48 2 мая 2018. Меня принимала доктор Гува Дженет Мурадовна.
+                                    p Хочется отметить ее внимательность и грамотность. Она очень подробно расспросила меня, провела осмотр, задавала много уточняющих вопросов. Дала рекомендации по курсу коррекции выявленных проблем, посоветовала сдать некоторые анализы. Спасибо Вам огромное! Обязательно приду к вам за красотой!
+                                .reviews__bottom
+                                    .reviews__tags
+                                        a(href="/").reviews__tags-item Jeternel на Комсомольском проспекте, 48
+                                        a(href="/").reviews__tags-item Консультация врача-косметолога
+                                        a(href="/").reviews__tags-item Гува Дженет Мурадовна
+                                    .reviews__info 
+                                        span Юлия, 08.05.2019
+                        .see__more
+                            button.common__button Все отзывы
+                    section.faq 
+                        .faq__title-inner
+                            h2.block__title Вопросы и ответы
+                        include components/faq.pug
+                    section.gallery.gallery--index
                         .main__content.gallery__content
                             h2.gallery__title Jeternel сегодня 
                             ul.gallery__list
@@ -519,7 +573,7 @@ html(lang="ru")
                                 img(src="images/today/today7.png" alt="gallery7")
                                 <iframe src="https://www.youtube.com/embed/E83DVERrmUk?autoplay=1&amp;loop=1&amp;mute=1&amp" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>                    
                     include components/publcation.pug
-                    section.equipment__wrap.equipment__wrap--inside
+                    section.equipment__wrap
                         .equipment 
                             .equipment__box
                                 .equipment__head 
@@ -527,28 +581,28 @@ html(lang="ru")
                                     a.common__button-link(href="")
                                         |Прайс-лист
                                 ul.equipment__list
-                                    li.equipment__item.equipment__item--half
-                                        a(href="#").equipment__link.equipment__link--row 
+                                    li.equipment__item.equipment__item--half.infobox__item--backdrop
+                                        a(href="#").equipment__link.equipment__link--row.infobox__link--backdrop
                                             span.equipment__link-title Аппарат газожидкостного пилинга «АтисМед»
                                             span.equipment__link-price от 1940 руб
-                                    li.equipment__item.equipment__item--half
-                                        a(href="#").equipment__link.equipment__link--row 
+                                    li.equipment__item.equipment__item--half.infobox__item--backdrop
+                                        a(href="#").equipment__link.equipment__link--row.infobox__link--backdrop
                                             span.equipment__link-title Заполнение носогубных складок, складок на переносице, морщин вокруг губ
                                             span.equipment__link-price от 1980 руб
-                                    li.equipment__item.equipment__item--half
-                                        a(href="#").equipment__link.equipment__link--row 
+                                    li.equipment__item.equipment__item--half.infobox__item--backdrop
+                                        a(href="#").equipment__link.equipment__link--row.infobox__link--backdrop 
                                             span.equipment__link-title Объемное Моделирование щёк, скул, подбородка, углов нижней челюсти, височных областей
                                             span.equipment__link-price от 1279 руб
-                                    li.equipment__item.equipment__item--half
-                                        a(href="#").equipment__link.equipment__link--row 
+                                    li.equipment__item.equipment__item--half.infobox__item--backdrop
+                                        a(href="#").equipment__link.equipment__link--row.infobox__link--backdrop 
                                             span.equipment__link-title Увеличение и коррекция объёма губ
                                             span.equipment__link-price от 1590 руб
-                                    li.equipment__item.equipment__item--half
-                                        a(href="#").equipment__link.equipment__link--row 
+                                    li.equipment__item.equipment__item--half.infobox__item--backdrop
+                                        a(href="#").equipment__link.equipment__link--row.infobox__link--backdrop
                                             span.equipment__link-title Коррекция носослезной борозды
                                             span.equipment__link-price от 590 руб
-                                    li.equipment__item.equipment__item--half
-                                        a(href="#").equipment__link.equipment__link--row 
+                                    li.equipment__item.equipment__item--half.infobox__item--backdrop
+                                        a(href="#").equipment__link.equipment__link--row.infobox__link--backdrop 
                                             span.equipment__link-title Коррекция атрофических рубцов
                                             span.equipment__link-price от 3850 руб
 

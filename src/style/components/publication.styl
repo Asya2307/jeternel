@@ -61,6 +61,11 @@
                 width unset
             &:after 
                 content none
+    @media screen and (max-width: 475px)
+        &__image 
+            img 
+                width 100%
+
         
     &__title 
         font-size 13px
@@ -87,6 +92,8 @@
             .publication__image 
                 img
                     transform: scale(1.05)
+    & + .equipment__wrap
+        margin-top 26px
 
 .hidden-xs
     display block

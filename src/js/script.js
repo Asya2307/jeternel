@@ -1,3 +1,13 @@
+const addHiddenBody = (block) => {
+    block.style.overflow = 'hidden';
+}
+
+const removeHiddenBody = (block) => {
+    block.style.overflow = '';
+}
+
+
+
 //= partials/swiper-initialize.js
 //= partials/burger.js
 //= partials/header.js
@@ -23,4 +33,6 @@
 //= partials/bird.js
 //= partials/gallery.js
 //= partials/search.js
+
+
 

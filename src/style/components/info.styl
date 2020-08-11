@@ -62,18 +62,21 @@
         color: black
         text-decoration: none
         border-bottom 1px solid transparent 
+        text-decoration: none
         transition: border-bottom-color .3s
         &--backdrop 
             position relative
             display block
             padding 32px 49px 35px 30px
+            text-decoration: none
+            color: black
             span 
                 position relative 
                 z-index 1
             &:after
                 content '' 
                 position absolute
-                top 0
+                top -1px
                 left 0
                 display block
                 width 100%
@@ -119,15 +122,20 @@
         padding-left 0
         margin-top 15px
         &-item
-            margin-bottom 5px
+            margin-bottom -1px
             &:last-child
                 margin-bottom 0
         &-link
             text-decoration: none
             span
                 color: black
-                font-weight 400
+                font-weight 300
                 font-size 15px
+                transition: color .3s
+            &:hover
+                span 
+                    color gray-cherry
+
     &--index 
         margin-top 70px
 

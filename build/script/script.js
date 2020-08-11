@@ -1,3 +1,13 @@
+const addHiddenBody = (block) => {
+    block.style.overflow = 'hidden';
+}
+
+const removeHiddenBody = (block) => {
+    block.style.overflow = '';
+}
+
+
+
 (function(){
 
     // Основной слайдер на главной странице
@@ -471,6 +481,15 @@ if (filterButton) {
     filterButton.forEach((item) => {
         item.addEventListener('click', filterAct)
     });
+
+    const filterBox = document.querySelector('.js-filter-box');
+
+    if (filterBox) {
+        const filterItem = filterBox.querySelectorAll('.js-filter-item');
+        filterItem.forEach((item,index) => {
+            item.style.zIndex = `${filterItem.length - index}`
+        })
+    }
 }
 document.addEventListener('DOMContentLoaded', function() {
     function resizeWatcher() {
@@ -770,15 +789,19 @@ if (windowWidth > 768) {
 }
 document.addEventListener('DOMContentLoaded', () => {
     const openCatalogButton = document.querySelector('.js-open-catalog');
-
     if (openCatalogButton) {
+       
+
         const openCatalog = (e) => {
-            document.querySelector('.js-menu-catalog').classList.add('active')
+            document.querySelector('.js-menu-catalog').classList.add('active');
+            addHiddenBody(document.querySelector('.content'))
         }
+
         openCatalogButton.addEventListener('click', openCatalog);
 
         document.querySelector('.js-close-catalog').addEventListener('click', (e) => {
-            e.currentTarget.closest('.menu__catalog').classList.remove('active')
+            e.currentTarget.closest('.menu__catalog').classList.remove('active');
+            removeHiddenBody(document.querySelector('.content'))
         });
     }
 
@@ -882,6 +905,7 @@ if (popup) {
     const openPopup = (e) => {
         let dataPopup = e.currentTarget.getAttribute('data-open');
         document.querySelector(`[data-popup='${dataPopup}']`).classList.add('active');
+        addHiddenBody(document.querySelector('.content'));
     }
 
     popup.forEach((item) => {
@@ -891,7 +915,8 @@ if (popup) {
     popupClose.forEach((item) => {
         item.addEventListener('click', (e) => {
             e.currentTarget.closest('.popup').classList.remove('active');
-        } )
+            removeHiddenBody(document.querySelector('.content'))
+        });
     })
 }
 

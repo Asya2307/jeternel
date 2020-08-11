@@ -208,16 +208,22 @@ html(lang="ru")
                                         .expert__name-wrap.expert__name-wrap
                                             span.expert__name Смирнова Елизавета
                                             span.expert__position врач косметолог
-                                    button.common__button.common__button--gray-cherry(data-open="consult-width-info") Спросить эксперта
+                                    button.common__button.common__button--gray-cherry(data-open="order-call") Спросить эксперта
                                 ul.expert__info
                                     li.expert__info-item 
-                                        a(href="#").expert__info-link О косметологии
+                                        a(href="#").expert__info-link 
+                                            span О косметологии
                                     li.expert__info-item 
-                                        a(href="#").expert__info-link Статьи
+                                        a(href="#").expert__info-link 
+                                            span Статьи
                                     li.expert__info-item 
-                                        a(href="#").expert__info-link Об эксперте
+                                        a(href="#").expert__info-link 
+                                            span Об эксперте
                                     li.expert__info-item 
-                                        a(href="#").expert__info-link.expert__info-link--sound Подкаст «Сенсация в косметологии»
+                                        a(href="#").expert__info-link.expert__info-link--sound 
+                                            .expert__info-icon
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30"><defs><style>.cls-1{fill:none;stroke:#231f20;stroke-linecap:round;stroke-linejoin:round;fill-rule:evenodd}</style></defs><g id="Слой_2" data-name="Слой 2"><g id="Слой_1-2" data-name="Слой 1"><path class="cls-1" d="M10.5 12.5h3l5-3v11l-5-3h-3z"/><path class="cls-1" d="M15 .5A14.5 14.5 0 11.5 15 14.5 14.5 0 0115 .5z"/></g></g></svg>                                           
+                                            span Подкаст «Сенсация в косметологии»
                             .expert__name-wrap.expert__name-wrap--desctop
                                 span.expert__name Смирнова Елизавета
                                 span.expert__position врач косметолог
@@ -228,28 +234,39 @@ html(lang="ru")
                     section.infobox
                         h2.infobox__title Проблемы старения
                         .infobox__inner.infobox__inner--part
-                            .infobox__item.infobox__item--part
-                                span Омоложение лица, шеи, декольте
-                            .infobox__item.infobox__item--part
-                                span Устранение второго подбородка
-                            .infobox__item.infobox__item--part
-                                span Лифтинг (подтяжка) кожи
-                            .infobox__item.infobox__item--part
-                                span Увлажнение кожи лица
-                            .infobox__item.infobox__item--part
-                                span Улучшение цвета лица
-                            .infobox__item.infobox__item--part
-                                span Коррекция овала лица
-                            .infobox__item.infobox__item--part
-                                span Коррекция морщин
-                            .infobox__item.infobox__item--part
-                                span Фотостарение кожи
-                            .infobox__item.infobox__item--part
-                                span Увядающая кожа рук
-                            .infobox__item.infobox__item--part
-                                span Возрастные пигментные пятна
-                            .infobox__item.infobox__item--part
-                                span Удаление сосудистых звездочек
+                            .infobox__item.infobox__item--part.infobox__item--backdrop
+                                a(href="#").infobox__link--backdrop
+                                    span Омоложение лица, шеи, декольте
+                            .infobox__item.infobox__item--part.infobox__item--backdrop
+                                a(href="#").infobox__link--backdrop
+                                    span Устранение второго подбородка
+                            .infobox__item.infobox__item--part.infobox__item--backdrop
+                                a(href="#").infobox__link--backdrop
+                                    span Лифтинг (подтяжка) кожи
+                            .infobox__item.infobox__item--part.infobox__item--backdrop
+                                a(href="#").infobox__link--backdrop
+                                    span Увлажнение кожи лица
+                            .infobox__item.infobox__item--part.infobox__item--backdrop
+                                a(href="#").infobox__link--backdrop
+                                    span Улучшение цвета лица
+                            .infobox__item.infobox__item--part.infobox__item--backdrop
+                                a(href="#").infobox__link--backdrop
+                                    span Коррекция овала лица
+                            .infobox__item.infobox__item--part.infobox__item--backdrop
+                                a(href="#").infobox__link--backdrop
+                                    span Коррекция морщин
+                            .infobox__item.infobox__item--part.infobox__item--backdrop
+                                a(href="#").infobox__link--backdrop
+                                    span Фотостарение кожи
+                            .infobox__item.infobox__item--part.infobox__item--backdrop
+                                a(href="#").infobox__link--backdrop
+                                    span Увядающая кожа рук
+                            .infobox__item.infobox__item--part.infobox__item--backdrop
+                                a(href="#").infobox__link--backdrop
+                                    span Возрастные пигментные пятна
+                            .infobox__item.infobox__item--part.infobox__item--backdrop
+                                a(href="#").infobox__link--backdrop
+                                    span Удаление сосудистых звездочек
                     section.action__slider-inner
                         .action__slider-box.action__slider-box--row
                             .action__slider-content
@@ -261,13 +278,9 @@ html(lang="ru")
                                     .action__slider-slide.swiper-slide
                                         .action__slider-img(style="background-image: url(/images/action/action.png)")
                                             img(src="/images/action/action.png")
-                                        span.action__slider-head Безупречность во всем!
-                                        span.action__slider-text При прохождении Альтератерапии от 406 линий процедура «Обогащённая PRP» в подарок! Только на Воровского, 13.
                                     .action__slider-slide.swiper-slide
                                         .action__slider-img(style="background-image: url(/images/action/action2.png)")
                                             img(src="/images/action/action2.png")
-                                        span.action__slider-head Безупречность во всем!
-                                        span.action__slider-text При прохождении Альтератерапии от 406 линий процедура «Обогащённая PRP» в подарок! Только на Воровского, 13.
                                     button.action__slider-arrow.action__slider-arrow--left
                                         <svg xmlns="http://www.w3.org/2000/svg">
                                             <path fill="#fff" d="M.71 17.984l-.7-.692L17.5.002l17.49 17.29-.7.692L17.5 1.386z"/>
@@ -276,15 +289,112 @@ html(lang="ru")
                                         <svg xmlns="http://www.w3.org/2000/svg">
                                             <path fill="#fff" d="M.71 17.984l-.7-.692L17.5.002l17.49 17.29-.7.692L17.5 1.386z"/>
                                     </svg>
-                include components/form-consult.pug
-                .main__wrap.main__wrap--biggest
-                    include components/special.pug
+            include components/form-consult.pug
+            .main__wrap.main__wrap--biggest
+                .container
+                    section.special.special--inner
+                        span.block__title Спецалисты направления
+                        .special__slider-inner
+                            .special__slider.js-special-slider.swiper-container
+                                .swiper-wrapper
+                                    .employers__item.employers__item--slider.swiper-slide
+                                        a(href="/").employers__link
+                                            .employers__img
+                                                img(src="../images/employers/e7.png", alt="")
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 375 227.5"><path d="M375 25.5c-72.2 37.6-120.3 34-184.8.4C121.7-9.7 65.8-7.7 0 26.5v201h375v-202z" fill-rule="evenodd" clip-rule="evenodd"/></svg>
+                                            span.employers__name Никулиина Екатерина Дмитриевна
+                                            span.employers__position Врач-косметолог
+                                        .employers__pattern
+                                            .employers__pattern-item.employers__pattern-item--1
+                                            .employers__pattern-item.employers__pattern-item--2
+                                            .employers__pattern-item.employers__pattern-item--3
+                                    .employers__item.employers__item--slider.swiper-slide
+                                        a(href="/").employers__link
+                                            .employers__img
+                                                img(src="../images/employers/e8.png", alt="")
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 375 227.5"><path d="M375 25.5c-72.2 37.6-120.3 34-184.8.4C121.7-9.7 65.8-7.7 0 26.5v201h375v-202z" fill-rule="evenodd" clip-rule="evenodd"/></svg>
+                                            span.employers__name Брюхова Надежда Александровна
+                                            span.employers__position Врач-косметолог, дерматовенеролог, преподаватель
+                                        .employers__pattern
+                                            .employers__pattern-item.employers__pattern-item--1
+                                            .employers__pattern-item.employers__pattern-item--2
+                                            .employers__pattern-item.employers__pattern-item--3
+                                    .employers__item.employers__item--slider.swiper-slide
+                                        a(href="/").employers__link
+                                            .employers__img
+                                                img(src="../images/employers/e4.png", alt="")
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 375 227.5"><path d="M375 25.5c-72.2 37.6-120.3 34-184.8.4C121.7-9.7 65.8-7.7 0 26.5v201h375v-202z" fill-rule="evenodd" clip-rule="evenodd"/></svg>
+                                            span.employers__name Герман Фарида Загитовна
+                                            span.employers__position Врач-дерматовенеролог
+                                        .employers__pattern
+                                            .employers__pattern-item.employers__pattern-item--1
+                                            .employers__pattern-item.employers__pattern-item--2
+                                            .employers__pattern-item.employers__pattern-item--3
+                                    .employers__item.employers__item--slider.swiper-slide
+                                        a(href="/").employers__link
+                                            .employers__img
+                                                img(src="../images/employers/e7.png", alt="")
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 375 227.5"><path d="M375 25.5c-72.2 37.6-120.3 34-184.8.4C121.7-9.7 65.8-7.7 0 26.5v201h375v-202z" fill-rule="evenodd" clip-rule="evenodd"/></svg>
+                                            span.employers__name Никулиина Екатерина Дмитриевна
+                                            span.employers__position Врач-косметолог
+                                        .employers__pattern
+                                            .employers__pattern-item.employers__pattern-item--1
+                                            .employers__pattern-item.employers__pattern-item--2
+                                            .employers__pattern-item.employers__pattern-item--3
+                                    .employers__item.employers__item--slider.swiper-slide
+                                        a(href="/").employers__link
+                                            .employers__img
+                                                img(src="../images/employers/e8.png", alt="")
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 375 227.5"><path d="M375 25.5c-72.2 37.6-120.3 34-184.8.4C121.7-9.7 65.8-7.7 0 26.5v201h375v-202z" fill-rule="evenodd" clip-rule="evenodd"/></svg>
+                                            span.employers__name Брюхова Надежда Александровна
+                                            span.employers__position Врач-косметолог, дерматовенеролог, преподаватель
+                                        .employers__pattern
+                                            .employers__pattern-item.employers__pattern-item--1
+                                            .employers__pattern-item.employers__pattern-item--2
+                                            .employers__pattern-item.employers__pattern-item--3
+                                    .employers__item.employers__item--slider.swiper-slide
+                                        a(href="/").employers__link
+                                            .employers__img
+                                                img(src="../images/employers/e4.png", alt="")
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 375 227.5"><path d="M375 25.5c-72.2 37.6-120.3 34-184.8.4C121.7-9.7 65.8-7.7 0 26.5v201h375v-202z" fill-rule="evenodd" clip-rule="evenodd"/></svg>
+                                            span.employers__name Герман Фарида Загитовна
+                                            span.employers__position Врач-дерматовенеролог
+                                        .employers__pattern
+                                            .employers__pattern-item.employers__pattern-item--1
+                                            .employers__pattern-item.employers__pattern-item--2
+                                            .employers__pattern-item.employers__pattern-item--3
+                            .slider__nav.slider__nav--em
+                                button.slider__nav-item.slider__nav-item--prev
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="35"><path fill="#382f2d" d="M.696 16.8L17.323.01l.693.699L1.39 17.499l16.626 16.79-.693.7L.697 18.2l-.693-.7z"/></svg>   
+                                button.slider__nav-item.slider__nav-item--next
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="35"><path fill="#382f2d" d="M.698 34.99l-.692-.7L16.602 17.5.006.708l.692-.7L17.985 17.5z"/></svg>
                     include components/reviews.pug
                     section.faq 
                         .faq__title-inner
                             h2.block__title Вопросы и ответы
                         include components/faq.pug
-                    include components/sections.pug
+                    section.sections
+                        .sections__wrap.sections__wrap--inside
+                            .sections__inner
+                                .sections__item
+                                    a(href="#").sections__link
+                                        span Каталог услуг
+                                    img(src="images/section/s1.jpg", alt="")
+                                    
+                                .sections__item
+                                    a(href="#").sections__link
+                                        span Проблемы
+                                    img(src="images/section/s2.jpg", alt="")
+                                    
+                                .sections__item
+                                    a(href="#").sections__link
+                                        span До и после
+                                    img(src="images/section/s3.jpg", alt="")
+                                    
+                                .sections__item
+                                    a(href="#").sections__link
+                                        span Наши аппараты
+                                    img(src="images/section/s4.jpg", alt="")
                     section.gallery
                         .main__content.gallery__content
                             h2.gallery__title Jeternel сегодня 

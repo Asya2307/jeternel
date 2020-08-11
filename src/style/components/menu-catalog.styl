@@ -35,32 +35,54 @@
     top 0
     left 0
     background-color #fff
+    box-shadow: 8px 13px 35px rgba(0, 0, 0, 0.05)
     z-index -1
-    height 100vh
+    height 100%
     opacity 0
     visibility hidden
     transition: .3s
     &-wrap 
         position relative
-        padding-top 80px
+        padding-top 74px
         font-family serif
+        .main__wrap--biggest
+            padding-top 0
     &-title 
         font-size 36px
+        font-weight 300
+        margin-top 0
+        margin-bottom 60px
+    @media tablet-hor
+        &-title 
+            margin-bottom 20px
     &-item 
-        border-top 1px solid rgba(0,0,0,0.25)
-        border-bottom 1px solid rgba(0,0,0,0.25)
+        border-top 1px solid #e7e7e7
     &-subtitle 
         font-size 26px
         line-height 30px
+        margin-top 42px
+        font-weight 400
+        margin-bottom 36px
+        a
+            text-decoration none 
+            color black
     &-desc 
         font-size 15px
+        line-height 19px
+        margin-top 0
+        margin-bottom 0
+        font-weight 300
+        a 
+            text-decoration none 
+            color black
     &-box 
         font-family default
         width calc(100%/4 - 98px)
-        margin 0px 49px 40px 49px
+        margin 0px 49px 24px 49px
     &-list 
         list-style-type none 
         padding-left 20px
+        margin-top 12px
     &-part 
         padding-bottom 10px
         &:last-child 
@@ -75,6 +97,7 @@
         align-items stretch
         margin-left -49px
         margin-right -49px
+        margin-bottom 23px
     .swiper-slide, .swiper-wrapper
         height auto
     &.active
@@ -95,7 +118,7 @@
 .btn__close
     position absolute
     top 43px
-    right 43px
+    right 85px
     width 24px
     height 24px
     background-color transparent 
@@ -108,7 +131,10 @@
         width 100%
         height 100%
     &:hover
-        transform rotate(90deg)
+        transform rotate(90deg) 
+@media phone 
+    .btn__close
+        right 30px
 
 .swiper-scrollbar-drag
     background-color bright-cherry

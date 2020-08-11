@@ -3,6 +3,8 @@
     align-items flex-start
     position relative
     background-color #ffffff
+    &__wrap 
+        margin-top 73px
     &__image
         position absolute
         bottom 0
@@ -29,28 +31,38 @@
         padding: 0
         margin-top 157px
         &-link
+            position relative
             color: black
             display flex
             align-items center
             text-decoration none
             font-family default
             font-size 15px
-            &--sound
-                &:before
-                    content: ''
-                    display block
-                    width 29px
-                    height 29px
-                    background-image url(../images/sound.png)
-                    border-radius 50%
-                    background-position center
-                    background-repeat no-repeat
-                    border 1px solid #000000
-                    margin-right 10px
+            transition: color .3s
+            & span:after
+                content: "";
+                position: absolute;
+                top: 19px;
+                left: 0;
+                display: block;
+                width: 0;
+                height: 1px;
+                background-color: #382f2d;
+                opacity: 0.25;
+                -webkit-transition: width 0.5s 0s ease;
+                transition: width 0.5s 0s ease;
+            span 
+                position relative
+            &:hover span:after
+                width 100%
         &-item
             margin-right 30px
             &:last-child
                 margin-right 0
+        &-icon 
+            width 29px
+            height 29px
+            margin-right 10px
     @media screen and (max-width: 1280px)
         &__info 
             flex-direction column

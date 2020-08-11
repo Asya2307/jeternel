@@ -1,6 +1,8 @@
 .faq 
     font-family serif
-    margin-top 100px
+    margin-top 50px
+    &--problem 
+        margin-top 70px
     &__inner
         display flex
         flex-direction column
@@ -46,6 +48,7 @@
         padding 0
         text-align left
         word-break break-word
+        color black
         span  
             border-bottom 1px dashed rgba(0,0,0,0)
             transition-duration .3s
@@ -55,6 +58,7 @@
             display flex
             justify-content space-between
             align-items center
+            margin-bottom 16px
             .common__button
                 height 90px
         @media tablet-landscape-small
