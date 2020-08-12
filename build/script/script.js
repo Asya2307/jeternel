@@ -809,15 +809,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (popupScroll) {
         popupScroll.forEach((item) => {
-            new Swiper(item, {
-                direction: 'vertical',
-                slidesPerView: 'auto',
-                freeMode: true,
-                scrollbar: {
-                    el: '.swiper-scrollbar',
-                },
-                mousewheel: true,
-            });
+                const scrollSwiper = new Swiper(item, {
+                    direction: 'vertical',
+                    slidesPerView: 'auto',
+                    freeMode: true,
+                    scrollbar: {
+                        el: '.swiper-scrollbar',
+                    },
+                    mousewheel: true,
+                    simulateTouch: false
+                });
         });
     };
 
@@ -854,7 +855,6 @@ if (cookiesShow) {
         e.target.closest('.cookies').classList.remove('active');
     })
 }
-
 const quizStep = document.querySelectorAll('.js-step');
 
 if (quizStep.length) {
@@ -905,7 +905,7 @@ if (popup) {
     const openPopup = (e) => {
         let dataPopup = e.currentTarget.getAttribute('data-open');
         document.querySelector(`[data-popup='${dataPopup}']`).classList.add('active');
-        addHiddenBody(document.querySelector('.content'));
+            addHiddenBody(document.querySelector('.content'));
     }
 
     popup.forEach((item) => {
@@ -914,7 +914,7 @@ if (popup) {
 
     popupClose.forEach((item) => {
         item.addEventListener('click', (e) => {
-            e.currentTarget.closest('.popup').classList.remove('active');
+            e.currentTarget.closest('.js-popup').classList.remove('active');
             removeHiddenBody(document.querySelector('.content'))
         });
     })

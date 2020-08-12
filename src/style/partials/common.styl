@@ -198,5 +198,14 @@ svg circle
             margin-top 20px
         &--small 
             padding: 19px 34px 19px 34px;
+        &--hidden
+            opacity 0
+            visibility hidden
+            transition: opacity .3s
+        @media tablet-landscape-large
+            &--hidden
+                opacity 1
+                visibility visible
+
 
         

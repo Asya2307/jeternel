@@ -30,7 +30,7 @@ html(lang="ru")
                                 button.helpers__button(data-open="consult")
                                     svg(width="23" height="23")
                                         use(xlink:href="#pen-icon")
-                                button.helpers__button
+                                button.helpers__button(data-open="search")
                                     svg(width="22" height="22")
                                         use(xlink:href="#search-icon")
                                 button.helpers__button.helpers__button--special.js-version-button(onclick="uvcl()")
@@ -174,7 +174,7 @@ html(lang="ru")
                     button.helpers__button(data-open="consult")
                         svg(width="23" height="23")
                             use(xlink:href="#pen-icon")
-                    button.helpers__button
+                    button.helpers__button(data-open="search")
                         svg(width="22" height="22")
                             use(xlink:href="#search-icon")
                     button.helpers__button.helpers__button--special.js-version-button(onclick="uvcl()")
@@ -400,16 +400,21 @@ html(lang="ru")
                     section.infobox(id="application")
                         h2.infobox__title В каких случаях применяется
                         .infobox__inner.infobox__inner--part
-                            .infobox__item.infobox__item--part
-                                span Возрастные изменения кожи
-                            .infobox__item.infobox__item--part
-                                span Возрастные изменения фигуры
-                            .infobox__item.infobox__item--part
-                                span Преждевременное выпадение волос
-                            .infobox__item.infobox__item--part
-                                span Сухость кожи
-                            .infobox__item.infobox__item--part
-                                span Отеки (в том числе, после липосакции, липолиза)
+                            .infobox__item.infobox__item--part.infobox__item--backdrop
+                                a(href="#").infobox__link--backdrop
+                                    span Возрастные изменения кожи
+                            .infobox__item.infobox__item--part.infobox__item--backdrop
+                                a(href="#").infobox__link--backdrop
+                                    span Возрастные изменения фигуры
+                            .infobox__item.infobox__item--part.infobox__item--backdrop
+                                a(href="#").infobox__link--backdrop
+                                    span Преждевременное выпадение волос
+                            .infobox__item.infobox__item--part.infobox__item--backdrop
+                                a(href="#").infobox__link--backdrop
+                                    span Сухость кожи
+                            .infobox__item.infobox__item--part.infobox__item--backdrop
+                                a(href="#").infobox__link--backdrop
+                                    span Отеки (в том числе, после липосакции, липолиза)
                     section.before-after__container.before-after__container--slider(id="before-after")
                         h2.infobox__title
                             |До и после
@@ -619,8 +624,9 @@ html(lang="ru")
                                         <svg xmlns="http://www.w3.org/2000/svg">
                                             <path fill="#fff" d="M.71 17.984l-.7-.692L17.5.002l17.49 17.29-.7.692L17.5 1.386z"/>
                                     </svg>
-                include components/form-consult.pug
-                .main__wrap--biggest
+            include components/form-consult.pug
+            .main__wrap--biggest
+                .container
                     include components/reviews.pug 
                     section.faq
                         h2.infobox__title Вопросы и ответы

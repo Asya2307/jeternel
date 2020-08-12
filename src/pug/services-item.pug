@@ -30,7 +30,7 @@ html(lang="ru")
                                 button.helpers__button(data-open="consult")
                                     svg(width="23" height="23")
                                         use(xlink:href="#pen-icon")
-                                button.helpers__button
+                                button.helpers__button(data-open="search")
                                     svg(width="22" height="22")
                                         use(xlink:href="#search-icon")
                                 button.helpers__button.helpers__button--special.js-version-button(onclick="uvcl()")
@@ -174,7 +174,7 @@ html(lang="ru")
                     button.helpers__button(data-open="consult")
                         svg(width="23" height="23")
                             use(xlink:href="#pen-icon")
-                    button.helpers__button
+                    button.helpers__button(data-open="search")
                         svg(width="22" height="22")
                             use(xlink:href="#search-icon")
                     button.helpers__button.helpers__button--special.js-version-button(onclick="uvcl()")
@@ -324,8 +324,9 @@ html(lang="ru")
                                         <svg xmlns="http://www.w3.org/2000/svg">
                                             <path fill="#fff" d="M.71 17.984l-.7-.692L17.5.002l17.49 17.29-.7.692L17.5 1.386z"/>
                                     </svg>    
-                include components/form-consult.pug
-                .main__wrap.main__wrap--biggest
+            include components/form-consult.pug
+            .main__wrap.main__wrap--biggest
+                .container
                     include components/special.pug
                     section.gallery
                         .main__content.gallery__content
@@ -394,8 +395,6 @@ html(lang="ru")
                                         a(href="#").equipment__link.equipment__link--row 
                                             span.equipment__link-title Прессотерапия
                                             span.equipment__link-price от 1590 руб
- 
-
         //= partials/footer.pug
         include components/menu-catalog.pug
         div.intro-curtain

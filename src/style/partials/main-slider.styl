@@ -195,10 +195,24 @@
             height 100%
             background-color: #382f2d
             opacity 0.5
-        iframe 
+        &--backdrop
+            position absolute
+            top 0
+            left 0
             width 100%
             height 100%
-            display block
+            object-fit cover
+            display none
+        video 
+            width 100%
+            height 100%
+            object-fit cover
+    @media tablet-landscape-medium
+        &__video 
+            video 
+                display none
+            &--backdrop 
+                display block
         
 
 
