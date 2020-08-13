@@ -2,7 +2,7 @@ section.form__wrap
     form.form(action="").js-form
         .form__inner
             span.form__title Записаться на прием
-            .form__box
+            .form__box.form__box--consult
                 ul.form__group(role="none")
                     li.form__group-item
                         .form__item 
@@ -18,11 +18,11 @@ section.form__wrap
                                         |Онлайн-консультация5
                     li.form__group-item
                         label.form__item(for="name")
-                            input(type="text" data-req name="name" autocomplete="off").form__input
+                            input(type="text" data-req name="name" autocomplete="off").form__input.js-form-input
                             span.form__label Имя
                     li.form__group-item
                         label.form__item
-                            input(type="text" data-req name="phone" autocomplete="off").form__input.js-input-phone.js-phone-mask
+                            input(type="text" data-req name="phone" autocomplete="off").form__input.js-input-phone.js-phone-mask.js-form-input
                             span.form__label Телефон
                 .form__checkbox
                     .custom__checkbox-wrap

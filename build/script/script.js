@@ -759,7 +759,7 @@ if (form) {
         });
     
 
-    const formItem = document.querySelectorAll('.form__input');
+    const formItem = document.querySelectorAll('.js-form-input');
 
     formItem.forEach((item) => {
         item.addEventListener('focus', (e) => {
