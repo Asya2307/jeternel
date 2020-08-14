@@ -4627,8 +4627,9 @@ body.js-burger-menu-is-open .burger__crossed:hover {
 .cookies__desc {
   color: #fff;
   font-family: "Helvetica-Neue";
-  font-size: 14px;
-  line-height: 24px;
+  font-size: 15px;
+  line-height: 19px;
+  padding-right: 20px;
 }
 .cookies__desc a {
   color: #fff;
@@ -4640,9 +4641,16 @@ body.js-burger-menu-is-open .burger__crossed:hover {
 .cookies__desc a:hover {
   border-bottom-color: transparent;
 }
+@media (max-width: 1480px) {
+  .cookies__desc {
+    font-size: 14px;
+    line-height: 18px;
+  }
+}
 @media (max-width: 960px) {
   .cookies__desc {
     padding-bottom: 20px;
+    padding-right: 0;
   }
 }
 #hpvgd,
@@ -8353,6 +8361,10 @@ body.without-imgs .main-slider__desc .top[class*="h-background-"] {
 @media (max-width: 1024px) {
   .main__wrap {
     padding-top: 0;
+  }
+  .main__wrap--window {
+    padding: 0px;
+    padding-right: 0px;
   }
 }
 @media (max-width: 1100px) {
