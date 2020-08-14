@@ -1,5 +1,5 @@
 .tabs
-    margin-top 100px
+    margin-top 90px
     &__wrap 
         display flex
         align-items stretch 
@@ -34,7 +34,8 @@
             width 100%
         &-item 
             position absolute
-            padding-left 40px
+            padding-left 48px
+            padding-top 3px
             opacity 0
             z-index -1
             top 0
@@ -47,6 +48,11 @@
                 opacity 1
                 z-index 1
                 visibility visible
+            .main__content
+                p 
+                    margin-bottom 0
+                table 
+                    margin-top 26px
 @media tablet-portrait
     .tabs 
         &__wrap 

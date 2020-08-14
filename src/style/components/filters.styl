@@ -46,8 +46,8 @@
 
 .filter 
     background-color: white
-    padding: 50px 80px 70px 80px;
-    max-width: 1283px
+    padding: 54px 80px 51px 85px;
+    max-width: 1238px
     &__inner 
         display flex
         margin-bottom 50px
@@ -71,6 +71,10 @@
             &-inner
                margin-left 0px 
                margin-top 20px
+    @media phone
+        &__check
+            &-inner
+               flex-direction: column
     &__box
         max-width: 110px
         margin-top: 15px
@@ -109,6 +113,10 @@
         justify-content flex-end
         &-item
             width 250px
+            &--reset
+                width 223px
+            .common__button
+                padding: 27px 70px 22px 70px
     @media phone-portrait
         &__button
             justify-content center
