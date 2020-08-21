@@ -62,21 +62,7 @@ const removeHiddenBody = (block) => {
         if(document.documentElement.clientWidth > 1083 && document.querySelector(".js-problems-slider")){
             createProblemsSlider();
         };
-        var sliderBeforeAfter = new Swiper('.js-before-after-slider', {
-            speed: 400,
-            slidesPerView: 1,
-            loop: true,
-            spaceBetween: 150,
-            navigation: {
-                nextEl: '.slider__nav--before-after .slider__nav-item--next',
-                prevEl: '.slider__nav--before-after .slider__nav-item--prev',
-            },
-            breakpoints: {
-                768: {
-                  slidesPerView: 2,
-                }
-              }
-        });
+        
     });
 
     window.addEventListener("resize", function(){
@@ -293,7 +279,7 @@ if(document.getElementById("map")){
         locationMap.controls.remove("routeButtonControl");
     };    
 };
-(function(){
+
 
    
 
@@ -308,10 +294,12 @@ if(document.getElementById("map")){
     })
 
     function updateBeforeAfter(){
+
         calculateBeforeAfter("recalc");
     };
 
     function calculateBeforeAfter(recalcCheck){
+        console.log(1)
         for(let i = 0; i < beforeAfterElements.length; i++){
             let overlay = beforeAfterElements[i].querySelector(".js-before-after-overlay");
             if(overlay){
@@ -347,12 +335,12 @@ if(document.getElementById("map")){
     let widthChange;
 
     function addMouseMoveListener(){
-        if(document.documentElement.clientWidth > 1283){
-            
+        if(document.documentElement.clientWidth > 1283){            
             let overlay = this.overlay;
+            
             overlay.style.transition = "none";
             widthChange = setInterval(function(){
-                console.log(currentWidth, neededWidth)
+                
                 if(currentWidth < neededWidth){
                     currentWidth = currentWidth + 1;
                     overlay.style.width = currentWidth + "%";
@@ -368,6 +356,27 @@ if(document.getElementById("map")){
     function calcOverlayWidth(){
         neededWidth = Math.round((event.clientX - this.offset) / this.step + this.skewCompensation);
     };
+
+    var sliderBeforeAfter = new Swiper('.js-before-after-slider', {
+        speed: 400,
+        slidesPerView: 1,
+        spaceBetween: 150,
+        navigation: {
+            nextEl: '.slider__nav--before-after .slider__nav-item--next',
+            prevEl: '.slider__nav--before-after .slider__nav-item--prev',
+        },
+        breakpoints: {
+            768: {
+              slidesPerView: 2,
+            }
+          }
+    });
+
+    sliderBeforeAfter.on('slideChangeTransitionEnd', function() {
+        calculateBeforeAfter("recalc");
+    });
+
+    
 
     const openPopup = document.querySelectorAll('.js-open-popup');
 
@@ -389,8 +398,6 @@ if(document.getElementById("map")){
             })
         });
     }
-
-})();
 (function () {
     
     // Конструктор фильтров в виде селекта
@@ -513,24 +520,50 @@ document.addEventListener('DOMContentLoaded', function() {
       }
   
       resizeWatcher();
-      
-      const actionSlider = document.querySelectorAll('.js-action-slider');
+});
 
-      if (actionSlider) {
-        actionSlider.forEach((item) => {
-          new Swiper(item, {
-            speed: 700,
-            slidesPerView: 1,
-            loop: true,
-            effect: 'fade',
-            direction: 'vertical',
-            navigation: {
-              nextEl: item.querySelector('.action__slider-arrow--left'),
-              prevEl: item.querySelector('.action__slider-arrow--right'),
-            },
-          });
-        })
-      }
+const actionSlider = document.querySelectorAll('.js-action-slider');
+
+
+let actionSliderIsActive = false;
+
+function createactionsSlider() {
+  actionSlider.forEach((item) => {
+    let actionsSwiper = new Swiper(item, {
+      speed: 700,
+      slidesPerView: 1,
+      loop: true,
+      effect: 'fade',
+      direction: 'vertical',
+      navigation: {
+        nextEl: item.querySelector('.action__slider-arrow--left'),
+        prevEl: item.querySelector('.action__slider-arrow--right'),
+      },
+    });
+
+
+
+    actionSliderIsActive = true;
+
+    actionsSwiper.on("resize", function () {
+      if (document.documentElement.clientWidth < 768) {
+        actionsSwiper.destroy();
+        actionSliderIsActive = false;
+      };
+    });
+  });
+};
+
+window.addEventListener("load", function () {
+  if (document.documentElement.clientWidth > 768 && document.querySelector(".js-action-slider")) {
+    createactionsSlider();
+  }
+});
+
+window.addEventListener("resize", function(){
+  if(document.documentElement.clientWidth > 768 && document.querySelector(".js-action-slider") && !actionSliderIsActive){
+        createactionsSlider();
+  };
 });
 document.addEventListener('DOMContentLoaded', (e) => {
     const specialSlider = document.querySelectorAll('.js-special-slider');
@@ -802,22 +835,22 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    const popupScroll = document.querySelectorAll('.js-popup-scroll');
+    // const popupScroll = document.querySelectorAll('.js-popup-scroll');
 
-    if (popupScroll) {
-        popupScroll.forEach((item) => {
-                const scrollSwiper = new Swiper(item, {
-                    direction: 'vertical',
-                    slidesPerView: 'auto',
-                    freeMode: true,
-                    scrollbar: {
-                        el: '.swiper-scrollbar',
-                    },
-                    mousewheel: true,
-                    simulateTouch: false
-                });
-        });
-    };
+    // if (popupScroll && document.documentElement.clientWidth > 768) {
+    //     popupScroll.forEach((item) => {
+    //             const scrollSwiper = new Swiper(item, {
+    //                 direction: 'vertical',
+    //                 slidesPerView: 'auto',
+    //                 freeMode: true,
+    //                 scrollbar: {
+    //                     el: '.swiper-scrollbar',
+    //                 },
+    //                 mousewheel: true,
+    //                 simulateTouch: false
+    //             });
+    //     });
+    // };
 
 })
 const tabsButton = document.querySelectorAll('.js-tabs-button');
@@ -902,7 +935,7 @@ if (popup) {
     const openPopup = (e) => {
         let dataPopup = e.currentTarget.getAttribute('data-open');
         document.querySelector(`[data-popup='${dataPopup}']`).classList.add('active');
-            addHiddenBody(document.querySelector('.content'));
+        addHiddenBody(document.querySelector('.content'));
     }
 
     popup.forEach((item) => {

@@ -38,16 +38,25 @@
             &-item
                 margin-left 0
                 margin-right 0
+                margin-top 0
+                margin-bottom 30px
                 width 100%
                 padding: 150px 100px;
                 height auto
                 &--resourses
                     padding-left 0
                     padding-right 0
+                &:last-child 
+                    margin-bottom 0
         @media phone
             &-item
-                padding-left 40px
-                padding-right 40px
+                display flex
+                flex-direction: column
+                padding-left 20px
+                padding-right 20px
+                margin-bottom 20px
+                padding-top 20px
+                padding-bottom 20px
                 &--resourses
                     padding-top 40px
                     padding-bottom 40px
@@ -67,7 +76,15 @@
                 right 0
         @media phone
             &-link
-                left 20px
+                flex-direction: column 
+                align-items center
+                font-size 30px
+                line-height 34px
+                left 30px
+                padding: 0
+                text-align: center
+                margin-bottom 20px
+                position unset
         &-heading 
             color black
             text-decoration none
@@ -82,11 +99,9 @@
             display block
             margin-left 10px
         @media phone
-            &-link
-                font-size 28px
-                line-height 32px
-                padding-left 20px
-                padding-right 20px
+            &-count 
+                margin-left 0
+        
         &-box
             position relative
             display flex
@@ -94,13 +109,21 @@
             max-width 379px
             margin-left auto
             margin-right auto
-            font-family default
+            font-family defaultFont
             text-align center
             z-index 1
             &--resourses
                 max-width unset
                 padding-left 20px
                 padding-right 20px
+        @media tablet-landscape-medium
+            &-box
+                max-width: 70%
+                margin-left auto
+                margin-right auto
+        @media phone
+            &-box
+                max-width: 100%
         &-title
             font-size 13px
             color black
@@ -139,6 +162,14 @@
             &--prm 
                color white 
                margin-top 42px
+        @media laptop
+            &-subtitle
+                font-size 14px
+                line-height 24px
+        @media tablet-portrait
+            &-subtitle
+                &--prm
+                    margin-top 32px
     &__profile
         position absolute
         bottom 0
@@ -153,7 +184,7 @@
         margin-top 27px
 
         &-auth 
-            width 50px
+            min-width 50px
             height 50px
             background-position center
             background-repeat no-repeat
@@ -164,6 +195,7 @@
             padding 0
             position relative
             z-index 1
+            text-align: left 
 
             &:hover ~ .blog__profile-name
                 opacity 1
@@ -183,7 +215,7 @@
                 transform translateY(0)
                 position unset
                 opacity 1
-                font-family default
+                font-family defaultFont
                 font-size 13px
                 line-height 15px
                 margin-top 19px
@@ -194,7 +226,8 @@
                 position unset
                 opacity 1
                 transform: translateY(0)
-                margin-top 20px
+                margin-top 0
+                margin-left 10px
         &--art
             position relative
             transform translate(0)
@@ -202,14 +235,29 @@
             margin-top 21px
     @media tablet-hor
         &__profile
-            display flex
-            align-items center
+            &--index
+                display flex
+                flex-direction: row
+                align-items center
+                justify-content space-between
+                width unset
+                .blog__profile-name--inside
+                    text-align: left 
             &--art
                 margin-right 20px
     @media phone
         &__profile
+            &--index
+                & + .social
+                    align-self start
             &--art
                 margin-right 0
+    @media tablet-portrait
+        &__auth
+            width 100%
+            display flex
+            align-items center
+            justify-content space-between
     @media phone
         &__auth
             flex-direction column

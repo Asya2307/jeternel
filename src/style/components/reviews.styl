@@ -18,9 +18,12 @@
 
         &:last-child 
             margin-bottom 0
+    @media tablet-landscape-small
+        &__item
+            padding 30px 35px 17px 35px 
     @media phone
         &__item 
-            padding 30px
+            padding 20px
     &__text
         font-family serif
         p
@@ -55,7 +58,7 @@
             padding 9px 18px
             text-decoration none
             color #382f2d
-            font-family default
+            font-family defaultFont
             transition: .3s
             &:last-child
                 margin-right 0
@@ -66,13 +69,20 @@
         &__tags
             &-item 
                 font-size 13px
+    @media tablet-landscape-small
+        &__tags 
+            margin-bottom 20px
     @media tablet-hor
         &__tags
             &-item 
-                margin-bottom 20px
+                margin-bottom 12px
+    @media phone
+        &__tags
+            &-item
+                padding 5px 11px
     &__info
         font-size 13px
-        font-family default
+        font-family defaultFont
 
     &--index 
         margin-bottom 100px

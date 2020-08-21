@@ -42,7 +42,7 @@
             display flex
             align-items center
             text-decoration none
-            font-family default
+            font-family defaultFont
             font-size 15px
             transition: color .3s
             & span:after
@@ -69,19 +69,22 @@
             width 29px
             height 29px
             margin-right 10px
-    @media screen and (max-width: 1280px)
+    @media tablet-landscape-large
         &__info 
-            flex-direction column
-            align-items flex-start
-            margin-top 30px
+            flex-wrap wrap
+            max-width 75%
             &-item
                 margin-bottom 15px
+    @media tablet-landscape-medium
+        &__info 
+            max-width 65%
+            
     &__name 
         display flex
         align-items flex-start
         flex-direction column
         &-wrap
-            font-family default
+            font-family defaultFont
             position absolute
             font-size 15px
             right -12px
@@ -98,9 +101,14 @@
         &__inner 
             padding-left 25px
             padding-right 25px
+            max-width: 100%
         &__info
+            margin-top 40px
             &--mobile 
                 display block
+                position absolute
+                top: 50px
+                right 50px
         &__name
             &-wrap 
                 position relative
@@ -125,13 +133,37 @@
                 height unset
             &--mobile
                 position unset
+                
         &__pattern 
             display none
+        &__text
+            max-width: 65%
+@media tablet-portrait
+    .expert
+        &__text 
+            max-width 100%
+        &__info 
+            width 100%
+            max-width: 100%
+            &--mobile 
+                position unset 
+                display flex
+                align-items center
+                margin-bottom 40px
+        &__image
+            &--mobile
+                width 80px
+                height 80px
+
 @media phone
     .expert
-        &__inner 
-            padding-left 15px
-            padding-right 15px
+        background-color transparent
+        &__inner
+            padding-left 0
+            padding-right 0
+            padding-top 0
+        &__text
+            margin-top 0
     
                 
 

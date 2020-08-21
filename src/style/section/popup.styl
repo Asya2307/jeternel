@@ -35,10 +35,24 @@
             background-image url(../images/pattern-popup.png)
             opacity 0
             transition: opacity 1s 0s ease
+        .swiper-wrapper 
+            overflow-y: scroll
+            margin-right: -34px
         .swiper-slide 
             display flex
-            align-items center
             justify-content center
+            .main__wrap--big
+                display flex
+                align-items flex-start
+                height 100%
+    @media phone-portrait
+        .swiper-wrapper 
+            overflow-y: scroll
+            margin-right: 0px
+        &--main 
+            .form__wrap--popup
+                background-color #5c2d32
+            
     @media phone 
         &--main 
             .swiper-slide 
@@ -58,7 +72,7 @@
             transition: opacity 2s 1s ease
         &:after 
             opacity 1
-            transition: opacity 0.3s 2s ease
+            transition: opacity 1s 1s ease
 @media tablet-landscape-small 
     .popup
         &:before 
@@ -69,6 +83,10 @@
         &:before 
             left: -150%
             width: 250%
+
+.before-after__scroll
+    width 100%
+    margin: auto
 
 
 

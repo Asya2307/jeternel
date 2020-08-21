@@ -16,21 +16,21 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    const popupScroll = document.querySelectorAll('.js-popup-scroll');
+    // const popupScroll = document.querySelectorAll('.js-popup-scroll');
 
-    if (popupScroll) {
-        popupScroll.forEach((item) => {
-                const scrollSwiper = new Swiper(item, {
-                    direction: 'vertical',
-                    slidesPerView: 'auto',
-                    freeMode: true,
-                    scrollbar: {
-                        el: '.swiper-scrollbar',
-                    },
-                    mousewheel: true,
-                    simulateTouch: false
-                });
-        });
-    };
+    // if (popupScroll && document.documentElement.clientWidth > 768) {
+    //     popupScroll.forEach((item) => {
+    //             const scrollSwiper = new Swiper(item, {
+    //                 direction: 'vertical',
+    //                 slidesPerView: 'auto',
+    //                 freeMode: true,
+    //                 scrollbar: {
+    //                     el: '.swiper-scrollbar',
+    //                 },
+    //                 mousewheel: true,
+    //                 simulateTouch: false
+    //             });
+    //     });
+    // };
 
 })

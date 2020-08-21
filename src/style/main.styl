@@ -110,6 +110,7 @@ body
     top: 0;
     right: 0;
     transform: translateY(-112px)
+    z-index: 2
     &-item 
         background-color transparent 
         border none
@@ -126,7 +127,7 @@ body
         transform: translate(0)
         display flex
         justify-content center
-        margin-top 30px
+        margin-top 89px
         &--em
             position: absolute;
             width 100%
@@ -134,11 +135,11 @@ body
             left 0
             .slider__nav-item--prev
                 position absolute
-                left -15px
+                left 0px
                 margin: 0
             .slider__nav-item--next
                 position absolute
-                right -15px
+                right 0px
                 margin 0 
 
 .see__more
@@ -160,7 +161,9 @@ body
 
 .video 
     width 100%
-    
+
+
+
 
 @import "partials/common.styl"
 @import "partials/animations.styl"

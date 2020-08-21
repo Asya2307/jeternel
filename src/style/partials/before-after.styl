@@ -26,8 +26,6 @@
             background-color transparent
             position relative
             margin-top 88px
-            .infobox__title 
-                padding-left 28px
         &--index 
             background-color transparent
             width 100%
@@ -48,9 +46,9 @@
                 padding 0
                 .infobox__title 
                     padding-left 0px
-        @media tablet-portrait
-            &--slider
-                margin-top 0
+        // @media tablet-portrait
+        //     &--slider
+        //         margin-top 0
            
 
     &__heading
@@ -118,22 +116,30 @@
         top 0
         left 0
         background-color #fff
-        padding-top 100px
-        padding-bottom 90px
+        .main__wrap--big 
+            padding-bottom 100px
         &.active 
             opacity 1
             z-index 100
             visibility visible
         .swiper-slide 
-            height auto
+            height 100%
+            padding-top 100px
+        .swiper-wrapper 
+            overflow-y: scroll;
+            height 100%
+            width: calc(100% + 17px)
+            
         .btn__close
-            right 37px
+            right: 70px;
+            top: 43px;
         &-container 
             display flex
             margin-bottom 39px
         @media phone-portrait
             &-container 
                 flex-direction: column
+            
     &__part 
         width 392px
         margin-right 12px
@@ -146,6 +152,9 @@
             float left 
             padding-bottom 100%
     @media phone-portrait
+        &__popup
+           .swiper-wrapper 
+                width: 100%
         &__part 
             width 100%
             margin-right 0
@@ -154,7 +163,7 @@
                 margin-bottom 0
     &__desc
         position absolute 
-        font-family default
+        font-family defaultFont
         font-weight 300
         font-size 14px
         border-radius: 18px
@@ -167,11 +176,20 @@
             opacity 1
             visibility visible
 
-@media tablet-landscape-large
+@media laptop
     .before-after
         &__scroll 
-            padding-left 15px
-            padding-right 15px
+            padding-left 0px
+            padding-right 0px
+        &__popup
+            .btn__close
+                right: 30px;
+
+@media phone
+    .before-after
+        &__popup
+            .btn__close
+                right: 20px;
 
         
 

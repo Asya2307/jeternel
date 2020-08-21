@@ -16,8 +16,6 @@
     @media screen and (max-width: 450px)
         &__inner
             justify-content space-between
-    &__wrap 
-        padding 0 44px
     @media tablet-portrait
         &__wrap 
             padding 0
@@ -28,7 +26,7 @@
         position relative
         z-index 1
     &__name
-        font-family default
+        font-family defaultFont
         line-height 22px 
         color black
         font-size 13px
@@ -39,6 +37,10 @@
         margin-top -18px
         position relative
         letter-spacing 3.12px
+    @media laptop
+        &__name
+            font-size 12px
+            line-height 21px
     @media phone-portrait
         &__name
             padding-left 0
@@ -46,8 +48,6 @@
     @media screen and (max-width: 450px)
         &__name
             margin-top 0
-            font-size 8px
-            line-height 14px
             padding-bottom 8px
 
     &__img
@@ -67,18 +67,49 @@
             transform: translateY(50%)
             path 
                 fill: #fafafa
-    @media tablet-landscape-large
+    @media laptop
         &__img 
+            height 350px
             svg 
                 transform: translateY(63%)
+            &--main
+                svg 
+                    transform: translateY(54%)
     @media tablet-hor
         &__img
-            height 200px
             svg 
-                transform: translateY(50%)
+                transform: translateY(57%) scale(0.6)
+            &--main 
+                svg
+                    transform: translateY(44%) scale(0.8);
+        
+    @media tablet-portrait
+        &__img
+            height 235px
+            svg 
+                transform: translateY(54%) scale(0.6)
+    @media phone-portrait 
+        &__img
+            &--main
+                svg 
+                    transform: translateY(54%) scale(0.8)
+    @media screen and (max-width: 680px)
+        &__img
+            &--main
+                svg 
+                    transform: translateY(55%) scale(0.9)
+    @media phone
+        &__img
+            svg 
+                transform: translateY(51%) scale(0.8)
+            &--main 
+                svg 
+                    transform: translateY(65%) scale(.9)
     @media screen and (max-width: 450px)
         &__img
-            height 150px
+            &--main
+                svg 
+                    transform: translateY(53%) scale(0.9)
     &__item
         width calc(100%/3 - 164px)
         margin: 0 81px 45px 81px
@@ -89,6 +120,7 @@
         &--slider 
             width unset 
             margin 0
+  
     
     @media tablet-landscape-large
         &__item
@@ -107,6 +139,9 @@
             &--slider 
                 margin-left 0
                 margin-right 0
+     @media phone
+        &__item
+            width 100%
     
     &__position
         font-size 15px
@@ -114,10 +149,11 @@
         color black
         width 100%
         text-align center
-        font-family default
-    @media screen and (max-width: 450px)
+        font-family defaultFont
+    @media laptop
         &__position
-            font-size 8px
+            font-size 14px
+            line-height 24px
     &__title
         font-size 50px
         font-family serif

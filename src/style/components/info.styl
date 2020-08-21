@@ -58,6 +58,10 @@
     @media tablet-landscape-large
         &__item 
             padding: 20px 0
+            &--backdrop
+                padding: 0
+    @media phone
+        &__item 
             &--half 
                 width 100%
                 margin-left 0
@@ -109,17 +113,34 @@
         &__link 
             font-size 26px
             line-height 30px
-    @media phone
+    @media tablet-landscape-small
         &__link 
             &--row
                 flex-direction: column
+    @media phone
+        &__link 
             &--backdrop 
-                padding-top 15px
-                padding-bottom 15px
+                padding-top 20px
+                padding-bottom 20px
+                padding-left 0
+                padding-right 0
 
 
     @media tablet-hor
+        &__inner 
+            margin 0
+            justify-content space-between
         &__item 
+            &--part 
+                width calc(100% / 2 - 16px);
+                margin-left 0
+                margin-right 0
+                padding-left 0
+                padding-right 0
+    @media phone
+        &__item 
+            font-size 26px
+            line-height 30px
             &--part 
                 width 100%
                 margin-left 0
@@ -127,7 +148,7 @@
                 padding-left 0
                 padding-right 0
     &__list 
-        font-family default
+        font-family defaultFont
         list-style-type none
         padding-left 0
         margin-top 15px

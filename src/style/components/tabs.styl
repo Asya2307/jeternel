@@ -12,9 +12,6 @@
         width 100%
         padding 0
         margin-top: 35px;
-    @media tablet-portrait
-        &__switch 
-            max-width: 100%
     &__button 
         background-color white
         transition: .3s
@@ -56,24 +53,25 @@
 @media tablet-portrait
     .tabs 
         &__wrap 
-            flex-wrap wrap
+            flex-direction: column
         &__switch
-            justify-content space-between
-            flex-wrap: wrap 
+            white-space: nowrap
             flex-direction: row
+            flex-wrap: nowrap
+            overflow scroll
+            width 100%
+            max-width: 100%
+
         &__item
-            width 48%
-            margin-bottom 10px
+            width 100%
+            margin-bottom 0
+            margin-right 4px
+            &:last-child 
+                margin-right 0
         &__inner
             &-item 
                 padding-left 0
-@media phone
-    .tabs 
-        &__switch
-            flex-direction: column
-        &__item
-            width 100%
-            margin-bottom 10px
+
         
     
 

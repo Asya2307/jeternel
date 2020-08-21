@@ -37,8 +37,11 @@
             transition: .3s
         &:hover, &.active
             color dark-cherry
+            cursor cursorDefault
             &:after
                 border-bottom-color transparent
+        &.active
+            cursor cursorDefault
     &__select 
         max-width 412px
         width 100%
@@ -71,10 +74,10 @@
             &-inner
                margin-left 0px 
                margin-top 20px
-    @media phone
-        &__check
-            &-inner
-               flex-direction: column
+    // @media phone
+    //     &__check
+    //         &-inner
+    //            flex-direction: column
     &__box
         max-width: 110px
         margin-top: 15px
@@ -88,7 +91,7 @@
             margin-bottom -30px
         &-title 
             font-size 15px
-            font-family default
+            font-family defaultFont
     @media tablet-landscape-medium
         &__box
             &--full
@@ -126,11 +129,11 @@
             align-items center
 @media tablet-landscape-medium
     .filter
-        padding: 50px
+        padding: 30px
 
 @media phone-portrait
     .filter
-        padding 40px
+        padding 20px
 
 
 

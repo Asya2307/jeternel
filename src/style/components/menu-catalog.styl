@@ -4,7 +4,7 @@
     top 0
     right 0
     background-color bright-cherry
-    font-family default
+    font-family defaultFont
     border none
     padding 21px 40px
     z-index 10
@@ -42,6 +42,10 @@
     opacity 0
     visibility hidden
     transition: .3s
+    .swiper-wrapper 
+        overflow-y: scroll;
+        height 100
+        width: calc(100% + 17px)
     &-wrap 
         position relative
         padding-top 74px
@@ -77,7 +81,7 @@
             text-decoration none 
             color black
     &-box 
-        font-family default
+        font-family defaultFont
         width calc(100%/4 - 98px)
         margin 0px 49px 24px 49px
     &-list 
@@ -99,31 +103,41 @@
         margin-left -49px
         margin-right -49px
         margin-bottom 23px
-    .swiper-slide, .swiper-wrapper
-        height auto
     &.active
         opacity 1
         visibility visible
         z-index 1000
     @media laptop
+
         &-wrap 
             padding-left 20px
             padding-right 20px 
         &-box 
            width: calc(100% / 3 - 98px)
+        &-inner 
+            margin-left 0
+            margin-right 0
     @media tablet-hor
         &-wrap 
             padding-left 20px
             padding-right 20px 
         &-box 
            width: calc(100% / 2 - 98px)
+        .swiper-wrapper
+            width 100% 
+
         .btn__close 
-            right 40px
+            right 30px
+        
+    @media phone-portrait
+        overflow auto
     @media phone
         &-box 
            width: 100% 
+           margin-left 0
+           margin-right 0
         .btn__close 
-            right 25px
+            right 20px
            
     .btn__close
         top 40px
@@ -138,7 +152,7 @@
     background-color transparent 
     border none 
     padding: 0
-    z-index 1
+    z-index 20
     cursor pointer
     transition: .3s
     svg  
@@ -148,7 +162,7 @@
         transform rotate(90deg) 
 @media phone 
     .btn__close
-        right 30px
+        right 20px
 
 .swiper-scrollbar-drag
     background-color bright-cherry

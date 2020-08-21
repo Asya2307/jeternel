@@ -54,10 +54,34 @@
                     left 21px
                 &--right
                     right 21px
-            
-            @media phone-portrait
+            @media laptop
+                .action__slider
+                    padding-right: 40px;
                 .action__slider-arrow
-                    top 155px
+                    &--left
+                        left -40px
+                    &--right
+                        right -40px
+            @media phone-portrait
+                .action__slider
+                    max-height: unset !important
+                    &-slide
+                        margin-bottom 80px
+                        max-height unset 
+                        width 100%
+                        &:last-child 
+                            margin-bottom 0
+                    &-show 
+                        margin-top 0
+                        width 100%
+
+                .swiper-wrapper
+                    flex-direction: column
+                    
+                .action__slider-arrow
+                    display none
+                    
+
             @media phone
                 .action__slider-arrow
                     top: 106px
@@ -87,9 +111,7 @@
                     background-position center
                     background-size: cover
                     background-repeat no-repeat
-            @media phone-portrait 
-                padding-left 0
-                padding-right 0 
+            
             &--main
                 margin 0 24px
                 background-color default-cherry
@@ -103,7 +125,6 @@
                 margin-left 24px
                 margin-right 24px
                 margin-top 0
-                margin-right 0
                 .action__slider
                     position relative
                     width 100%
@@ -111,6 +132,10 @@
                     max-height 451px
                     max-width: 100%
                     padding-left 0
+                @media laptop
+                    .action__slider
+                        padding-right: 0px
+                
                 @media phone 
                     .action__slider
                         max-height: 474px
@@ -218,6 +243,10 @@
                     .action__slider-content
                         padding-right 0
                         padding-bottom 40px
+        @media phone-portrait 
+            &-box
+                padding-left 20px
+                padding-right 20px
 
         &-title
             display block
@@ -238,9 +267,7 @@
         @media phone-portrait
             &-slide
                 justify-content start
-        @media phone
-            &-slide
-                padding: 0 40px
+                max-width 100%
         &-img
             width 100%
             &:before
@@ -250,6 +277,9 @@
                 padding-bottom 100%
             img 
                 display none
+        @media phone-portrait
+            &-img 
+                max-width: 392px
         &-arrow
             position absolute
             top 147px
@@ -291,14 +321,14 @@
             font-size 13px
             font-family defaut
             text-transform uppercase
-            font-family default
+            font-family defaultFont
             text-align center
             margin-top 40px
             margin-bottom 15px
             letter-spacing: 3.12px
         
         &-text
-            font-family default
+            font-family defaultFont
             font-size 15px
             line-height 25px
             text-align center
@@ -325,7 +355,7 @@
                 padding-left 15px
                 padding-right 15px
         &-desc 
-            font-family default
+            font-family defaultFont
             margin-bottom 17px
             font-size 15px
             line-height 25px

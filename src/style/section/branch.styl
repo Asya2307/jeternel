@@ -15,7 +15,11 @@
                 margin-bottom 0
         @media tablet-hor
             &-item 
-                padding 40px 30px    
+                padding 40px 30px 
+        @media phone 
+            &-item
+                padding-left: 20px
+                padding-right 20px   
         &-box
             display flex
             align-items center
@@ -24,10 +28,6 @@
             margin-left auto
             margin-right auto
             justify-content space-between
-        @media desktop-medium
-            &-box
-                padding-left 126px
-                padding-right 60px
 
         @media laptop
             &-box
@@ -37,7 +37,11 @@
             &-box
                 padding-right 100px
                 padding-left 100px
-        @media tablet-hor
+        @media tablet-hor 
+            &-box
+                padding-left 0
+                padding-right 0
+        @media tablet-portrait
             &-box 
                 flex-direction column
                 padding-left 0
@@ -53,7 +57,7 @@
                 height 100%
                 object-fit cover
                 display block
-        @media tablet-hor
+        @media tablet-portrait
             &-img 
                 margin-bottom 30px
                 min-width unset 
@@ -68,8 +72,8 @@
         @media tablet-landscape-small
             &-inner
                 max-width 100%
-                padding-left 30px
-        @media tablet-hor
+                padding-left 70px
+        @media tablet-portrait
             &-inner 
                 padding-left 0
         &-wrap 
@@ -88,6 +92,10 @@
                 transition border-bottom-color .3s
                 &:hover
                     border-bottom-color transparent
+        @media phone
+            &-title
+                font-size: 30px;
+                line-height: 34px;
         &--contacts 
             justify-content flex-start
         &-phone
@@ -115,12 +123,12 @@
             margin-left: auto;
             margin-right: auto;
         &-text 
-            font-family default 
+            font-family defaultFont 
             font-size 15px 
             line-height 25px  
             margin-top 43px
             margin-bottom 0
-    @media tablet-hor
+    @media tablet-portrait
         &__info
             flex-direction column
             &--contacts 
@@ -143,6 +151,8 @@
             font-size 26px
         &-info
             font-size 26px
+            text-decoration: none
+            color black
     @media phone-portrait
         &__contacts
             flex-direction column

@@ -40,10 +40,19 @@
                 visibility visible
                 z-index 1
                 transition: opacity .3s
-    @media phone 
+    @media laptop
+        &__box 
+            padding-top 20px
+            padding-bottom 20px
+    @media tablet-portrait
+        &__box 
+            padding-left 30px
+            padding-right 30px
+    @media phone
         &__box 
             padding-left 20px
             padding-right 20px
+
 
     &__title
         display inline
@@ -61,6 +70,7 @@
         &:hover 
             span 
                 border-bottom 1px dotted rgba(0,0,0,0.25)
+        
         &-inner
             display flex
             justify-content space-between
@@ -69,7 +79,6 @@
             .common__button
                 height 90px
                 top -16px
-                left 20px
         @media tablet-landscape-small
             &-inner 
                 flex-direction column
@@ -89,7 +98,7 @@
             span 
                 &:hover 
                     border-bottom 1px solid rgba(0,0,0,0)
-    @media phone-portrait 
+    @media tablet-portrait 
         &__title 
             font-size 26px
             line-height 30px 
@@ -127,14 +136,14 @@
             flex-direction column 
             font-size 14px
             line-height 18px
-            font-family default 
+            font-family defaultFont 
         &-name  
             display block
         &-position 
             color #aaaaaa
     &__date 
         font-size 14px
-        font-family default
+        font-family defaultFont
         margin-left auto
     &__button 
         margin-top 17px
@@ -158,4 +167,9 @@
             margin-bottom 5px
         &__date
             margin-left 0
+@media phone
+    .faq
+        &__text
+            font-size 20px
+            line-height 24px
 
